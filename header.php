@@ -32,9 +32,9 @@
 				<button class="menu-toggle"><?php _e( 'Primary Menu', 'businesstheme' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- #site-navigation -->
-			<div class="featured-header-image-container">
-				<img src="http://thb_demo_medialibrary_w3.s3.amazonaws.com/demo/bigfoot/wp-content/uploads/sites/9/6594076175_9a560953fb_o-1160x866.jpg?c90533">
 		</div>
+		<div class="featured-header-image-container">
+			<img src="http://thb_demo_medialibrary_w3.s3.amazonaws.com/demo/bigfoot/wp-content/uploads/sites/9/6594076175_9a560953fb_o-1160x866.jpg?c90533">
 		</div>
 	</header><!-- #masthead -->
 

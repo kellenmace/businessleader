@@ -658,44 +658,41 @@ object {
 .infinity-end.neverending .site-footer {
   display: block; }
 
-.site-header {
+.site-header .nav-bar-container {
   max-width: 1500px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #df1e14; }
-  .site-header:after {
+  background-color: #363636; }
+  .site-header .nav-bar-container:after {
     content: "";
     display: table;
     clear: both; }
-  .site-header .featured-header-image-container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 0;
-    max-height: 450px;
-    overflow: hidden; }
-  .site-header .nav-bar-container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    background-color: rgba(223, 30, 20, 0.6); }
-    .site-header .nav-bar-container .site-branding {
+  .site-header .nav-bar-container .site-branding {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    padding-left: 40px; }
+    .site-header .nav-bar-container .site-branding:last-child {
+      margin-right: 0; }
+  .site-header .nav-bar-container .main-navigation {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto; }
+    .site-header .nav-bar-container .main-navigation:last-child {
+      margin-right: 0; }
+    .site-header .nav-bar-container .main-navigation:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .site-header .nav-bar-container .main-navigation li {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 31.76157%;
-      padding-left: 40px;
-      z-index: 50; }
-      .site-header .nav-bar-container .site-branding:last-child {
-        margin-right: 0; }
-    .site-header .nav-bar-container .main-navigation {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 65.88078%;
-      padding-right: 40px;
-      z-index: 50; }
-      .site-header .nav-bar-container .main-navigation:last-child {
+      width: 6.17215%; }
+      .site-header .nav-bar-container .main-navigation li:last-child {
         margin-right: 0; }
