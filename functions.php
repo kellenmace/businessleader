@@ -38,7 +38,7 @@ function bus_leader_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -50,7 +50,7 @@ function bus_leader_setup() {
 	 * to output valid HTML5.
 	 */
 	add_theme_support( 'html5', array(
-		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
+		'aside', 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
 	) );
 
 	/*
@@ -92,6 +92,10 @@ add_action( 'widgets_init', 'bus_leader_widgets_init' );
 function bus_leader_scripts() {
 	wp_enqueue_style( 'bus_leader-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'bus_leader-google-fonts', 'http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic,100' );
+
+	wp_enqueue_style( 'bus_leader-font-awesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
+
 	wp_enqueue_script( 'bus_leader-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'bus_leader-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
@@ -105,7 +109,7 @@ add_action( 'wp_enqueue_scripts', 'bus_leader_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-//require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.

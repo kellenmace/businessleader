@@ -1,83 +1,83 @@
 /* =Menu
 ----------------------------------------------- */
 
-.main-navigation {
-	display: block;
-	float: left;
-	width: 100%;
+// .main-navigation {
+// 	display: block;
+// 	float: left;
+// 	width: 100%;
 
-	// first level
-	ul {
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
+// 	// first level
+// 	ul {
+// 		list-style: none;
+// 		margin: 0;
+// 		padding-left: 0;
 
-		li {
-			float: left;
-			position: relative;
+// 		li {
+// 			float: left;
+// 			position: relative;
 
-			a {
-				display: block;
-				text-decoration: none;
-			}
+// 			a {
+// 				display: block;
+// 				text-decoration: none;
+// 			}
 
-			// link hover
-			&:hover {
-				> a { }
-				> ul { display: block; }
-			}
+// 			// link hover
+// 			&:hover {
+// 				> a { }
+// 				> ul { display: block; }
+// 			}
 
-		}
+// 		}
 
-		.current_page_item, .current-menu-item {
-			a {}
-		}
+// 		.current_page_item, .current-menu-item {
+// 			a {}
+// 		}
 
-		// second level
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			display: none;
-			float: left;
-			position: absolute;
-				top: $vspacing;
-				left: 0;
-			z-index: 99999;
+// 		// second level
+// 		ul {
+// 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+// 			display: none;
+// 			float: left;
+// 			position: absolute;
+// 				top: $vspacing;
+// 				left: 0;
+// 			z-index: 99999;
 
-			&:hover {
-				> a {};
-			}
+// 			&:hover {
+// 				> a {};
+// 			}
 
-			li {
-				a {
-					width: 200px;
-					&:hover {};
-				}
-			}
+// 			li {
+// 				a {
+// 					width: 200px;
+// 					&:hover {};
+// 				}
+// 			}
 
-			// third level
-			ul {
-				left: 100%;
-				top: 0;
-			}
+// 			// third level
+// 			ul {
+// 				left: 100%;
+// 				top: 0;
+// 			}
 
-		}
-	}
+// 		}
+// 	}
 
-}
+// }
 
 /* Small menu */
-.menu-toggle {
-	display: none;
-	cursor: pointer;
-}
+// .menu-toggle {
+// 	display: none;
+// 	cursor: pointer;
+// }
 
-@media screen and (max-width: 600px) {
-  .menu-toggle,
-  .main-navigation.toggled .nav-menu {
-    display: block;
-  }
+// @media screen and (max-width: 600px) {
+//   .menu-toggle,
+//   .main-navigation.toggled .nav-menu {
+//     display: block;
+//   }
 
-  .main-navigation ul {
-    display: none;
-  }
-}
+//   .main-navigation ul {
+//     display: none;
+//   }
+// }
