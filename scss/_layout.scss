@@ -1,17 +1,59 @@
 // Layout: Content-Sidebar
 @if $layout == content-sidebar {
-	.content-area {
-		float: left;
-		margin: 0 -25% 0 0;
-		width: 100%;
-	}
+
 	.site-main {
-		margin: 0 25% 0 0;
+		background: $site-main-background;
 	}
+
 	.site-content .widget-area { /* Sidebar 1 */
+		width: 380px;
 		float: right;
-		overflow: hidden;
-		width: 25%;
+		padding: 4rem;
+		background: $widget-area-background;
+		@media screen and (max-width: $break-small - 1) {
+			width: auto;
+			max-width: $widget-area-tablet-width;
+			float: none;
+			margin: 1em auto 0 auto;
+		}
+	}
+
+    .entry-header,
+    .entry-content,
+    .entry-meta,
+    .entry-footer,
+    .tag-links,
+    .post-navigation,
+    .comments-area,
+    .paging-navigation {
+    	position: relative;
+	    max-width: 780px;
+	    max-width: 78rem;
+	    padding: 0 4rem;
+	    margin: 0 auto;
+    	@media screen and (min-width: $break-small) and (max-width: $break-large - 1) {
+        	margin-right: 0;
+    	}
+    }
+	    
+	.content-area {
+		@media screen and (min-width: $break-large) {
+		    width: 100%;
+			float: left;
+			margin-left: -380px;
+			padding-left: 380px;
+		}
+		@media screen and (min-width: $break-small) and (max-width: $break-large - 1) {
+			width: 100%;
+	        float: left;
+	        margin-left: -380px;
+	        padding-left: 380px;
+		}
+	}
+
+	.site-footer {
+	    clear: both;
+	    width: 100%;
 	}
 }
 

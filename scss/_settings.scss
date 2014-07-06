@@ -6,14 +6,32 @@
 $base-font: roboto;
 $header-font: $base-font; // you can refer to other variables
 
-// base color scheme
+// Case color scheme
 $body-background: #fff;
+$site-main-background: #b2b2b2;
+$widget-area-background: #fff;
 $text-color: #404040;
 $header-color: #000;
 $link-color: royalblue;
 $link-visited: purple;
 
+// Media Queries
+$break-small: 1160px;
+$break-large: 1540px;
+$widget-area-tablet-width: 780px;
+
+// Header
+$header-background: #333;
+$header-text: #fff;
+
 // Supported Values for $layout:
 //  null | content-sidebar | sidebar-content
-$layout: null !default;
+// $layout: null !default;
+$layout: content-sidebar;
 $vspacing: 1.5em;
+
+// Mixins
+@mixin font-size($sizeValue: 12 ){
+  font-size: $sizeValue + px; //fallback for old browsers
+  font-size: (0.125 * $sizeValue) + rem;
+}

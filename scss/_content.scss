@@ -1,21 +1,6 @@
 /* =Content
 ----------------------------------------------- */
 
-.site-content {
-	@include outer-container;
-	background-color: #d5eefb;
-	.content-area {
-		@include span-columns(8);
-		background-color: #aadbf5;
-		padding-left: 30px;
-	}
-	.widget-area {
-		@include span-columns(4);
-		background-color: #aadbf5;
-		padding: 40px;
-	}
-}
-
 .sticky {
 }
 .hentry {
@@ -38,4 +23,21 @@
 .page-links {
 	clear: both;
 	margin: 0 0 $vspacing;
+}
+
+
+// FROM LYNDA.COM LESSON
+.entry-header,
+.entry-content,
+.entry-meta,
+.entry-footer,
+.tag-links,
+.post-navigation,
+.comments-area,
+.paging-navigation {
+    position: relative;
+    max-width: 780px;
+    max-width: 78rem;
+    padding: 0 4rem;
+    margin: 0 auto;
 }

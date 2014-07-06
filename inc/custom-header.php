@@ -24,10 +24,10 @@
  */
 function bus_leader_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'bus_leader_custom_header_args', array(
-		'default-image'          => '',
-		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'default-image'          => get_template_directory() . '/images/sample-logo.png',
+		'default-text-color'     => 'ffffff',
+		'width'                  => 114,
+		'height'                 => 40,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'bus_leader_header_style',
 		'admin-head-callback'    => 'bus_leader_admin_header_style',
