@@ -23,12 +23,14 @@ $widget-area-tablet-width: 780px;
 // Header
 $header-background: #333;
 $header-text: #fff;
+$sub-menu-background: lighten( $header-background, 10% );
+
 
 // Supported Values for $layout:
 //  null | content-sidebar | sidebar-content
 // $layout: null !default;
 $layout: content-sidebar;
-$vspacing: 1.5em;
+$vspacing: 60px;
 
 // Mixins
 @mixin font-size($sizeValue: 12 ){

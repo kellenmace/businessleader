@@ -2,10 +2,12 @@
 ----------------------------------------------- */
 
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+	position: relative;
+    float: right;
+    display: block;
+    font-family: $base-font;
+    font-weight: 100;
+    text-transform: uppercase;
 
 	// first level
 	ul {
@@ -20,32 +22,47 @@
 			a {
 				display: block;
 				text-decoration: none;
+			    padding: 1.3em 1em;
+			    @include font-size(12);
+			    line-height: 1.3em;
+			    color: $header-text;
 			}
 
 			// link hover
 			&:hover {
-				> a { }
+				> a {
+					// Apply Fancy JS here!
+					background: $sub-menu-background;
+				}
 				> ul { display: block; }
 			}
 
 		}
 
-		.current_page_item, .current-menu-item {
-			a {}
-		}
-
 		// second level
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			display: none;
-			float: left;
 			position: absolute;
-				top: $vspacing;
-				left: 0;
-			z-index: 99999;
+		    left: 0;
+		    z-index: 99999;
+		    display: none;
+		    float: left;
+		    padding: 0;
+		    background: $sub-menu-background;
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+
+			top: $vspacing;
+			a {
+				width: 200px;
+				&:hover {
+					// Hover color for sub-menu items
+					background: $header-background;
+				}
+			}
 
 			&:hover {
-				> a {};
+				> a {
+					background: green;
+				};
 			}
 
 			li {
@@ -53,6 +70,10 @@
 					width: 200px;
 					&:hover {};
 				}
+			}
+
+			.current_page_parent {
+				background: $header-background;
 			}
 
 			// third level
@@ -64,6 +85,20 @@
 		}
 	}
 
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_item > a:hover,
+	.current-menu-item > a:hover {
+	    background: $sub-menu-background;
+	}
+
+	.current_page_ancestor {
+	    background: $sub-menu-background;
+	}
+	
+	.current_page_parent .current_page_item > a {
+		background: $header-background;
+	}
 }
 
 /* Small menu */
@@ -73,12 +108,98 @@
 }
 
 @media screen and (max-width: 600px) {
-  .menu-toggle,
-  .main-navigation.toggled .nav-menu {
-    display: block;
-  }
+	.menu-toggle {
+            display: block;
+            float: right;
+            height: 3.75em;
+            padding: 0 1em;
+            font-weight: normal;
+            font-size: 14px;
+            font-size: 1.4rem;
+            text-decoration: none;
+            line-height: 3.75em;
+            color: white;
+	}
 
-  .main-navigation ul {
-    display: none;
-  }
+	.main-navigation {
+		float: none;
+	}
+        
+	.main-navigation.toggled .nav-menu {
+		display: block;
+		clear: both;
+		border-top: 1px solid;
+		border-top-color: #fff;
+	}
+
+	.main-navigation ul {
+            display: none;
+            padding-left: 0;
+	}
+	
+	.main-navigation ul li {
+		float: none;
+	}
+
+	.main-navigation ul li:hover > a {
+		background: $header-background;
+	}
+
+	.main-navigation ul li > a:hover {
+		background: $sub-menu-background;
+	}
+        
+	.main-navigation li { 
+		float: none; 
+	}
+
+	.main-navigation li a { 
+		padding: 1.3em 2em; 
+	}
+
+	.main-navigation li li a { 
+		padding-left: 4em; 
+	}
+
+	.main-navigation li li li a { 
+		padding-left: 6em; 
+	}
+
+	
+	.main-navigation ul ul,
+	.main-navigation ul ul ul {
+		position: relative;
+		top: inherit;
+		left: 0;
+		display: block;
+		float: none;
+		box-shadow: none;
+		background: $header-background;
+	}
+	
+	.main-navigation ul ul a { width: 100%; }
+
+	.main-navigation ul ul li a {
+		width: auto;
+	}
+
+	.main-navigation ul a:hover,
+	.main-navigation ul ul a:hover {
+		background: $sub-menu-background;
+	}
+
+	.main-navigation .current_page_ancestor { background: inherit; }
+
+	.main-navigation ul ul .current_page_parent {
+		color: inherit;
+		background: inherit;
+	}
+
+	.main-navigation .current_page_item > a,
+	.main-navigation .current_page_item > a:hover,
+	.main-navigation .current_page_item li:hover,
+	.main-navigation .current_page_parent .current_page_item > a  {
+		color: #fff;
+		background: $header-background; 
+	}
 }
