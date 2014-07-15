@@ -109,32 +109,48 @@
 
 @media screen and (max-width: 600px) {
 	.menu-toggle {
-            display: block;
-            float: right;
+            // display: block;
+            // float: right;
             height: 3.75em;
             padding: 0 1em;
-            font-weight: normal;
-            font-size: 14px;
-            font-size: 1.4rem;
-            text-decoration: none;
+            // font-weight: normal;
+            // font-size: 14px;
+            // font-size: 1.4rem;
+            // text-decoration: none;
             line-height: 3.75em;
-            color: white;
+            // color: white;
+            
+            display: block;
+            float: right;
+		    //width: 54px;
+		    //height: 54px;
+		    //padding: 12px;
+		    margin-right: 20px;
+		    color: $header-text;
+		    text-align: center;
+		    cursor: pointer;
+
+		    &:hover, &.active {
+	            background: $sub-menu-background;
+	        }
 	}
 
 	.main-navigation {
+		display: none;
 		float: none;
-	}
-        
-	.main-navigation.toggled .nav-menu {
-		display: block;
 		clear: both;
-		border-top: 1px solid;
-		border-top-color: #fff;
+		background: $sub-menu-background;
+
+		&.toggled {
+			//display: block; //handle by JS?
+			clear: both;
+			border-top: 1px solid;
+			border-top-color: $sub-menu-background;
+		}
 	}
 
 	.main-navigation ul {
-            display: none;
-            padding-left: 0;
+        padding-left: 0;
 	}
 	
 	.main-navigation ul li {
@@ -142,11 +158,12 @@
 	}
 
 	.main-navigation ul li:hover > a {
-		background: $header-background;
+		background: inherit;
 	}
 
 	.main-navigation ul li > a:hover {
-		background: $sub-menu-background;
+		background: $header-background; //$sub-menu-background;
+		color: $mobile-menu-current-page; //NEW
 	}
         
 	.main-navigation li { 
@@ -174,7 +191,7 @@
 		display: block;
 		float: none;
 		box-shadow: none;
-		background: $header-background;
+		background: inherit;
 	}
 	
 	.main-navigation ul ul a { width: 100%; }
@@ -185,7 +202,7 @@
 
 	.main-navigation ul a:hover,
 	.main-navigation ul ul a:hover {
-		background: $sub-menu-background;
+		background: $header-background; //$sub-menu-background;
 	}
 
 	.main-navigation .current_page_ancestor { background: inherit; }
@@ -196,10 +213,10 @@
 	}
 
 	.main-navigation .current_page_item > a,
+	.main-navigation .current_page_parent .current_page_item > a,
 	.main-navigation .current_page_item > a:hover,
-	.main-navigation .current_page_item li:hover,
-	.main-navigation .current_page_parent .current_page_item > a  {
-		color: #fff;
-		background: $header-background; 
+	.main-navigation .current-menu-item > a:hover {
+		background: $header-background;
+		color: $mobile-menu-current-page;
 	}
 }

@@ -24,7 +24,11 @@ $widget-area-tablet-width: 780px;
 $header-background: #333;
 $header-text: #fff;
 $sub-menu-background: lighten( $header-background, 10% );
+$header-search-background: #fff;
+$mobile-menu-current-page: #999;
 
+// Form fields and text areas
+$text-area-text: #666;
 
 // Supported Values for $layout:
 //  null | content-sidebar | sidebar-content

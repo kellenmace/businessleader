@@ -40,6 +40,7 @@
             clip: rect(1px, 1px, 1px, 1px);
         }
 
+
         .mobile-menu-icon:before {
             display: inline-block;
             font-style: normal;
@@ -51,5 +52,64 @@
             -webkit-font-smoothing: antialiased;
             content: '\f0c9';
         }
+    }
+
+    /* Header search */
+    .search-toggle {
+        float: right;
+        //width: 54px;
+        //height: 54px;
+        //padding: 12px;
+        margin-right: 20px;
+        color: $header-text;
+        text-align: center;
+        cursor: pointer;
+
+        height: 3.75em;
+        padding: 0 1em;
+        // font-weight: normal;
+        // font-size: 14px;
+        // font-size: 1.4rem;
+        // text-decoration: none;
+        line-height: 3.75em;
+
+        &:hover, &.active {
+            background: $sub-menu-background;
+        }
+    }
+
+    .search-box-wrapper {
+        clear: both;
+        z-index: 2;
+        width: 100%;
+        display: none;
+
+        .search-box {
+            padding: 1em;
+            background: $sub-menu-background;
+
+            .search-field {
+                max-width: 362px;
+                float: right;
+                padding: 1rem 2rem 1rem 4rem;
+                font-size: 20px;
+                font-size: 2rem;
+                background-color: $header-search-background;
+                border: 0;
+            }
+        }
+    }
+
+    input[type="search"] {
+        box-sizing: border-box;
+        width: 100%;
+        color: $text-area-text;
+    }
+
+    // Hides the search button on all pages that display it by default
+    .error404 .search-submit,
+    .search .search-submit,
+    .search-box .search-submit { 
+        display: none; 
     }
 }

@@ -144,10 +144,11 @@ a img {
 
 /* Text meant only for screen readers */
 .screen-reader-text {
-  clip: rect(1px 1px 1px 1px);
-  /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
-  position: absolute !important; }
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
 
 .screen-reader-text:hover,
 .screen-reader-text:active,
@@ -378,7 +379,7 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-  color: #666;
+  color: #666666;
   border: 1px solid #ccc;
   border-radius: 3px; }
 
@@ -467,7 +468,8 @@ textarea {
   width: 100%; }
 
 .site-header {
-  background: #333333; }
+  background: #333333;
+  /* Header search */ }
   .site-header .site-branding {
     padding: 1rem 3rem;
     text-align: left;
@@ -507,6 +509,41 @@ textarea {
       color: #fff;
       -webkit-font-smoothing: antialiased;
       content: '\f0c9'; }
+  .site-header .search-toggle {
+    float: right;
+    margin-right: 20px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    height: 3.75em;
+    padding: 0 1em;
+    line-height: 3.75em; }
+    .site-header .search-toggle:hover, .site-header .search-toggle.active {
+      background: #4d4d4d; }
+  .site-header .search-box-wrapper {
+    clear: both;
+    z-index: 2;
+    width: 100%;
+    display: none; }
+    .site-header .search-box-wrapper .search-box {
+      padding: 1em;
+      background: #4d4d4d; }
+      .site-header .search-box-wrapper .search-box .search-field {
+        max-width: 362px;
+        float: right;
+        padding: 1rem 2rem 1rem 4rem;
+        font-size: 20px;
+        font-size: 2rem;
+        background-color: white;
+        border: 0; }
+  .site-header input[type="search"] {
+    box-sizing: border-box;
+    width: 100%;
+    color: #666666; }
+  .site-header .error404 .search-submit,
+  .site-header .search .search-submit,
+  .site-header .search-box .search-submit {
+    display: none; }
 
 /* =Menu
 ----------------------------------------------- */
@@ -576,38 +613,40 @@ textarea {
 
 @media screen and (max-width: 600px) {
   .menu-toggle {
-    display: block;
-    float: right;
     height: 3.75em;
     padding: 0 1em;
-    font-weight: normal;
-    font-size: 14px;
-    font-size: 1.4rem;
-    text-decoration: none;
     line-height: 3.75em;
-    color: white; }
+    display: block;
+    float: right;
+    margin-right: 20px;
+    color: white;
+    text-align: center;
+    cursor: pointer; }
+    .menu-toggle:hover, .menu-toggle.active {
+      background: #4d4d4d; }
 
   .main-navigation {
-    float: none; }
-
-  .main-navigation.toggled .nav-menu {
-    display: block;
+    display: none;
+    float: none;
     clear: both;
-    border-top: 1px solid;
-    border-top-color: #fff; }
+    background: #4d4d4d; }
+    .main-navigation.toggled {
+      clear: both;
+      border-top: 1px solid;
+      border-top-color: #4d4d4d; }
 
   .main-navigation ul {
-    display: none;
     padding-left: 0; }
 
   .main-navigation ul li {
     float: none; }
 
   .main-navigation ul li:hover > a {
-    background: #333333; }
+    background: inherit; }
 
   .main-navigation ul li > a:hover {
-    background: #4d4d4d; }
+    background: #333333;
+    color: #999999; }
 
   .main-navigation li {
     float: none; }
@@ -629,7 +668,7 @@ textarea {
     display: block;
     float: none;
     box-shadow: none;
-    background: #333333; }
+    background: inherit; }
 
   .main-navigation ul ul a {
     width: 100%; }
@@ -639,7 +678,7 @@ textarea {
 
   .main-navigation ul a:hover,
   .main-navigation ul ul a:hover {
-    background: #4d4d4d; }
+    background: #333333; }
 
   .main-navigation .current_page_ancestor {
     background: inherit; }
@@ -649,11 +688,11 @@ textarea {
     background: inherit; }
 
   .main-navigation .current_page_item > a,
+  .main-navigation .current_page_parent .current_page_item > a,
   .main-navigation .current_page_item > a:hover,
-  .main-navigation .current_page_item li:hover,
-  .main-navigation .current_page_parent .current_page_item > a {
-    color: #fff;
-    background: #333333; } }
+  .main-navigation .current-menu-item > a:hover {
+    background: #333333;
+    color: #999999; } }
 /* =Content
 ----------------------------------------------- */
 .hentry {
