@@ -979,9 +979,24 @@ object {
  */
 .footer-widgets .widget {
   float: left;
-  width: 320px;
-  margin: 0 4rem 8rem 4rem; }
+  width: 290px;
+  margin: 0 1.5rem 3rem 1.5rem; }
+  @media screen and (max-width: 1044px) {
+    .footer-widgets .widget {
+      width: 250px; } }
+  @media screen and (max-width: 924px) {
+    .footer-widgets .widget {
+      width: 226px; } }
+  @media screen and (max-width: 797px) {
+    .footer-widgets .widget {
+      float: none;
+      width: 100%;
+      margin: 0 0 8rem; } }
 
+/* Footer widgets responsive */
+@media screen and (max-width: 797px) {
+  #footer-widgets {
+    width: 100% !important; } }
 /* =Infinite Scroll
 ----------------------------------------------- */
 /* Globally hidden elements when Infinite Scroll is supported and in use. */

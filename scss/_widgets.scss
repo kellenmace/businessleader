@@ -139,6 +139,26 @@
  */
 .footer-widgets .widget {
     float: left;
-    width: 320px;
-    margin: 0 4rem 8rem 4rem;
+    width: 290px; //320px;
+    margin: 0 1.5rem 3rem 1.5rem; //0 4rem 8rem 4rem;
+    @media screen and (max-width: 1044px) {
+    	width: 250px;
+    }
+    @media screen and (max-width: 924px) {
+    	width: 226px;
+    }
+    @media screen and (max-width: 797px) {
+    	float: none;
+        width: 100%;
+        margin: 0 0 8rem;
+    }
+}
+
+// @media of max-width 1044, .footer-widgets .widget { width = 226px }
+// THB One does this at 990px
+
+
+/* Footer widgets responsive */
+@media screen and (max-width: 797px) {
+    #footer-widgets { width: 100%!important; }
 }

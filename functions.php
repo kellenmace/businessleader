@@ -117,6 +117,8 @@ function bus_leader_scripts() {
 
 	wp_enqueue_script( 'bus_leader-hide-search', get_template_directory_uri() . '/js/hide-search.js', array('jquery'), '20141107', true );
 
+	wp_enqueue_script( 'bus_leader-masonry', get_template_directory_uri() . '/js/masonry-settings.js', array('masonry'), '20141707', true );
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
