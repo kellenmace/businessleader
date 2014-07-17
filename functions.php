@@ -83,6 +83,15 @@ function bus_leader_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer Widgets', 'bus_leader' ),
+		'description'   => __( 'Footer widget area appears in the footer of the site', 'bus_leader' ),
+		'id'            => 'sidebar-2',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
 }
 add_action( 'widgets_init', 'bus_leader_widgets_init' );
 

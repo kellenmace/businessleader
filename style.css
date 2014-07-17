@@ -178,7 +178,7 @@ input,
 select,
 textarea {
   font-family: roboto;
-  color: #404040;
+  color: #4d4d4d;
   font-size: 18px;
   font-size: 1.8rem;
   line-height: 1.5; }
@@ -292,12 +292,12 @@ img {
 
 /* Links */
 a {
-  color: royalblue; }
+  color: #4d4d4d; }
   a:hover, a:active, a:focus {
-    color: #132c76; }
+    color: black; }
 
 a:visited {
-  color: purple; }
+  color: #4d4d4d; }
 
 button,
 input,
@@ -411,11 +411,11 @@ textarea {
 
 .site-content .widget-area {
   /* Sidebar 1 */
-  width: 380px;
+  width: 342px;
   float: right;
   padding: 4rem;
   background: white; }
-  @media screen and (max-width: 1159px) {
+  @media screen and (max-width: 984px) {
     .site-content .widget-area {
       width: auto;
       max-width: 780px;
@@ -435,7 +435,7 @@ textarea {
   max-width: 78rem;
   padding: 0 4rem;
   margin: 0 auto; }
-  @media screen and (min-width: 1160px) and (max-width: 1539px) {
+  @media screen and (min-width: 985px) and (max-width: 1539px) {
     .entry-header,
     .entry-content,
     .entry-meta,
@@ -450,14 +450,14 @@ textarea {
   .content-area {
     width: 100%;
     float: left;
-    margin-left: -380px;
-    padding-left: 380px; } }
-@media screen and (min-width: 1160px) and (max-width: 1539px) {
+    margin-left: -342px;
+    padding-left: 342px; } }
+@media screen and (min-width: 985px) and (max-width: 1539px) {
   .content-area {
     width: 100%;
     float: left;
-    margin-left: -380px;
-    padding-left: 380px; } }
+    margin-left: -342px;
+    padding-left: 342px; } }
 
 .site-footer {
   clear: both;
@@ -531,8 +531,8 @@ textarea {
       .site-header .search-box-wrapper .search-box .search-field {
         max-width: 362px;
         float: right;
-        padding: 1rem 2rem 1rem 4rem;
-        font-size: 20px;
+        padding: 1rem 2rem 1rem 2rem;
+        font-size: 16px;
         font-size: 2rem;
         background-color: white;
         border: 0; }
@@ -862,16 +862,125 @@ object {
 .comment-content a {
   word-wrap: break-word; }
 
+.site-footer {
+  padding: 2em;
+  font-family: roboto;
+  font-size: 14px;
+  font-size: 1.75rem;
+  font-weight: 100;
+  color: white;
+  background: #333333; }
+  .site-footer a {
+    color: white; }
+
 /* =Widgets
 ----------------------------------------------- */
 .widget {
   margin: 0 0 60px;
-  /* Make sure select elements fit in widgets */
-  /* Search widget */ }
+  font-family: roboto;
+  font-size: 12px;
+  font-size: 1.5rem;
+  /* Make sure select elements fit in widgets */ }
   .widget select {
     max-width: 100%; }
-  .widget .widget-search .search-submit {
-    display: none; }
+  .widget a {
+    font-weight: 300;
+    text-decoration: none; }
+  .widget a:hover {
+    text-decoration: underline; }
+  .widget ul, .widget ol {
+    padding: 0;
+    margin: -1em 0 0;
+    list-style-type: none; }
+  .widget li {
+    padding: 0.5em 0 0; }
+  .widget li ul, .widget li ol {
+    margin-top: 0; }
+  .widget li li {
+    margin-left: 1.5em; }
+
+/* Search widget */
+.widget_search .search-field {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-size: 2rem;
+  color: #666666; }
+.widget_search .search-submit {
+  display: none; }
+.widget_search input[type="search"] {
+  color: #666; }
+
+.widget-title {
+  margin-bottom: 1em;
+  font-size: 18px;
+  font-size: 2.25rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  border-top: 1px solid #ccc; }
+
+.widget_recent_entries li:before,
+.widget_recent_comments li:before,
+.widget_archive li:before {
+  display: block;
+  float: left;
+  padding-top: 2px;
+  margin-left: -2.5em;
+  font-family: 'fontawesome';
+  font-size: 11px;
+  font-size: 1.375rem; }
+
+.widget_recent_entries li,
+.widget_recent_comments li {
+  margin: 0 0 .5em 2.4em; }
+
+.widget_recent_entries li:before {
+  content: "\f036"; }
+
+.widget_recent_comments li:before {
+  content: "\f075"; }
+
+.widget_archive li {
+  margin: 0 0 0 2.3em; }
+
+.widget_archive li:before {
+  content: "\f187"; }
+
+.widget_nav_menu a,
+.widget_pages a {
+  display: block;
+  padding: 0.75em 0;
+  border-bottom: solid 1px #e6e6e6; }
+
+.widget_nav_menu li,
+.widget_pages li {
+  padding-top: 0; }
+
+.widget_rss li {
+  margin-bottom: .5em; }
+.widget_rss .rss-date, .widget_rss cite {
+  display: block;
+  font-size: 85%;
+  color: #9d9d9d;
+  font-weight: 300;
+  font-style: italic; }
+
+.footer-widgets {
+  margin: 0 auto; }
+
+.footer-widgets .widget-title,
+.footer-widgets .widget a:hover {
+  color: white;
+  border-color: white; }
+
+/*
+ *	CHANGE THIS SO THAT THE FOOTER IS MORE RESPONSIVE, LIKE BIGFOOT
+ */
+.footer-widgets .widget {
+  float: left;
+  width: 320px;
+  margin: 0 4rem 8rem 4rem; }
 
 /* =Infinite Scroll
 ----------------------------------------------- */

@@ -1,0 +1,15 @@
+.site-footer {
+    padding: 2em;
+    font-family: $footer-font;
+    @include font-size(14);
+    font-weight: 100;
+    color: $footer-text;
+    background: $footer-background;
+
+    a {
+        color: $footer-text;
+    }
+}
+
+.site-info { 
+}

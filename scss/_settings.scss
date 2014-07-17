@@ -10,13 +10,13 @@ $header-font: $base-font; // you can refer to other variables
 $body-background: #fff;
 $site-main-background: #b2b2b2;
 $widget-area-background: #fff;
-$text-color: #404040;
+$text-color: #4d4d4d;
 $header-color: #000;
-$link-color: royalblue;
-$link-visited: purple;
+$link-color: $text-color;
+$link-visited: $text-color;
 
 // Media Queries
-$break-small: 1160px;
+$break-small: 985px;
 $break-large: 1540px;
 $widget-area-tablet-width: 780px;
 
@@ -24,20 +24,24 @@ $widget-area-tablet-width: 780px;
 $header-background: #333;
 $header-text: #fff;
 $sub-menu-background: lighten( $header-background, 10% );
-$header-search-background: #fff;
 $mobile-menu-current-page: #999;
 
 // Form fields and text areas
+$search-field-background: #fff;
 $text-area-text: #666;
+
+// Footer
+$footer-background: $header-background;
+$footer-text: $header-text;
+$footer-font: $base-font;
+
+// Widgets
+$widget-font: $base-font;
+$widget-link-color: $link-color;
+$widget-light-text: #9d9d9d;
 
 // Supported Values for $layout:
 //  null | content-sidebar | sidebar-content
 // $layout: null !default;
 $layout: content-sidebar;
 $vspacing: 60px;
-
-// Mixins
-@mixin font-size($sizeValue: 12 ){
-  font-size: $sizeValue + px; //fallback for old browsers
-  font-size: (0.125 * $sizeValue) + rem;
-}

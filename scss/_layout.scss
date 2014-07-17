@@ -6,7 +6,7 @@
 	}
 
 	.site-content .widget-area { /* Sidebar 1 */
-		width: 380px;
+		width: 342px;
 		float: right;
 		padding: 4rem;
 		background: $widget-area-background;
@@ -40,14 +40,14 @@
 		@media screen and (min-width: $break-large) {
 		    width: 100%;
 			float: left;
-			margin-left: -380px;
-			padding-left: 380px;
+			margin-left: -342px;
+			padding-left: 342px;
 		}
 		@media screen and (min-width: $break-small) and (max-width: $break-large - 1) {
 			width: 100%;
 	        float: left;
-	        margin-left: -380px;
-	        padding-left: 380px;
+	        margin-left: -342px;
+	        padding-left: 342px;
 		}
 	}
 
