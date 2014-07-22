@@ -2,15 +2,16 @@
 jQuery(document).ready(function($){
     var $container = $('#footer-widgets');
     var $masonryOn;
-    var $columnWidth = 400;
+    var $columnWidth = 50;
+    //var $gutter = 10;
     
-    if ($(document).width() > 879) { // TODO: Change this breakpoint for footer
+    if ($(document).width() > 819) { // TODO: Change this breakpoint for footer // was 879
         $masonryOn = true;
         runMasonry();
-    };
+    }
 
     $(window).resize( function() {
-        if ($(document).width() < 879) { // TODO: Change this breakpoint for footer
+        if ($(document).width() < 819) { // TODO: Change this breakpoint for footer
             if ($masonryOn){
                 $container.masonry('destroy');
                 $masonryOn = false;
@@ -26,6 +27,7 @@ jQuery(document).ready(function($){
         // initialize
         $container.masonry({
             columnWidth: $columnWidth,
+            //gutter: $gutter,
             itemSelector: '.widget',
             isFitWidth: true,
             isAnimated: true

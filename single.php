@@ -12,7 +12,7 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'content', 'single' ); ?>
+			<?php get_template_part( 'partials/content', 'single' ); ?>
 
 			<?php bus_leader_post_nav(); ?>
 

@@ -981,13 +981,16 @@ object {
   float: left;
   width: 290px;
   margin: 0 1.5rem 3rem 1.5rem; }
-  @media screen and (max-width: 1044px) {
+  @media screen and (max-width: 1119px) {
     .footer-widgets .widget {
       width: 250px; } }
-  @media screen and (max-width: 924px) {
+  @media screen and (max-width: 969px) {
     .footer-widgets .widget {
-      width: 226px; } }
-  @media screen and (max-width: 797px) {
+      width: 212px; } }
+  @media screen and (max-width: 819px) {
+    .footer-widgets .widget {
+      width: 202px; } }
+  @media screen and (max-width: 767px) {
     .footer-widgets .widget {
       float: none;
       width: 100%;
