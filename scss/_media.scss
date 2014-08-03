@@ -13,48 +13,79 @@
 }
 // Image Captions
 .wp-caption {
-	border: 1px solid #ccc;
 	margin-bottom: $vspacing;
 	max-width: 100%;
 
 	img[class*="wp-image-"] {
 		display: block;
-		margin: 1.2% auto 0;
-		max-width: 98%;
+		margin: 0 auto;
 	}
 	.wp-caption-text {
 		text-align: center;
-		margin: 0.8075em 0;
+		padding: 0.8075em 1em;
+	    font-size: 14px;
+	    font-size: 1.4rem;
+	    font-weight: 300;
+	    font-family: $base-font;
+	    background: $image-caption;
 	}
 }
 
 // Galleries
-.gallery {
+.site-main {
+	.gallery {
 
-	@extend %clearfix;
+		@extend %clearfix;
 
-	margin-bottom: $vspacing;
+		margin-bottom: $vspacing;
 
-	.gallery-item {
-		float: left;
+		.gallery-item {
+			float: left;
+			position: relative;    
+		    max-width: 100%;
+		    float: left;
+		    margin-right: 3.333333333%;
+		    margin-bottom: 3rem;
+		    background: #333;
+		    overflow: hidden;
 
-		.gallery-icon {
-			a { display: block; }
+		    &:hover .gallery-caption {
+		    	opacity: 1;
+		    }
 
-			img {
-				border: none;
-				height: auto;
-				margin-bottom: 0;
+			.gallery-icon {
+				a { display: block; }
+
+				img {
+					max-width: 100%;
+				    height: auto;
+				    display: block;
+				    margin: 0 auto;
+				    border: none;
+				}
+			}
+
+			.gallery-caption {
+				position: absolute;
+			    bottom: 0;
+			    left: 0;
+			    max-height: 45%;
+			    width: 100%;
+				margin: 0;
+				padding: 6px 8px;
+			    font-size: 12px;
+			    font-size: 1.2rem;
+			    font-family: $base-font;
+			    background: $image-caption;
+			    background-color: #000;
+			    background-color: hsla(0, 0%, 0%, .6);
+			    opacity: 0;
+			    line-height: 1.5;
+			    color: #fff;
+			    text-align: left;
 			}
 		}
-
-		.gallery-caption {
-			margin: 0;
-			text-align: center;
-		}
-
 	}
-
 }
 
 @mixin gallery_column ( $margin: 2, $num: 4 ){
@@ -75,9 +106,9 @@
    add_filter( 'use_default_gallery_style', '__return_false' );
 */
 
-@for $i from 2 through 9 {
-	@include gallery_column( 2, $i );
-}
+// @for $i from 2 through 9 {
+// 	@include gallery_column( 2, $i );
+// }
 
 /* Make sure embeds and iframes fit their containers */
 embed,

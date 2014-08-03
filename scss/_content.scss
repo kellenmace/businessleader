@@ -1,6 +1,132 @@
 /* =Content
 ----------------------------------------------- */
 
+/*
+ *  Posts and Pages
+ */
+
+// Typography
+.entry-header {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    @media screen and (max-width: $entry-text-small) {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .entry-title {
+        font-weight: 300;
+        font-size: 40px;
+        font-size: 4rem;
+        line-height: 1.3em;
+        color: $entry-title;
+        a {
+            text-decoration: none;
+        }
+        @media screen and (max-width: $entry-text-small) {
+            font-size: 32px;
+            font-size: 3.2rem;
+            line-height: 1.3em;
+        }
+    }
+}
+
+.entry-content {
+    a { 
+        text-decoration: underline; 
+    }
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: .4em;
+        font-weight: 300;
+    }
+    h1 {
+        font-size: 32px;
+        font-size: 3.2rem;
+        @media screen and (max-width: $entry-text-small) {
+            font-size: 28px;
+            font-size: 2.8rem;
+        }
+    }
+    h2 {
+        font-size: 30px;
+        font-size: 3.0rem;
+        @media screen and (max-width: $entry-text-small) {
+            font-size: 26px;
+            font-size: 2.6rem;
+        }
+    }
+    h3 {
+        font-size: 28px;
+        font-size: 2.8rem;
+        @media screen and (max-width: $entry-text-small) {
+            font-size: 24px;
+            font-size: 2.4rem;
+        }
+    }
+    h4 {
+        font-size: 26px;
+        font-size: 2.6rem;
+        @media screen and (max-width: $entry-text-small) {
+            font-size: 22px;
+            font-size: 2.2rem;
+        }
+    }
+    h5 {
+        font-size: 24px;
+        font-size: 2.4rem;
+        @media screen and (max-width: $entry-text-small) {
+            font-size: 20px;
+            font-size: 2rem;
+        }
+    }
+    h6 {
+        font-size: 22px;
+        font-size: 2.2rem;
+        @media screen and (max-width: $entry-text-small) {
+            font-size: 18px;
+            font-size: 1.8rem;
+        }
+    }
+    p, ul, ol {
+        font-size: 20px;
+        font-size: 2rem;
+        font-weight: 300;
+        line-height: 1.6em;
+        @media screen and (max-width: $entry-text-small) {
+            font-size: 18px;
+            font-size: 1.8rem;
+        }
+    }
+    blockquote {
+        p {
+            font-size: 25px;
+            font-size: 2.5rem;
+            line-height: 1.5em;
+            @media screen and (max-width: $entry-text-small) {
+                font-size: 19px;
+                font-size: 1.9rem;
+            }
+        }
+    }
+}
+
+// Meta
+.entry-footer {
+    font-family: $header-font;
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    a {
+        color: $entry-footer-links;
+        &:hover {
+            color: #000;
+        }
+    }
+}
+
+/*
+ *  Other
+ */
+
 .sticky {
 }
 .hentry {
@@ -16,28 +142,10 @@
 	}
 }
 .page-content,
-.entry-content,
 .entry-summary {
 	margin: $vspacing 0 0;
 }
 .page-links {
 	clear: both;
 	margin: 0 0 $vspacing;
-}
-
-
-// FROM LYNDA.COM LESSON
-.entry-header,
-.entry-content,
-.entry-meta,
-.entry-footer,
-.tag-links,
-.post-navigation,
-.comments-area,
-.paging-navigation {
-    position: relative;
-    max-width: 780px;
-    max-width: 78rem;
-    padding: 0 4rem;
-    margin: 0 auto;
 }

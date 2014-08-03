@@ -5,22 +5,24 @@
 		background: $site-main-background;
 	}
 
-	.site-content .widget-area { /* Sidebar 1 */
-		width: 342px;
-		float: right;
-		padding: 4rem;
-		background: $widget-area-background;
-		@media screen and (max-width: $break-small - 1) {
-			width: auto;
-			max-width: $widget-area-tablet-width;
-			float: none;
-			margin: 1em auto 0 auto;
+	.site-content {
+		padding-bottom: 4em;
+		.widget-area { /* Sidebar 1 */
+			width: 342px;
+			float: right;
+			padding: 4rem;
+			background: $widget-area-background;
+			@media screen and (max-width: $break-small - 1) {
+				width: auto;
+				max-width: $widget-area-tablet-width;
+				float: none;
+				margin: 1em auto 0 auto;
+			}
 		}
 	}
 
     .entry-header,
     .entry-content,
-    .entry-meta,
     .entry-footer,
     .tag-links,
     .post-navigation,
@@ -32,8 +34,23 @@
 	    padding: 0 4rem;
 	    margin: 0 auto;
     	@media screen and (min-width: $break-small) and (max-width: $break-large - 1) {
-        	margin-right: 0;
+        	margin-right: 0; // TODO
     	}
+    }
+
+    .entry-meta {
+    	position: relative;
+	    max-width: 780px;
+	    max-width: 78rem;
+	    margin: 0 auto;
+	    color: #999;
+	    font-weight: 300;
+		font-size: 14px;
+	    a {
+	    	color: #999;
+	    	font-weight: 300;
+			font-size: 14px;
+	    }
     }
 	    
 	.content-area {

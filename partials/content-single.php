@@ -10,6 +10,13 @@
 
 		<div class="entry-meta">
 			<?php bus_leader_posted_on(); ?>
+			<?php
+			    if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) { 
+			        echo '<span class="comments-link"> • ';
+			        comments_popup_link( '', __( '1 Comment', 'bus_leader' ), __( '% Comments', 'bus_leader' ) );
+			        echo '</span>';
+			    }
+			?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
@@ -34,15 +41,15 @@
 			if ( ! bus_leader_categorized_blog() ) {
 				// This blog only has 1 category so we just need to worry about tags in the meta text
 				if ( '' != $tag_list ) {
-					$meta_text = __( 'Tagged %2$s.', 'bus_leader' );
+					$meta_text = __( 'Tagged %2$s', 'bus_leader' );
 				}
 
 			} else {
 				// But this blog has loads of categories so we should probably display them here
 				if ( '' != $tag_list ) {
-					$meta_text = __( 'Filed under %1$s. Tagged %2$s.', 'bus_leader' );
+					$meta_text = __( 'Filed under %1$s • Tagged %2$s', 'bus_leader' );
 				} else {
-					$meta_text = __( 'Filed under %1$s.', 'bus_leader' );
+					$meta_text = __( 'Filed under %1$s', 'bus_leader' );
 				}
 
 			} // end check for categories on this blog

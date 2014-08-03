@@ -47,6 +47,7 @@ dt {
 }
 dd {
 	margin: 0 $vspacing $vspacing;
+	font-weight: 300;
 }
 b, strong {
 	font-weight: bold;
@@ -55,13 +56,73 @@ dfn, cite, em, i {
 	font-style: italic;
 }
 blockquote {
-	margin: 0 $vspacing;
+    padding: 1em 1.5em;
+    margin-bottom: 1em;
+    font-style: italic;
+    border-top: 1px solid $horizontal-line;
+    border-bottom: 1px solid $horizontal-line;
+    p {
+    	margin: 0;
+    	&:before {
+    		content: "\f10d";
+    		display: block;
+		    float: left;
+		    margin-right: 1.5em;
+		    font-family: 'fontawesome';
+		    font-size: 16px;
+		    font-size: 1.6rem;
+    	}
+    }
+    em { 
+	    font-style: normal; 
+	}
+	cite {
+	    display: block;
+	    margin-top: 1em;
+	    margin-left: 40%;
+	    font-size: 16px;
+	    font-size: 1.6rem;
+	    font-family: $base-font;
+	    font-style: normal;
+	    line-height: 1.5em;
+	    text-align: right;
+	}
+	&.alignleft {
+	    width: 50%;
+	    float: left;
+	    padding: 1em 0 0;
+	    margin-right: 2em;
+	    @media screen and (max-width: 780px) {
+			width: 40%;
+		}
+		@media screen and (max-width:600px) {
+		        width: 100%;
+		        padding: 1em 1.5em 0;   
+		}
+	}
+	&.alignright {
+	    width: 50%;
+	    float: right;
+	    padding: 1em 0 0;
+	    margin-left: 2em;
+	    @media screen and (max-width: 780px) {
+			width: 40%;
+		}
+		@media screen and (max-width:600px) {
+		        width: 100%;
+		        padding: 1em 1.5em 0;   
+		}
+	}
 }
 address {
 	margin: 0 0 $vspacing;
+	font-weight: 300;
 }
 pre {
 	background: #eee;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px; /* future proofing */
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
 	font-size: 1.5rem;
@@ -111,6 +172,9 @@ table {
 }
 th {
 	font-weight: bold;
+}
+caption, th, td {
+	font-weight: 300;
 }
 img {
 	height: auto; /* Make sure images are scaled correctly. */

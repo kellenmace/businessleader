@@ -7,13 +7,58 @@
 
 	.nav-previous {
 		float: left;
-		width: 50%;
+		width: 49%;
+		border: 2px solid #ccc;
+		border-radius: 5px;
+		padding: 5px;
+
+		@media screen and (max-width: $prev-next-nav-small) {
+			width: 100%;
+			text-align: center;
+		}
+
+		&:hover {
+			border-color: #000;
+		}
+
+		&:hover a {
+			color: #000;
+		}
+
+		a {
+			color: #ccc;
+			font-weight: 400;
+			text-decoration: none;
+		}
 	}
 
 	.nav-next {
 		float: right;
 		text-align: right;
-		width: 50%;
-	}
+		width: 49%;
+		border: 2px solid #ccc;
+		border-radius: 5px;
+		padding: 5px;
 
+		@media screen and (max-width: $prev-next-nav-small) {
+			clear: both;
+			width: 100%;
+			margin-top: 10px;
+			text-align: center;
+		}
+
+		&:hover {
+			border-color: #000;
+		}
+
+		&:hover a {
+			color: #000;
+		}
+
+		a {
+			color: #ccc;
+			font-weight: 400;
+			text-decoration: none;
+		}
+	}
 }

@@ -3,13 +3,13 @@
 // yourself. This means that changes that should be small, such as tweaking the
 // coloring or the sizing, can be done in one place, not all over the stylesheet.
 
-$base-font: roboto;
-$header-font: $base-font; // you can refer to other variables
+$base-font: 'Roboto', sans-serif;
+$header-font: $base-font;
 
-// Case color scheme
+// Base color scheme
 $body-background: #fff;
-$site-main-background: #b2b2b2;
-$widget-area-background: #fff;
+$site-main-background: #fff;
+$widget-area-background: #f9f9f9;
 $text-color: #4d4d4d;
 $header-color: #000;
 $link-color: $text-color;
@@ -19,12 +19,18 @@ $link-visited: $text-color;
 $break-small: 985px;
 $break-large: 1540px;
 $widget-area-tablet-width: 780px;
+$entry-text-small: 680px;
+$prev-next-nav-small: 600px;
 
 // Header
 $header-background: #333;
 $header-text: #fff;
 $sub-menu-background: lighten( $header-background, 10% );
 $mobile-menu-current-page: #999;
+
+// Content
+$entry-title: #000;
+$entry-footer-links: #333;
 
 // Form fields and text areas
 $search-field-background: #fff;
@@ -40,8 +46,12 @@ $widget-font: $base-font;
 $widget-link-color: $link-color;
 $widget-light-text: #9d9d9d;
 
+// Other
+$horizontal-line: #ccc;
+$image-caption: #e5e5e5;
+
 // Supported Values for $layout:
 //  null | content-sidebar | sidebar-content
 // $layout: null !default;
 $layout: content-sidebar;
-$vspacing: 60px;
+$vspacing: 60px; // try 1.5em?

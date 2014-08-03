@@ -1,4 +1,4 @@
-/*!
+/*
 Theme Name: Business Leader
 Theme URI: https://github.com/kellenmace/businessleader
 Author: Kellen Mace
@@ -108,12 +108,12 @@ a img {
 .comment-content:before,
 .site-header:before,
 .site-content:before,
-.site-footer:before, .gallery:before, .clear:after,
+.site-footer:before, .site-main .gallery:before, .clear:after,
 .entry-content:after,
 .comment-content:after,
 .site-header:after,
 .site-content:after,
-.site-footer:after, .gallery:after {
+.site-footer:after, .site-main .gallery:after {
   content: "";
   display: table; }
 .clear:after,
@@ -121,7 +121,7 @@ a img {
 .comment-content:after,
 .site-header:after,
 .site-content:after,
-.site-footer:after, .gallery:after {
+.site-footer:after, .site-main .gallery:after {
   clear: both; }
 
 /* =Global
@@ -177,7 +177,7 @@ button,
 input,
 select,
 textarea {
-  font-family: roboto;
+  font-family: "Roboto", sans-serif;
   color: #4d4d4d;
   font-size: 18px;
   font-size: 1.8rem;
@@ -185,7 +185,7 @@ textarea {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: roboto;
+  font-family: "Roboto", sans-serif;
   color: black;
   font-weight: 700;
   clear: both; }
@@ -218,7 +218,8 @@ dt {
   font-weight: bold; }
 
 dd {
-  margin: 0 60px 60px; }
+  margin: 0 60px 60px;
+  font-weight: 300; }
 
 b, strong {
   font-weight: bold; }
@@ -227,13 +228,68 @@ dfn, cite, em, i {
   font-style: italic; }
 
 blockquote {
-  margin: 0 60px; }
+  padding: 1em 1.5em;
+  margin-bottom: 1em;
+  font-style: italic;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc; }
+  blockquote p {
+    margin: 0; }
+    blockquote p:before {
+      content: "\f10d";
+      display: block;
+      float: left;
+      margin-right: 1.5em;
+      font-family: 'fontawesome';
+      font-size: 16px;
+      font-size: 1.6rem; }
+  blockquote em {
+    font-style: normal; }
+  blockquote cite {
+    display: block;
+    margin-top: 1em;
+    margin-left: 40%;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    line-height: 1.5em;
+    text-align: right; }
+  blockquote.alignleft {
+    width: 50%;
+    float: left;
+    padding: 1em 0 0;
+    margin-right: 2em; }
+    @media screen and (max-width: 780px) {
+      blockquote.alignleft {
+        width: 40%; } }
+    @media screen and (max-width: 600px) {
+      blockquote.alignleft {
+        width: 100%;
+        padding: 1em 1.5em 0; } }
+  blockquote.alignright {
+    width: 50%;
+    float: right;
+    padding: 1em 0 0;
+    margin-left: 2em; }
+    @media screen and (max-width: 780px) {
+      blockquote.alignright {
+        width: 40%; } }
+    @media screen and (max-width: 600px) {
+      blockquote.alignright {
+        width: 100%;
+        padding: 1em 1.5em 0; } }
 
 address {
-  margin: 0 0 60px; }
+  margin: 0 0 60px;
+  font-weight: 300; }
 
 pre {
   background: #eee;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  /* future proofing */
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 15px;
   font-size: 1.5rem;
@@ -283,6 +339,9 @@ table {
 
 th {
   font-weight: bold; }
+
+caption, th, td {
+  font-weight: 300; }
 
 img {
   height: auto;
@@ -407,24 +466,25 @@ textarea {
   width: 98%; }
 
 .site-main {
-  background: #b2b2b2; }
-
-.site-content .widget-area {
-  /* Sidebar 1 */
-  width: 342px;
-  float: right;
-  padding: 4rem;
   background: white; }
-  @media screen and (max-width: 984px) {
-    .site-content .widget-area {
-      width: auto;
-      max-width: 780px;
-      float: none;
-      margin: 1em auto 0 auto; } }
+
+.site-content {
+  padding-bottom: 4em; }
+  .site-content .widget-area {
+    /* Sidebar 1 */
+    width: 342px;
+    float: right;
+    padding: 4rem;
+    background: #f9f9f9; }
+    @media screen and (max-width: 984px) {
+      .site-content .widget-area {
+        width: auto;
+        max-width: 780px;
+        float: none;
+        margin: 1em auto 0 auto; } }
 
 .entry-header,
 .entry-content,
-.entry-meta,
 .entry-footer,
 .tag-links,
 .post-navigation,
@@ -438,13 +498,25 @@ textarea {
   @media screen and (min-width: 985px) and (max-width: 1539px) {
     .entry-header,
     .entry-content,
-    .entry-meta,
     .entry-footer,
     .tag-links,
     .post-navigation,
     .comments-area,
     .paging-navigation {
       margin-right: 0; } }
+
+.entry-meta {
+  position: relative;
+  max-width: 780px;
+  max-width: 78rem;
+  margin: 0 auto;
+  color: #999;
+  font-weight: 300;
+  font-size: 14px; }
+  .entry-meta a {
+    color: #999;
+    font-weight: 300;
+    font-size: 14px; }
 
 @media screen and (min-width: 1540px) {
   .content-area {
@@ -531,9 +603,10 @@ textarea {
       .site-header .search-box-wrapper .search-box .search-field {
         max-width: 362px;
         float: right;
-        padding: 1rem 2rem 1rem 2rem;
-        font-size: 16px;
-        font-size: 2rem;
+        padding: 0.5rem 1rem;
+        font-size: 21px;
+        font-size: 2.1rem;
+        font-weight: 300;
         background-color: white;
         border: 0; }
   .site-header input[type="search"] {
@@ -551,7 +624,7 @@ textarea {
   position: relative;
   float: right;
   display: block;
-  font-family: roboto;
+  font-family: "Roboto", sans-serif;
   font-weight: 100;
   text-transform: uppercase; }
   .main-navigation ul {
@@ -695,6 +768,108 @@ textarea {
     color: #999999; } }
 /* =Content
 ----------------------------------------------- */
+/*
+ *  Posts and Pages
+ */
+.entry-header {
+  margin-top: 40px;
+  margin-bottom: 40px; }
+  @media screen and (max-width: 680px) {
+    .entry-header {
+      margin-top: 25px;
+      margin-bottom: 25px; } }
+  .entry-header .entry-title {
+    font-weight: 300;
+    font-size: 40px;
+    font-size: 4rem;
+    line-height: 1.3em;
+    color: black; }
+    .entry-header .entry-title a {
+      text-decoration: none; }
+    @media screen and (max-width: 680px) {
+      .entry-header .entry-title {
+        font-size: 32px;
+        font-size: 3.2rem;
+        line-height: 1.3em; } }
+
+.entry-content a {
+  text-decoration: underline; }
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
+  margin-bottom: .4em;
+  font-weight: 300; }
+.entry-content h1 {
+  font-size: 32px;
+  font-size: 3.2rem; }
+  @media screen and (max-width: 680px) {
+    .entry-content h1 {
+      font-size: 28px;
+      font-size: 2.8rem; } }
+.entry-content h2 {
+  font-size: 30px;
+  font-size: 3.0rem; }
+  @media screen and (max-width: 680px) {
+    .entry-content h2 {
+      font-size: 26px;
+      font-size: 2.6rem; } }
+.entry-content h3 {
+  font-size: 28px;
+  font-size: 2.8rem; }
+  @media screen and (max-width: 680px) {
+    .entry-content h3 {
+      font-size: 24px;
+      font-size: 2.4rem; } }
+.entry-content h4 {
+  font-size: 26px;
+  font-size: 2.6rem; }
+  @media screen and (max-width: 680px) {
+    .entry-content h4 {
+      font-size: 22px;
+      font-size: 2.2rem; } }
+.entry-content h5 {
+  font-size: 24px;
+  font-size: 2.4rem; }
+  @media screen and (max-width: 680px) {
+    .entry-content h5 {
+      font-size: 20px;
+      font-size: 2rem; } }
+.entry-content h6 {
+  font-size: 22px;
+  font-size: 2.2rem; }
+  @media screen and (max-width: 680px) {
+    .entry-content h6 {
+      font-size: 18px;
+      font-size: 1.8rem; } }
+.entry-content p, .entry-content ul, .entry-content ol {
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.6em; }
+  @media screen and (max-width: 680px) {
+    .entry-content p, .entry-content ul, .entry-content ol {
+      font-size: 18px;
+      font-size: 1.8rem; } }
+.entry-content blockquote p {
+  font-size: 25px;
+  font-size: 2.5rem;
+  line-height: 1.5em; }
+  @media screen and (max-width: 680px) {
+    .entry-content blockquote p {
+      font-size: 19px;
+      font-size: 1.9rem; } }
+
+.entry-footer {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-size: 1.5rem;
+  font-weight: 300; }
+  .entry-footer a {
+    color: #333333; }
+    .entry-footer a:hover {
+      color: #000; }
+
+/*
+ *  Other
+ */
 .hentry {
   margin: 0 0 60px; }
 
@@ -706,27 +881,12 @@ textarea {
   display: inline; }
 
 .page-content,
-.entry-content,
 .entry-summary {
   margin: 60px 0 0; }
 
 .page-links {
   clear: both;
   margin: 0 0 60px; }
-
-.entry-header,
-.entry-content,
-.entry-meta,
-.entry-footer,
-.tag-links,
-.post-navigation,
-.comments-area,
-.paging-navigation {
-  position: relative;
-  max-width: 780px;
-  max-width: 78rem;
-  padding: 0 4rem;
-  margin: 0 auto; }
 
 /* =Asides
 ----------------------------------------------- */
@@ -744,100 +904,65 @@ textarea {
   padding: 0; }
 
 .wp-caption {
-  border: 1px solid #ccc;
   margin-bottom: 60px;
   max-width: 100%; }
   .wp-caption img[class*="wp-image-"] {
     display: block;
-    margin: 1.2% auto 0;
-    max-width: 98%; }
+    margin: 0 auto; }
   .wp-caption .wp-caption-text {
     text-align: center;
-    margin: 0.8075em 0; }
+    padding: 0.8075em 1em;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    background: #e5e5e5; }
 
-.gallery {
+.site-main .gallery {
   margin-bottom: 60px; }
-  .gallery .gallery-item {
-    float: left; }
-    .gallery .gallery-item .gallery-icon a {
+  .site-main .gallery .gallery-item {
+    float: left;
+    position: relative;
+    max-width: 100%;
+    float: left;
+    margin-right: 3.333333333%;
+    margin-bottom: 3rem;
+    background: #333;
+    overflow: hidden; }
+    .site-main .gallery .gallery-item:hover .gallery-caption {
+      opacity: 1; }
+    .site-main .gallery .gallery-item .gallery-icon a {
       display: block; }
-    .gallery .gallery-item .gallery-icon img {
-      border: none;
+    .site-main .gallery .gallery-item .gallery-icon img {
+      max-width: 100%;
       height: auto;
-      margin-bottom: 0; }
-    .gallery .gallery-item .gallery-caption {
+      display: block;
+      margin: 0 auto;
+      border: none; }
+    .site-main .gallery .gallery-item .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      max-height: 45%;
+      width: 100%;
       margin: 0;
-      text-align: center; }
+      padding: 6px 8px;
+      font-size: 12px;
+      font-size: 1.2rem;
+      font-family: "Roboto", sans-serif;
+      background: #e5e5e5;
+      background-color: #000;
+      background-color: rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      line-height: 1.5;
+      color: #fff;
+      text-align: left; }
 
 /* Fluid Gallery Columns
    works well if you remove the default gallery styling
    by adding the following to your functions.php
    add_filter( 'use_default_gallery_style', '__return_false' );
 */
-.gallery-columns-2 .gallery-item {
-  width: 49%;
-  margin-right: 2; }
-
-.gallery-columns-2 .gallery-item:nth-of-type(2n - 2) {
-  margin-right: 0;
-  clear: right; }
-
-.gallery-columns-3 .gallery-item {
-  width: 32%;
-  margin-right: 2; }
-
-.gallery-columns-3 .gallery-item:nth-of-type(3n - 3) {
-  margin-right: 0;
-  clear: right; }
-
-.gallery-columns-4 .gallery-item {
-  width: 23.5%;
-  margin-right: 2; }
-
-.gallery-columns-4 .gallery-item:nth-of-type(4n - 4) {
-  margin-right: 0;
-  clear: right; }
-
-.gallery-columns-5 .gallery-item {
-  width: 18.4%;
-  margin-right: 2; }
-
-.gallery-columns-5 .gallery-item:nth-of-type(5n - 5) {
-  margin-right: 0;
-  clear: right; }
-
-.gallery-columns-6 .gallery-item {
-  width: 15%;
-  margin-right: 2; }
-
-.gallery-columns-6 .gallery-item:nth-of-type(6n - 6) {
-  margin-right: 0;
-  clear: right; }
-
-.gallery-columns-7 .gallery-item {
-  width: 12.57143%;
-  margin-right: 2; }
-
-.gallery-columns-7 .gallery-item:nth-of-type(7n - 7) {
-  margin-right: 0;
-  clear: right; }
-
-.gallery-columns-8 .gallery-item {
-  width: 10.75%;
-  margin-right: 2; }
-
-.gallery-columns-8 .gallery-item:nth-of-type(8n - 8) {
-  margin-right: 0;
-  clear: right; }
-
-.gallery-columns-9 .gallery-item {
-  width: 9.33333%;
-  margin-right: 2; }
-
-.gallery-columns-9 .gallery-item:nth-of-type(9n - 9) {
-  margin-right: 0;
-  clear: right; }
-
 /* Make sure embeds and iframes fit their containers */
 embed,
 iframe,
@@ -851,11 +976,43 @@ object {
   overflow: hidden; }
   .site-main [class*="navigation"] .nav-previous {
     float: left;
-    width: 50%; }
+    width: 49%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 5px; }
+    @media screen and (max-width: 600px) {
+      .site-main [class*="navigation"] .nav-previous {
+        width: 100%;
+        text-align: center; } }
+    .site-main [class*="navigation"] .nav-previous:hover {
+      border-color: #000; }
+    .site-main [class*="navigation"] .nav-previous:hover a {
+      color: #000; }
+    .site-main [class*="navigation"] .nav-previous a {
+      color: #ccc;
+      font-weight: 400;
+      text-decoration: none; }
   .site-main [class*="navigation"] .nav-next {
     float: right;
     text-align: right;
-    width: 50%; }
+    width: 49%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 5px; }
+    @media screen and (max-width: 600px) {
+      .site-main [class*="navigation"] .nav-next {
+        clear: both;
+        width: 100%;
+        margin-top: 10px;
+        text-align: center; } }
+    .site-main [class*="navigation"] .nav-next:hover {
+      border-color: #000; }
+    .site-main [class*="navigation"] .nav-next:hover a {
+      color: #000; }
+    .site-main [class*="navigation"] .nav-next a {
+      color: #ccc;
+      font-weight: 400;
+      text-decoration: none; }
 
 /* =Comments
 ----------------------------------------------- */
@@ -864,7 +1021,7 @@ object {
 
 .site-footer {
   padding: 2em;
-  font-family: roboto;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-size: 1.75rem;
   font-weight: 100;
@@ -877,7 +1034,7 @@ object {
 ----------------------------------------------- */
 .widget {
   margin: 0 0 60px;
-  font-family: roboto;
+  font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-size: 1.5rem;
   /* Make sure select elements fit in widgets */ }
@@ -903,9 +1060,10 @@ object {
 .widget_search .search-field {
   width: 100%;
   box-sizing: border-box;
-  padding: 10px 16px;
-  font-size: 16px;
+  padding: 0.5rem 1rem;
+  font-size: 20px;
   font-size: 2rem;
+  font-weight: 300;
   color: #666666; }
 .widget_search .search-submit {
   display: none; }
@@ -918,7 +1076,7 @@ object {
   font-size: 2.25rem;
   font-weight: 100;
   text-transform: uppercase;
-  border-top: 1px solid #ccc; }
+  border-top: 1px solid #cccccc; }
 
 .widget_recent_entries li:before,
 .widget_recent_comments li:before,
