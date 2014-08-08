@@ -49,13 +49,20 @@ function bus_leader_post_nav() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'bus_leader' ); ?></h1>
-		<div class="nav-links">
-			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'bus_leader' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'bus_leader' ) );
-			?>
-		</div><!-- .nav-links -->
+		<div class="post-nav-box clear">
+			<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'bus_leader' ); ?></h1>
+			<div class="nav-links">
+				<?php
+					// previous_post_link( '<div class="nav-previous">	%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'bus_leader' ) );
+					// next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'bus_leader' ) );
+					// previous_post_link( '<div class="nav-previous"><div class="nav-indicator">' . _x( ' Previous Post', 'Previous post', 'bus_leader' ) . '</div><h1>%link</h1></div>', '%title' );
+					previous_post_link( '<div class="nav-previous"><div class="nav-indicator">%link</div>', _x( 'Previous Post', 'Previous post', 'bus_leader' ) );
+					previous_post_link( '<h1>%link</h1></div>', '%title' );
+					next_post_link(		'<div class="nav-next"><div class="nav-indicator">%link</div>', _x( 'Next Post', 'Next post', 'bus_leader' ) );
+					next_post_link(		'<h1>%link</h1></div>', '%title' );
+				?>
+			</div><!-- .nav-links -->
+		</div><!-- .post-nav-box -->
 	</nav><!-- .navigation -->
 	<?php
 }

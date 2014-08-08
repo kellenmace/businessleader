@@ -2,63 +2,91 @@
 ----------------------------------------------- */
 
 .site-main [class*="navigation"] {
-	margin: 0 0 $vspacing;
+	// margin: 0 0 $vspacing;
 	overflow: hidden;
 
-	.nav-previous {
-		float: left;
-		width: 49%;
-		border: 2px solid #ccc;
-		border-radius: 5px;
-		padding: 5px;
+	.post-nav-box {
+	    padding: 1em 0;
+	    margin-bottom: 4em;
+	    border-top: 1px solid $horizontal-line;
+	    border-bottom: 1px solid $horizontal-line;
+	    a {
+			color: #ccc;
+			font-weight: 300;
+			text-decoration: none;
+		}
+	}
 
+	.nav-indicator {
+		text-transform: uppercase;
+		font-size: 2rem;
+		font-weight: 100;
+		color: $post-navigation-text;
+	}
+	
+	.nav-previous { // TODO: put inside of .post-nav-box so that it doesn't apply to page or comment navigation?
+		float: left;
+		width: 50%;
+		padding-right: 10px;
 		@media screen and (max-width: $prev-next-nav-small) {
 			width: 100%;
 			text-align: center;
 		}
 
-		&:hover {
-			border-color: #000;
-		}
-
+		&:hover .nav-indicator,
 		&:hover a {
 			color: #000;
 		}
 
-		a {
-			color: #ccc;
-			font-weight: 400;
-			text-decoration: none;
+		.nav-indicator {
+			&:before {
+				font-family: 'Fontawesome';
+				content: '\f104';
+				-webkit-font-smoothing: antialiased;
+				padding-right: 10px;
+				vertical-align: top;
+			}
+			a {
+				font-weight: 100;
+			}
+		}
+
+		h1 a {
+			font-style: italic;
 		}
 	}
 
 	.nav-next {
 		float: right;
 		text-align: right;
-		width: 49%;
-		border: 2px solid #ccc;
-		border-radius: 5px;
-		padding: 5px;
-
+		width: 50%;
+		padding-left: 10px;
 		@media screen and (max-width: $prev-next-nav-small) {
 			clear: both;
 			width: 100%;
-			margin-top: 10px;
+			margin-top: 15px;
 			text-align: center;
 		}
 
-		&:hover {
-			border-color: #000;
-		}
-
+		&:hover .nav-indicator,
 		&:hover a {
 			color: #000;
 		}
 
-		a {
-			color: #ccc;
-			font-weight: 400;
-			text-decoration: none;
+		.nav-indicator a {
+			font-weight: 100;
+		}
+
+		.nav-indicator:after {
+			font-family: 'Fontawesome';
+			content: '\f105';
+			-webkit-font-smoothing: antialiased;
+			padding-left: 10px;
+			vertical-align: top;
+		}
+
+		h1 a {
+			font-style: italic;
 		}
 	}
 }

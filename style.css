@@ -972,47 +972,64 @@ object {
 /* =Navigation
 ----------------------------------------------- */
 .site-main [class*="navigation"] {
-  margin: 0 0 60px;
   overflow: hidden; }
+  .site-main [class*="navigation"] .post-nav-box {
+    padding: 1em 0;
+    margin-bottom: 4em;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc; }
+    .site-main [class*="navigation"] .post-nav-box a {
+      color: #ccc;
+      font-weight: 300;
+      text-decoration: none; }
+  .site-main [class*="navigation"] .nav-indicator {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 100;
+    color: #cccccc; }
   .site-main [class*="navigation"] .nav-previous {
     float: left;
-    width: 49%;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    padding: 5px; }
+    width: 50%;
+    padding-right: 10px; }
     @media screen and (max-width: 600px) {
       .site-main [class*="navigation"] .nav-previous {
         width: 100%;
         text-align: center; } }
-    .site-main [class*="navigation"] .nav-previous:hover {
-      border-color: #000; }
-    .site-main [class*="navigation"] .nav-previous:hover a {
+    .site-main [class*="navigation"] .nav-previous:hover .nav-indicator, .site-main [class*="navigation"] .nav-previous:hover a {
       color: #000; }
-    .site-main [class*="navigation"] .nav-previous a {
-      color: #ccc;
-      font-weight: 400;
-      text-decoration: none; }
+    .site-main [class*="navigation"] .nav-previous .nav-indicator:before {
+      font-family: 'Fontawesome';
+      content: '\f104';
+      -webkit-font-smoothing: antialiased;
+      padding-right: 10px;
+      vertical-align: top; }
+    .site-main [class*="navigation"] .nav-previous .nav-indicator a {
+      font-weight: 100; }
+    .site-main [class*="navigation"] .nav-previous h1 a {
+      font-style: italic; }
   .site-main [class*="navigation"] .nav-next {
     float: right;
     text-align: right;
-    width: 49%;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    padding: 5px; }
+    width: 50%;
+    padding-left: 10px; }
     @media screen and (max-width: 600px) {
       .site-main [class*="navigation"] .nav-next {
         clear: both;
         width: 100%;
-        margin-top: 10px;
+        margin-top: 15px;
         text-align: center; } }
-    .site-main [class*="navigation"] .nav-next:hover {
-      border-color: #000; }
-    .site-main [class*="navigation"] .nav-next:hover a {
+    .site-main [class*="navigation"] .nav-next:hover .nav-indicator, .site-main [class*="navigation"] .nav-next:hover a {
       color: #000; }
-    .site-main [class*="navigation"] .nav-next a {
-      color: #ccc;
-      font-weight: 400;
-      text-decoration: none; }
+    .site-main [class*="navigation"] .nav-next .nav-indicator a {
+      font-weight: 100; }
+    .site-main [class*="navigation"] .nav-next .nav-indicator:after {
+      font-family: 'Fontawesome';
+      content: '\f105';
+      -webkit-font-smoothing: antialiased;
+      padding-left: 10px;
+      vertical-align: top; }
+    .site-main [class*="navigation"] .nav-next h1 a {
+      font-style: italic; }
 
 /* =Comments
 ----------------------------------------------- */
