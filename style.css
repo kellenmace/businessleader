@@ -186,7 +186,7 @@ textarea {
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto", sans-serif;
-  color: black;
+  color: #333333;
   font-weight: 700;
   clear: both; }
 
@@ -783,7 +783,7 @@ textarea {
     font-size: 40px;
     font-size: 4rem;
     line-height: 1.3em;
-    color: black; }
+    color: #333333; }
     .entry-header .entry-title a {
       text-decoration: none; }
     @media screen and (max-width: 680px) {
@@ -791,6 +791,8 @@ textarea {
         font-size: 32px;
         font-size: 3.2rem;
         line-height: 1.3em; } }
+  .entry-header .entry-meta a:hover {
+    color: #333333; }
 
 .entry-content a {
   text-decoration: underline; }
@@ -861,11 +863,26 @@ textarea {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-size: 1.5rem;
-  font-weight: 300; }
+  font-weight: 300;
+  color: #9d9d9d; }
   .entry-footer a {
-    color: #333333; }
+    text-decoration: none;
+    color: #9d9d9d;
+    font-weight: 700; }
     .entry-footer a:hover {
       color: #000; }
+  .entry-footer .category-list:before {
+    font-family: 'Fontawesome';
+    content: '\f07c';
+    -webkit-font-smoothing: antialiased;
+    padding-right: 10px;
+    vertical-align: top; }
+  .entry-footer .tag-list:before {
+    font-family: 'Fontawesome';
+    content: '\f02b';
+    -webkit-font-smoothing: antialiased;
+    padding-right: 10px;
+    vertical-align: top; }
 
 /*
  *  Other
@@ -979,7 +996,7 @@ object {
     border-top: 1px solid #cccccc;
     border-bottom: 1px solid #cccccc; }
     .site-main [class*="navigation"] .post-nav-box a {
-      color: #ccc;
+      color: #cccccc;
       font-weight: 300;
       text-decoration: none; }
   .site-main [class*="navigation"] .nav-indicator {
@@ -996,7 +1013,7 @@ object {
         width: 100%;
         text-align: center; } }
     .site-main [class*="navigation"] .nav-previous:hover .nav-indicator, .site-main [class*="navigation"] .nav-previous:hover a {
-      color: #000; }
+      color: black; }
     .site-main [class*="navigation"] .nav-previous .nav-indicator:before {
       font-family: 'Fontawesome';
       content: '\f104';
@@ -1019,7 +1036,7 @@ object {
         margin-top: 15px;
         text-align: center; } }
     .site-main [class*="navigation"] .nav-next:hover .nav-indicator, .site-main [class*="navigation"] .nav-next:hover a {
-      color: #000; }
+      color: black; }
     .site-main [class*="navigation"] .nav-next .nav-indicator a {
       font-weight: 100; }
     .site-main [class*="navigation"] .nav-next .nav-indicator:after {

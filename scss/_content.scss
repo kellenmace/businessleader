@@ -28,6 +28,13 @@
             line-height: 1.3em;
         }
     }
+    .entry-meta a {
+        // text-decoration: none;
+        // font-weight: 700;
+        &:hover {
+            color: $entry-title;
+        }
+    }
 }
 
 .entry-content {
@@ -115,11 +122,28 @@
     font-size: 15px;
     font-size: 1.5rem;
     font-weight: 300;
+    color: $entry-footer-text;
     a {
-        color: $entry-footer-links;
+        text-decoration: none;
+        color: $entry-footer-text;
+        font-weight: 700;
         &:hover {
             color: #000;
         }
+    }
+    .category-list:before {
+        font-family: 'Fontawesome';
+        content: '\f07c';
+        -webkit-font-smoothing: antialiased;
+        padding-right: 10px;
+        vertical-align: top;
+    }
+    .tag-list:before {
+        font-family: 'Fontawesome';
+        content: '\f02b';
+        -webkit-font-smoothing: antialiased;
+        padding-right: 10px;
+        vertical-align: top;
     }
 }
 

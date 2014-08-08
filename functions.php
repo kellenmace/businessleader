@@ -101,7 +101,7 @@ add_action( 'widgets_init', 'bus_leader_widgets_init' );
 function bus_leader_scripts() {
 	wp_enqueue_style( 'bus_leader-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'bus_leader-google-fonts', 'http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic,100' );
+	wp_enqueue_style( 'bus_leader-google-fonts', 'http://fonts.googleapis.com/css?family=Roboto:500,400,300,300italic,700,400italic,100' );
 
 	wp_enqueue_style( 'bus_leader-font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
 

@@ -11,7 +11,7 @@
 	    border-top: 1px solid $horizontal-line;
 	    border-bottom: 1px solid $horizontal-line;
 	    a {
-			color: #ccc;
+			color: $post-navigation-text;
 			font-weight: 300;
 			text-decoration: none;
 		}
@@ -35,7 +35,7 @@
 
 		&:hover .nav-indicator,
 		&:hover a {
-			color: #000;
+			color: $post-navigation-text-hover;
 		}
 
 		.nav-indicator {
@@ -70,7 +70,7 @@
 
 		&:hover .nav-indicator,
 		&:hover a {
-			color: #000;
+			color: $post-navigation-text-hover;
 		}
 
 		.nav-indicator a {

@@ -11,7 +11,7 @@ $body-background: #fff;
 $site-main-background: #fff;
 $widget-area-background: #f9f9f9;
 $text-color: #4d4d4d;
-$header-color: #000;
+$header-color: #333;
 $link-color: $text-color;
 $link-visited: $text-color;
 
@@ -29,7 +29,8 @@ $sub-menu-background: lighten( $header-background, 10% );
 $mobile-menu-current-page: #999;
 
 // Content
-$entry-title: #000;
+$entry-title: #333;
+$entry-footer-text: #9d9d9d;
 $entry-footer-links: #333;
 
 // Form fields and text areas
@@ -50,6 +51,7 @@ $widget-light-text: #9d9d9d;
 $horizontal-line: #ccc;
 $image-caption: #e5e5e5;
 $post-navigation-text: #ccc;
+$post-navigation-text-hover: #000;
 
 // Supported Values for $layout:
 //  null | content-sidebar | sidebar-content

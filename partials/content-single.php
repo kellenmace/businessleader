@@ -47,7 +47,7 @@
 			} else {
 				// But this blog has loads of categories so we should probably display them here
 				if ( '' != $tag_list ) {
-					$meta_text = __( 'Filed under %1$s • Tagged %2$s', 'bus_leader' );
+					$meta_text = '<div class="category-list">' . __( 'Filed under %1$s', 'bus_leader' ) . '</div><div class="tag-list">' . __( 'Tagged %2$s', 'bus_leader' ) . '</div>';
 				} else {
 					$meta_text = __( 'Filed under %1$s', 'bus_leader' );
 				}
