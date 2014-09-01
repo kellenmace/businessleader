@@ -1,5 +1,121 @@
 /* =Comments
 ----------------------------------------------- */
+
+.comment-navigation {
+    padding: 1em 0;
+    margin: 3em 0;
+    border-top: 1px solid $horizontal-line;
+    border-bottom: 1px solid $horizontal-line;
+    text-transform: uppercase;
+	font-size: 2rem;
+	font-weight: 100;
+	.nav-previous {
+		color: $post-navigation-text;
+		&:hover {
+			color: $post-navigation-text-hover
+		}
+		i {
+		    margin-right: 10px;
+		}
+	}
+	.nav-next {
+		color: $post-navigation-text;
+		&:hover {
+			color: $post-navigation-text-hover
+		}
+		i {
+		    margin-left: 10px;
+		}
+	}
+}
+
+.comments-area {
+	> ol {
+		list-style: decimal;
+		padding: 0;
+		margin: 2em 0;
+		list-style-type: none;
+	}
+	.comments-title {
+		font-weight: 100;
+		font-size: 30px;
+		font-size: 3rem;
+		color: $header-color;
+		text-transform: uppercase;
+	}
+	.comment-list {
+		ol {
+			margin-left: 50px;
+			
+		}
+		.comment-body {
+			padding-bottom: 2em;
+		    margin-bottom: 2em;
+		    border-bottom: 1px solid $horizontal-line;
+			.comment-meta {
+				margin-bottom: 1em;
+				.comment-author {
+					img {
+						width: 60px;
+						display: block;
+						float: left;
+						margin-right: 20px;
+						-webkit-border-radius: 1000px; 
+						-moz-border-radius: 1000px; 
+						border-radius: 1000px; 
+					}
+					.fn {
+					    font-weight: 300;
+					    font-family: $base-font;
+					    font-size: 20px;
+					    font-size: 2rem;
+					    a {
+							text-decoration: none;
+							&:hover {
+						    	text-decoration: underline;
+						    }
+					    }
+				    }
+				}
+			    .comment-metadata {
+			    	color: #bfbfbf;
+					font-weight: 300;
+			    	font-size: 14px;
+    				font-size:1.4rem;
+			    }
+			}
+			.comment-content {
+				font-size: 90%;
+				font-weight: 300;
+				margin-left: 80px;
+				a {
+					word-wrap: break-word;
+				}
+				ol {
+					margin-left: 1.5em;
+				}
+			}
+			.reply {
+				margin-left: 80px;
+				font-weight: 300;
+				font-family: $base-font;
+				font-size: 14px;
+				font-size: 1.4rem;
+				text-transform: uppercase;
+				a {
+					text-decoration: none;
+					color: $text-color-light;
+					&:hover {
+						color: $text-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+ol.children { list-style-type: none; }
+
 .comment-content a {
 	word-wrap: break-word;
 }

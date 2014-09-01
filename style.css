@@ -510,11 +510,11 @@ textarea {
   max-width: 780px;
   max-width: 78rem;
   margin: 0 auto;
-  color: #999;
+  color: #bfbfbf;
   font-weight: 300;
   font-size: 14px; }
   .entry-meta a {
-    color: #999;
+    color: #bfbfbf;
     font-weight: 300;
     font-size: 14px; }
 
@@ -1013,7 +1013,7 @@ object {
         width: 100%;
         text-align: center; } }
     .site-main [class*="navigation"] .nav-previous:hover .nav-indicator, .site-main [class*="navigation"] .nav-previous:hover a {
-      color: black; }
+      color: #4d4d4d; }
     .site-main [class*="navigation"] .nav-previous .nav-indicator:before {
       font-family: 'Fontawesome';
       content: '\f104';
@@ -1036,7 +1036,7 @@ object {
         margin-top: 15px;
         text-align: center; } }
     .site-main [class*="navigation"] .nav-next:hover .nav-indicator, .site-main [class*="navigation"] .nav-next:hover a {
-      color: black; }
+      color: #4d4d4d; }
     .site-main [class*="navigation"] .nav-next .nav-indicator a {
       font-weight: 100; }
     .site-main [class*="navigation"] .nav-next .nav-indicator:after {
@@ -1050,6 +1050,92 @@ object {
 
 /* =Comments
 ----------------------------------------------- */
+.comment-navigation {
+  padding: 1em 0;
+  margin: 3em 0;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 100; }
+  .comment-navigation .nav-previous {
+    color: #cccccc; }
+    .comment-navigation .nav-previous:hover {
+      color: #4d4d4d; }
+    .comment-navigation .nav-previous i {
+      margin-right: 10px; }
+  .comment-navigation .nav-next {
+    color: #cccccc; }
+    .comment-navigation .nav-next:hover {
+      color: #4d4d4d; }
+    .comment-navigation .nav-next i {
+      margin-left: 10px; }
+
+.comments-area > ol {
+  list-style: decimal;
+  padding: 0;
+  margin: 2em 0;
+  list-style-type: none; }
+.comments-area .comments-title {
+  font-weight: 100;
+  font-size: 30px;
+  font-size: 3rem;
+  color: #333333;
+  text-transform: uppercase; }
+.comments-area .comment-list ol {
+  margin-left: 50px; }
+.comments-area .comment-list .comment-body {
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #cccccc; }
+  .comments-area .comment-list .comment-body .comment-meta {
+    margin-bottom: 1em; }
+    .comments-area .comment-list .comment-body .comment-meta .comment-author img {
+      width: 60px;
+      display: block;
+      float: left;
+      margin-right: 20px;
+      -webkit-border-radius: 1000px;
+      -moz-border-radius: 1000px;
+      border-radius: 1000px; }
+    .comments-area .comment-list .comment-body .comment-meta .comment-author .fn {
+      font-weight: 300;
+      font-family: "Roboto", sans-serif;
+      font-size: 20px;
+      font-size: 2rem; }
+      .comments-area .comment-list .comment-body .comment-meta .comment-author .fn a {
+        text-decoration: none; }
+        .comments-area .comment-list .comment-body .comment-meta .comment-author .fn a:hover {
+          text-decoration: underline; }
+    .comments-area .comment-list .comment-body .comment-meta .comment-metadata {
+      color: #bfbfbf;
+      font-weight: 300;
+      font-size: 14px;
+      font-size: 1.4rem; }
+  .comments-area .comment-list .comment-body .comment-content {
+    font-size: 90%;
+    font-weight: 300;
+    margin-left: 80px; }
+    .comments-area .comment-list .comment-body .comment-content a {
+      word-wrap: break-word; }
+    .comments-area .comment-list .comment-body .comment-content ol {
+      margin-left: 1.5em; }
+  .comments-area .comment-list .comment-body .reply {
+    margin-left: 80px;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+    .comments-area .comment-list .comment-body .reply a {
+      text-decoration: none;
+      color: #bfbfbf; }
+      .comments-area .comment-list .comment-body .reply a:hover {
+        color: #4d4d4d; }
+
+ol.children {
+  list-style-type: none; }
+
 .comment-content a {
   word-wrap: break-word; }
 

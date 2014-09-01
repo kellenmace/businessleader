@@ -28,17 +28,22 @@ if ( post_password_required() ) {
 		<ol class="comment-list">
 			<?php
 				wp_list_comments( array(
-					'style'      => 'ol',
-					'short_ping' => true,
+					'callback' => 'bus_leader_comment',
+					'style'      => 'ol'
 				) );
+				// wp_list_comments( array(
+				// 	'style'      => 'ol',
+				// 	'short_ping' => true,
+				// 	'avatar_size'=> 65
+				// ) );
 			?>
 		</ol><!-- .comment-list -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-below" class="comment-navigation clear" role="navigation">
 		    <h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'my-simone' ); ?></h1>
-		    <?php previous_comments_link( '<div class="nav-previous"><i class="fa fa-chevron-left"></i>' . __( ' Older Comments', 'bus_leader' ) . '</div>'); ?>
-		    <?php next_comments_link( '<div class="nav-next">' . __( 'Newer Comments ', 'bus_leader' ) . '<i class="fa fa-chevron-right"></i></div>' ); ?>
+		    <?php previous_comments_link( '<div class="nav-previous"><i class="fa fa-angle-left"></i>' . __( ' Older Comments', 'bus_leader' ) . '</div>'); ?>
+		    <?php next_comments_link( '<div class="nav-next">' . __( 'Newer Comments ', 'bus_leader' ) . '<i class="fa fa-angle-right"></i></div>' ); ?>
 		</nav><!-- #comment-nav-below -->
 		<?php endif; // check for comment navigation ?>
 
