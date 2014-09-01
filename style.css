@@ -1084,10 +1084,14 @@ object {
   text-transform: uppercase; }
 .comments-area .comment-list ol {
   margin-left: 50px; }
+.comments-area .comment-list > .comment {
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 2em; }
+  .comments-area .comment-list > .comment:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0R; }
 .comments-area .comment-list .comment-body {
-  padding-bottom: 2em;
-  margin-bottom: 2em;
-  border-bottom: 1px solid #cccccc; }
+  margin-bottom: 2em; }
   .comments-area .comment-list .comment-body .comment-meta {
     margin-bottom: 1em; }
     .comments-area .comment-list .comment-body .comment-meta .comment-author img {
@@ -1120,12 +1124,14 @@ object {
       word-wrap: break-word; }
     .comments-area .comment-list .comment-body .comment-content ol {
       margin-left: 1.5em; }
+    .comments-area .comment-list .comment-body .comment-content p {
+      margin-bottom: 1em; }
   .comments-area .comment-list .comment-body .reply {
     margin-left: 80px;
     font-weight: 300;
     font-family: "Roboto", sans-serif;
-    font-size: 14px;
-    font-size: 1.4rem;
+    font-size: 13px;
+    font-size: 1.3rem;
     text-transform: uppercase; }
     .comments-area .comment-list .comment-body .reply a {
       text-decoration: none;
@@ -1135,10 +1141,24 @@ object {
 
 ol.children {
   list-style-type: none; }
+  ol.children .comment-body {
+    border-left: 5px solid whitesmoke;
+    padding-left: 10px; }
 
 .comment-content a {
   word-wrap: break-word; }
 
+/* Comments responsive */
+@media screen and (max-width: 600px) {
+  .comment-list ol {
+    margin-left: 0; }
+
+  .comment-content ol {
+    margin-left: 1em; }
+
+  .comment-content,
+  .reply {
+    margin-left: 0; } }
 .site-footer {
   padding: 2em;
   font-family: "Roboto", sans-serif;

@@ -46,12 +46,17 @@
 	.comment-list {
 		ol {
 			margin-left: 50px;
-			
+		}
+		>.comment {
+			border-bottom: 1px solid $horizontal-line;
+			margin-bottom: 2em;
+			&:last-of-type {
+				border-bottom: none;
+				margin-bottom: 0R;
+			}
 		}
 		.comment-body {
-			padding-bottom: 2em;
-		    margin-bottom: 2em;
-		    border-bottom: 1px solid $horizontal-line;
+		    margin-bottom: 2em; 
 			.comment-meta {
 				margin-bottom: 1em;
 				.comment-author {
@@ -94,13 +99,16 @@
 				ol {
 					margin-left: 1.5em;
 				}
+				p {
+					margin-bottom: 1em;
+				}
 			}
 			.reply {
 				margin-left: 80px;
 				font-weight: 300;
 				font-family: $base-font;
-				font-size: 14px;
-				font-size: 1.4rem;
+				font-size: 13px;
+				font-size: 1.3rem;
 				text-transform: uppercase;
 				a {
 					text-decoration: none;
@@ -114,10 +122,26 @@
 	}
 }
 
-ol.children { list-style-type: none; }
+ol.children {
+	list-style-type: none;
+	.comment-body {
+		border-left: 5px solid $comment-reply-border;
+		padding-left: 10px;
+	}
+}
 
 .comment-content a {
 	word-wrap: break-word;
 }
 
 .bypostauthor {}
+
+/* Comments responsive */
+@media screen and (max-width:600px) {    
+    .comment-list ol { margin-left: 0; }
+    
+    .comment-content ol { margin-left: 1em; }
+    
+    .comment-content,
+    .reply { margin-left: 0; }
+}

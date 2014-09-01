@@ -29,13 +29,9 @@ if ( post_password_required() ) {
 			<?php
 				wp_list_comments( array(
 					'callback' => 'bus_leader_comment',
-					'style'      => 'ol'
+					'style'      => 'ol',
+					'short_ping' => true,
 				) );
-				// wp_list_comments( array(
-				// 	'style'      => 'ol',
-				// 	'short_ping' => true,
-				// 	'avatar_size'=> 65
-				// ) );
 			?>
 		</ol><!-- .comment-list -->
 
