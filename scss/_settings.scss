@@ -12,7 +12,7 @@ $site-main-background: #fff;
 $widget-area-background: #f9f9f9;
 $text-color: #4d4d4d;
 $text-color-light: #bfbfbf; //#9d9d9d - darker for better visibility?
-$header-color: #333;
+$header-color: #333; // remove all instances of this and use $header-background below
 $link-color: $text-color;
 $link-visited: $text-color;
 
@@ -36,7 +36,10 @@ $entry-footer-links: #333;
 
 // Form fields and text areas
 $search-field-background: #fff;
-$text-area-text: #666;
+$text-area-text: $text-color;
+$input-border: #ddd;
+$button: #ddd;
+$button-hover: $text-color;
 
 // Footer
 $footer-background: $header-background;

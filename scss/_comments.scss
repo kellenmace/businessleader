@@ -120,6 +120,41 @@
 			}
 		}
 	}
+	.comment-respond {
+		.comment-reply-title {
+			margin-bottom: .5em;
+			font-weight: 100;
+			font-size: 30px;
+			font-size: 3rem;
+			color: #333333;
+			text-transform: uppercase;
+		}
+		.comment-notes {
+			font-size: 15px;
+			font-size: 1.5rem;
+			font-weight: 300;
+		}
+		.comment-form {
+			padding-bottom: 4rem;
+			font-size: 16px;
+			font-size: 1.6rem;
+			p {
+				margin-bottom: 30px;
+			}
+			label {
+				display: block;
+				font-size: 18px;
+				font-size: 1.8rem;
+				font-weight: 300;
+			}
+			input, textarea {
+				width: 100%;
+			}
+			.form-allowed-tags {
+				display: none;
+			}
+		}
+	}
 }
 
 ol.children {
@@ -144,4 +179,12 @@ ol.children {
     
     .comment-content,
     .reply { margin-left: 0; }
+}
+
+.bypostauthor > .comment-body { // TODO: highlight author comments
+    // position: relative;
+    // padding: 1em;
+    // margin-bottom: 2em;
+    // background: hsl(0, 0%, 93%);
+    // border: none;
 }
