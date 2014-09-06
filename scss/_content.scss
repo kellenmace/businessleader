@@ -7,10 +7,10 @@
 
 // Typography
 .entry-header {
-    margin-top: 40px;
+    padding-top: 40px;
     margin-bottom: 40px;
     @media screen and (max-width: $entry-text-small) {
-        margin-top: 25px;
+        padding-top: 25px;
         margin-bottom: 25px;
     }
     .entry-title {

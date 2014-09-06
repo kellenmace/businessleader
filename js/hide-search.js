@@ -14,3 +14,13 @@ jQuery(document).ready(function($){
         return false;
     });
 });
+
+/* 
+ * Apply parallax effect to featured image
+ */
+jQuery(document).ready(function($){
+	$(window).scroll(function(e){
+		var scrolled = $(window).scrollTop();
+		$('.single-post-featured-image').css('top', -(scrolled * 0.2) + 'px');
+	});
+});

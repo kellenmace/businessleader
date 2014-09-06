@@ -7,6 +7,16 @@
 
 get_header(); ?>
 
+	<?php
+	// TODO: add a default parallax image to display when no featured image has been selected.
+	// Same as front page image? Add as option in theme customizer?
+    if ( has_post_thumbnail() ) {
+        echo '<div class="single-post-featured-image clear">';
+        echo the_post_thumbnail('large-thumb');
+        echo '</div><!-- .single-post-featured-image -->';
+    }
+	?>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
