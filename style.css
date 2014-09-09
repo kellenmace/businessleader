@@ -462,6 +462,27 @@ textarea {
 
 .site-main {
   background: white; }
+  .site-main .index-box {
+    max-width: 780px;
+    max-width: 78rem;
+    margin: 0 auto 2em; }
+    .site-main .index-box .small-index-thumbnail {
+      padding: 0 4rem; }
+    .site-main .index-box .entry-header {
+      padding-top: 25px;
+      margin-bottom: 30px; }
+    .site-main .index-box .entry-content p {
+      margin-bottom: 50px; }
+    .site-main .index-box blockquote.alignleft {
+      border: none; }
+      @media screen and (min-width: 1320px) {
+        .site-main .index-box blockquote.alignleft {
+          padding-left: 2em; } }
+    .site-main .index-box blockquote.alignright {
+      border: none; }
+      @media screen and (min-width: 1820px) {
+        .site-main .index-box blockquote.alignright {
+          padding-right: 2em; } }
 
 .site-content {
   margin-top: 250px;
@@ -485,7 +506,8 @@ textarea {
 .tag-links,
 .post-navigation,
 .comments-area,
-.paging-navigation {
+.paging-navigation
+.index-box {
   position: relative;
   max-width: 780px;
   max-width: 78rem;
@@ -498,7 +520,8 @@ textarea {
     .tag-links,
     .post-navigation,
     .comments-area,
-    .paging-navigation {
+    .paging-navigation
+    .index-box {
       margin-right: 0; } }
 
 .entry-meta {
@@ -888,7 +911,6 @@ textarea {
 .hentry {
   margin: 0 0 60px; }
 
-.byline,
 .updated {
   display: none; }
 
@@ -902,6 +924,35 @@ textarea {
 .page-links {
   clear: both;
   margin: 0 0 60px; }
+
+/* =index
+----------------------------------------------- */
+/*
+ *  Index and Archive Pages
+ */
+.read-more a {
+  padding: .6em 1em;
+  font-size: 17px;
+  font-size: 1.7rem;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  line-height: 1;
+  color: #dddddd;
+  border: 2px solid #dddddd;
+  webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  cursor: pointer; }
+  @media screen and (max-width: 650px) {
+    .read-more a {
+      display: block;
+      text-align: center;
+      padding-top: 1em;
+      padding-bottom: 1em; } }
+  .read-more a:hover {
+    color: #4d4d4d;
+    border-color: #4d4d4d; }
 
 /* =Asides
 ----------------------------------------------- */

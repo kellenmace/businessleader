@@ -3,11 +3,46 @@
 
 	.site-main {
 		background: $site-main-background;
+
+		.index-box {
+			max-width: 780px;
+		    max-width: 78rem;
+		    // padding: 1em 0 2em;
+		    margin: 0 auto 2em;
+
+		    .small-index-thumbnail {
+				padding: 0 4rem;
+		    }
+
+		    .entry-header {
+		    	padding-top: 25px;
+		    	margin-bottom: 30px;
+		    }
+
+		    .entry-content p {
+		    	margin-bottom: 50px;
+		    }
+			
+			blockquote.alignleft {
+				border: none;
+				@media screen and (min-width: 1320px) {
+			    	padding-left: 2em;
+				}
+			}
+
+			blockquote.alignright {
+			    border: none;
+			    @media screen and (min-width: 1820px) {
+			    	padding-right: 2em;
+				}
+			}
+		}
 	}
 
 	.site-content {
 		margin-top: 250px;
 		background: $site-main-background;
+
 		.widget-area { /* Sidebar 1 */
 			width: 342px;
 			float: right;
@@ -28,7 +63,8 @@
     .tag-links,
     .post-navigation,
     .comments-area,
-    .paging-navigation {
+    .paging-navigation
+    .index-box {
     	position: relative;
 	    max-width: 780px;
 	    max-width: 78rem;
