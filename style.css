@@ -232,8 +232,8 @@ blockquote {
   padding: 1em 1.5em;
   margin-bottom: 1em;
   font-style: italic;
-  border-top: 1px solid #cccccc;
-  border-bottom: 1px solid #cccccc; }
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea; }
   blockquote p {
     margin: 0; }
     blockquote p:before {
@@ -1055,8 +1055,8 @@ object {
   .site-main [class*="navigation"] .post-nav-box {
     padding: 1em 0;
     margin-bottom: 4em;
-    border-top: 1px solid #cccccc;
-    border-bottom: 1px solid #cccccc; }
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea; }
     .site-main [class*="navigation"] .post-nav-box a {
       color: #cccccc;
       font-weight: 300;
@@ -1110,13 +1110,56 @@ object {
     .site-main [class*="navigation"] .nav-next h1 a {
       font-style: italic; }
 
+.paging-navigation {
+  margin: 0 4rem;
+  border-top: 1px solid #eaeaea;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  list-style-type: none; }
+  .paging-navigation ul {
+    margin: 0;
+    text-align: center; }
+  .paging-navigation li {
+    display: inline-block; }
+  .paging-navigation a.page-numbers,
+  .paging-navigation span.page-numbers {
+    display: inline-block;
+    padding: 0 .6em;
+    text-decoration: none;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    line-height: 25px;
+    color: #dddddd;
+    border: 2px solid #dddddd;
+    webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle; }
+    .paging-navigation a.page-numbers:hover,
+    .paging-navigation span.page-numbers:hover {
+      border-color: #4d4d4d;
+      color: #4d4d4d; }
+  .paging-navigation span.dots {
+    border: none;
+    color: #dddddd;
+    padding-bottom: 8px; }
+    .paging-navigation span.dots:hover {
+      color: #dddddd; }
+  .paging-navigation span.current {
+    border-color: #4d4d4d;
+    color: #4d4d4d; }
+
 /* =Comments
 ----------------------------------------------- */
 .comment-navigation {
   padding: 1em 0;
   margin: 3em 0;
-  border-top: 1px solid #cccccc;
-  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: 100; }
@@ -1147,7 +1190,7 @@ object {
 .comments-area .comment-list ol {
   margin-left: 50px; }
 .comments-area .comment-list > .comment {
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #eaeaea;
   margin-bottom: 2em; }
   .comments-area .comment-list > .comment:last-of-type {
     border-bottom: none;
@@ -1302,7 +1345,7 @@ ol.children {
   font-size: 2.25rem;
   font-weight: 100;
   text-transform: uppercase;
-  border-top: 1px solid #cccccc; }
+  border-top: 1px solid #eaeaea; }
 
 .widget_recent_entries li:before,
 .widget_recent_comments li:before,
