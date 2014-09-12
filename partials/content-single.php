@@ -43,12 +43,15 @@
 				// This blog only has 1 category so we just need to worry about tags in the meta text
 				if ( '' != $tag_list ) {
 					$meta_text = __( 'Tagged %2$s', 'bus_leader' );
+				} else {
+					$meta_text = '';
 				}
+
 
 			} else {
 				// But this blog has loads of categories so we should probably display them here
 				if ( '' != $tag_list ) {
-					$meta_text = '<div class="category-list">' . __( 'Filed under %1$s', 'bus_leader' ) . '</div><div class="tag-list">' . __( 'Tagged %2$s', 'bus_leader' ) . '</div>';
+					$meta_text = __( 'Filed under %1$s • Tagged %2$s', 'bus_leader' );
 				} else {
 					$meta_text = __( 'Filed under %1$s', 'bus_leader' );
 				}
