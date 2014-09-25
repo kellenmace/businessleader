@@ -19,3 +19,17 @@
   font-size: $sizeValue + px; //fallback for old browsers
   font-size: (0.125 * $sizeValue) + rem;
 }
+
+// FROM NEW SASS UNDERSCORES:
+// Rem output with px fallback
+// @mixin font-size($sizeValue: 1.6) {
+//     font-size: ($sizeValue * 10) + px;
+//     font-size: $sizeValue + rem;
+// }
+
+// Border radius
+@mixin border-radius($radius) {
+    background-clip: padding-box; /* stops bg color from leaking outside the border: */
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}

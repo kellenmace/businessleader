@@ -59,7 +59,7 @@ function bus_leader_setup() {
 	 * Enable support for Post Formats.
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
-	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+	add_theme_support( 'post-formats', array( 'aside' ) );
 
 	// Setup the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'bus_leader_custom_background_args', array(
@@ -102,6 +102,10 @@ add_action( 'widgets_init', 'bus_leader_widgets_init' );
  */
 function bus_leader_scripts() {
 	wp_enqueue_style( 'bus_leader-style', get_stylesheet_uri() );
+
+	if ( is_page_template( 'page-templates/page-nosidebar.php' ) ) {
+	    wp_enqueue_style( 'bus_leader-layout-style', get_template_directory_uri() . '/layouts/no-sidebar.css' );
+	}
 
 	wp_enqueue_style( 'bus_leader-google-fonts', 'http://fonts.googleapis.com/css?family=Roboto:500,400,300,300italic,700,400italic,100' );
 

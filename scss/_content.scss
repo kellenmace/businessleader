@@ -94,13 +94,13 @@
         }
     }
     p, ul, ol {
-        font-size: 20px;
-        font-size: 2rem;
+        font-size: 19px;
+        font-size: 1.9rem;
         font-weight: 300;
         line-height: 1.6em;
         @media screen and (max-width: $entry-text-small) {
-            font-size: 18px;
-            font-size: 1.8rem;
+            font-size: 17px;
+            font-size: 1.7rem;
         }
     }
     blockquote {

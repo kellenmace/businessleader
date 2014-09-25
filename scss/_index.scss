@@ -32,3 +32,20 @@
 		border-color: $button-hover;
 	}
 }
+
+.sticky {
+	border: 2px dashed #ccc;
+
+	.entry-title:before {
+        font-family: 'Fontawesome';
+        content: '\f08d';
+        -webkit-font-smoothing: antialiased;
+        padding-right: 10px;
+        vertical-align: top;
+    }
+}
+
+// TODO: move this to appropriate scss sheet - watch Creating custom post format templates video.
+.format-aside .entry-content {
+    padding-top: 4rem;
+}

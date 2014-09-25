@@ -18,10 +18,16 @@ get_header(); ?>
 				<h1 class="page-title">
 					<?php
 						if ( is_category() ) :
-							single_cat_title();
+						    printf( __( 'Filed under ', 'bus_leader' ) );
+						    echo '<em>';
+						    single_cat_title();
+						    echo '</em> ' . __('category', 'bus_leader');
 
 						elseif ( is_tag() ) :
-							single_tag_title();
+						    printf( __( 'Tagged as ', 'bus_leader' ) );
+						    echo '<em>';
+						    single_tag_title();
+						    echo '</em> ' . __('tag', 'bus_leader');
 
 						elseif ( is_author() ) :
 							printf( __( 'Author: %s', 'bus_leader' ), '<span class="vcard">' . get_the_author() . '</span>' );
@@ -37,30 +43,6 @@ get_header(); ?>
 
 						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
 							_e( 'Asides', 'bus_leader' );
-
-						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
-							_e( 'Galleries', 'bus_leader');
-
-						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-							_e( 'Images', 'bus_leader');
-
-						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-							_e( 'Videos', 'bus_leader' );
-
-						elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-							_e( 'Quotes', 'bus_leader' );
-
-						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-							_e( 'Links', 'bus_leader' );
-
-						elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
-							_e( 'Statuses', 'bus_leader' );
-
-						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
-							_e( 'Audios', 'bus_leader' );
-
-						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
-							_e( 'Chats', 'bus_leader' );
 
 						else :
 							_e( 'Archives', 'bus_leader' );

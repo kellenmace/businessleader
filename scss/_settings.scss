@@ -3,10 +3,10 @@
 // yourself. This means that changes that should be small, such as tweaking the
 // coloring or the sizing, can be done in one place, not all over the stylesheet.
 
+// Base Font
 $base-font: 'Roboto', sans-serif;
-$header-font: $base-font;
 
-// Base color scheme
+// Base Color Scheme
 $body-background: #fff;
 $site-main-background: #fff;
 $widget-area-background: #f9f9f9;
@@ -25,6 +25,7 @@ $prev-next-nav-small: 600px;
 $read-more-small: 650px;
 
 // Header
+$header-font: $base-font;
 $header-background: #333;
 $header-text: #fff;
 $sub-menu-background: lighten( $header-background, 10% );
@@ -52,15 +53,20 @@ $widget-font: $base-font;
 $widget-link-color: $link-color;
 $widget-light-text: #9d9d9d;
 
+// Media
+$image-caption-border: #e5e5e5;
+$gallery-caption-background: $image-caption-border;
+$gallery-caption-text: #fff;
+
 // Other
 $horizontal-line: #eaeaea;
-$image-caption: #e5e5e5;
 $post-navigation-text: #ccc;
 $post-navigation-text-hover: $text-color;
+$blockquote-border: #f5f5f5;
 $comment-reply-border: #f5f5f5;
 
 // Supported Values for $layout:
-//  null | content-sidebar | sidebar-content
+//  null | content-sidebar | sidebar-content | no-sidebar
 // $layout: null !default;
 $layout: content-sidebar;
-$vspacing: 60px; // try 1.5em?
+$vspacing: 40px; // try 1.5em?

@@ -1,0 +1,34 @@
+/*
+Theme Name: Business Leader
+Layout: No sidebar
+*/
+
+.site-content {
+	margin-top: 250px;
+	background: #fff;
+}
+
+.content-area {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.entry-header,
+.entry-content,
+.entry-footer,
+.tag-links,
+.post-navigation,
+.comments-area,
+.paging-navigation,
+.index-box {
+	position: relative;
+    max-width: 780px;
+    max-width: 78rem;
+    padding: 0 4rem;
+    margin: 0 auto;
+}
+
+.site-footer {
+    clear: both;
+    width: 100%;
+}

@@ -56,21 +56,24 @@ dfn, cite, em, i {
 	font-style: italic;
 }
 blockquote {
-    padding: 1em 1.5em;
-    margin-bottom: 1em;
+    padding: 1em 1.5em 1em 3.5em;
+    margin-bottom: $vspacing;
     font-style: italic;
-    border-top: 1px solid $horizontal-line;
-    border-bottom: 1px solid $horizontal-line;
     p {
     	margin: 0;
-    	&:before {
+    	border-left: 5px solid $blockquote-border;
+    	padding-left: 1.5em;
+    	position: relative;
+    	&:after {
+    		font-family: 'fontawesome';
     		content: "\f10d";
     		display: block;
-		    float: left;
-		    margin-right: 1.5em;
-		    font-family: 'fontawesome';
-		    font-size: 16px;
-		    font-size: 1.6rem;
+		    float: right;
+		    position: absolute;
+		    top: 0;
+		    left: -2.7em;
+		    font-size: 25px;
+		    font-size: 2.5rem;
     	}
     }
     em { 

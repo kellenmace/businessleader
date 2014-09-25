@@ -25,7 +25,7 @@ get_header(); ?>
 				 * If you want to overload this in a child theme then include a file
 				 * called content-search.php and that will be used instead.
 				 */
-				get_template_part( 'partials/content', 'search' );
+				get_template_part( 'content', 'search' );
 				?>
 
 			<?php endwhile; ?>
@@ -33,9 +33,9 @@ get_header(); ?>
 			<?php bus_leader_paging_nav(); ?>
 
 		<?php else : ?>
-
-			<?php get_template_part( 'content', 'none' ); ?>
-
+			
+			<?php get_template_part( 'partials/content', 'none' ); ?>
+			
 		<?php endif; ?>
 
 		</main><!-- #main -->

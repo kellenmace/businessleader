@@ -7,11 +7,10 @@
 		.index-box {
 			max-width: 780px;
 		    max-width: 78rem;
-		    // padding: 1em 0 2em;
 		    margin: 0 auto 2em;
 
 		    .small-index-thumbnail {
-				padding: 0 4rem;
+				padding: 4rem 4rem 0;
 		    }
 
 		    .entry-header {
@@ -63,7 +62,7 @@
     .tag-links,
     .post-navigation,
     .comments-area,
-    .paging-navigation
+    .paging-navigation,
     .index-box {
     	position: relative;
 	    max-width: 780px;
@@ -127,6 +126,33 @@
 		float: left;
 		overflow: hidden;
 		width: 25%;
+	}
+}
+
+@else if $layout == no-sidebar {
+	.site-content {
+		margin-top: 250px;
+		background: $site-main-background;
+	}
+
+    .entry-header,
+    .entry-content,
+    .entry-footer,
+    .tag-links,
+    .post-navigation,
+    .comments-area,
+    .paging-navigation,
+    .index-box {
+    	position: relative;
+	    max-width: 780px;
+	    max-width: 78rem;
+	    padding: 0 4rem;
+	    margin: 0 auto;
+    }
+
+	.site-footer {
+	    clear: both;
+	    width: 100%;
 	}
 }
 
