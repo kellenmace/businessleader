@@ -12,7 +12,7 @@ $site-main-background: #fff;
 $widget-area-background: #f9f9f9;
 $text-color: #4d4d4d;
 $text-color-light: #bfbfbf; //#9d9d9d - darker for better visibility?
-$header-color: #333; // remove all instances of this and use $header-background below
+$header-color: #333; // TODO: remove all instances of this and use $header-background below
 $link-color: $text-color;
 $link-visited: $text-color;
 
@@ -55,7 +55,7 @@ $widget-light-text: #9d9d9d;
 
 // Media
 $image-caption-border: #e5e5e5;
-$gallery-caption-background: $image-caption-border;
+$gallery-caption-background: $header-background;
 $gallery-caption-text: #fff;
 
 // Other
@@ -64,6 +64,7 @@ $post-navigation-text: #ccc;
 $post-navigation-text-hover: $text-color;
 $blockquote-border: #f5f5f5;
 $comment-reply-border: #f5f5f5;
+$highlighted-text-color: #e5e5e5;
 
 // Supported Values for $layout:
 //  null | content-sidebar | sidebar-content | no-sidebar

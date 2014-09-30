@@ -42,7 +42,7 @@
 			if ( ! bus_leader_categorized_blog() ) {
 				// This blog only has 1 category so we just need to worry about tags in the meta text
 				if ( '' != $tag_list ) {
-					$meta_text = __( 'Tagged %2$s', 'bus_leader' );
+					$meta_text = '<div class="tag-list">' . __( 'Tagged %2$s', 'bus_leader' ) . '</div>';
 				}
 
 			} else {
@@ -50,7 +50,7 @@
 				if ( '' != $tag_list ) {
 					$meta_text = '<div class="category-list">' . __( 'Filed under %1$s', 'bus_leader' ) . '</div><div class="tag-list">' . __( 'Tagged %2$s', 'bus_leader' ) . '</div>';
 				} else {
-					$meta_text = __( 'Filed under %1$s', 'bus_leader' );
+					$meta_text = '<div class="category-list">' . __( 'Filed under %1$s', 'bus_leader' ) . '</div>';
 				}
 
 			} // end check for categories on this blog

@@ -10,6 +10,10 @@ textarea {
 	line-height: 1.5;
 }
 
+::selection {
+	background: $highlighted-text-color;
+}
+
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
 	font-family: $header-font;
@@ -187,10 +191,12 @@ img {
 /* Links */
 a {
 	color: $link-color;
+	
 	@include hoverActiveFocus {
 		color: darken($link-color, 30%);
 	}
-}
-a:visited {
-	color: $link-visited;
+
+	&:visited {
+		color: $link-visited;
+	}
 }

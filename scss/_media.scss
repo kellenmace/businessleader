@@ -33,7 +33,7 @@
 	margin-bottom: $vspacing;
 	max-width: 100%;
 
-	img {
+	img[class*="size-large"] {
 		display: block;
 		margin: 0 auto;
 	}
@@ -54,9 +54,7 @@
 // Galleries
 .site-main {
 	.gallery {
-
 		@extend %clearfix;
-
 		margin-bottom: $vspacing;
 
 		.gallery-item {
@@ -66,11 +64,11 @@
 		    float: left;
 		    margin-right: 3.333333333%;
 		    margin-bottom: 3rem;
-		    background: #333;
+		    background: $gallery-caption-background;
 		    overflow: hidden;
 
 		    &:hover .gallery-caption {
-		    	opacity: 1;
+		    	opacity: 0.7;
 		    }
 
 			.gallery-icon {

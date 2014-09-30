@@ -1,0 +1,239 @@
+/*
+Theme Name: Business Leader
+Description: Used to style the content editor in posts and pages.
+*/
+
+@import 'settings';
+@import 'mixins';
+
+body#tinymce.wp-editor { 
+    font-family: Courier, Arial, Helvetica, sans-serif; 
+    font-size: 60px;
+    color: purple;
+}
+
+/* =Body
+----------------------------------------------- */
+html .mceContentBody {
+	max-width: 700px;
+}
+
+body {
+	color: $text-color;
+    font-family: $base-font;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* =Base elements
+----------------------------------------------- */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: $link-color;
+
+    &:visited {
+        color: $link-visited;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $header-font;
+    color: $header-color;
+    font-weight: 700;
+    clear: both;
+    margin-bottom: .4em;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 26px;
+}
+
+h5 {
+    font-size: 24px;
+}
+
+h6 {
+    font-size: 22px;
+}
+
+p,
+ul,
+ol {
+    font-size: 19px;
+    line-height: 1.6em;
+}
+
+/* =Blockquotes
+----------------------------------------------- */
+blockquote p {
+        font-size: 25px;
+        line-height: 1.5em;
+}
+
+blockquote {
+	padding: 1em 1.5em 1em 3.5em;
+    margin-bottom: $vspacing;
+    font-style: italic;
+}
+
+blockquote.alignleft {
+    border: none;
+    @media screen and (min-width: 1320px) {
+        padding-left: 2em;
+    }
+}
+
+blockquote.alignright {
+    border: none;
+    @media screen and (min-width: 1820px) {
+        padding-right: 2em;
+    }
+}
+
+blockquote em {
+    font-style: normal;
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 1em;
+    margin-left: 40%;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-family: $base-font;
+    font-style: normal;
+    line-height: 1.5em;
+    text-align: right;
+}
+
+
+/* =Images
+ ----------------------------------------------- */
+
+.wp-caption {
+    margin-bottom: $vspacing;
+    max-width: 100%;
+
+    img[class*="size-large"] {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .wp-caption-text {
+        text-align: center;
+        padding: 0.8075em 1em;
+        font-size: 14px;
+        font-size: 1.4rem;
+        font-weight: 300;
+        font-family: $base-font;
+        border-left: 1px solid $image-caption-border;
+        border-bottom: 1px solid $image-caption-border;
+        border-right: 1px solid $image-caption-border;
+    }
+}
+
+.gallery-caption,
+.wp-caption .wp-caption-text,
+.wp-caption-dd {
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    max-height: 45%;
+    width: 100%;
+    margin: 0;
+    padding: 6px 8px;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-family: $base-font;
+    background: $gallery-caption-background;
+    opacity: 0;
+    line-height: 1.5;
+    color: $gallery-caption-text;
+    text-align: left;
+}
+
+/* Due to HTML5 galleries being activated default gallery styling does not apply.*/
+
+.gallery {
+    @extend %clearfix;
+    margin-bottom: $vspacing;
+}
+
+.gallery-item:hover .gallery-caption {
+	opacity: 0.7;
+}
+
+.gallery img {
+        display: block;
+}
+.gallery a img {
+	max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: none;
+}
+
+.gallery-item {
+    float: left;
+    position: relative;
+    padding: 0!important;
+    max-width: 100%;
+    margin-right: 3.333333333%;
+    margin-bottom: 3rem;
+    background: $gallery-caption-background;
+    overflow: hidden;
+}
+
+.gallery-caption {
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    max-height: 45%;
+    width: 100%;
+    margin: 0;
+    padding: 6px 8px;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-family: $base-font;
+    background: $gallery-caption-background;
+    opacity: 0;
+    line-height: 1.5;
+    color: $gallery-caption-text;
+    text-align: left;
+}
+
+/* =Alignment
+----------------------------------------------- */
+
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: $vspacing;
+}
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: $vspacing;
+}
+.aligncenter {
+    clear: both;
+    display: block;
+    margin: 0 auto;
+}

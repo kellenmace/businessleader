@@ -131,6 +131,7 @@
             color: #000;
         }
     }
+
     .category-list:before {
         font-family: 'Fontawesome';
         content: '\f07c';
@@ -138,12 +139,33 @@
         padding-right: 10px;
         vertical-align: top;
     }
+
     .tag-list:before {
         font-family: 'Fontawesome';
         content: '\f02b';
         -webkit-font-smoothing: antialiased;
         padding-right: 10px;
         vertical-align: top;
+    }
+
+    .edit-link a {
+        display: inline-block;
+        margin-top: 3em;
+        padding: 0.5em 1em;
+        color: $button;
+        font-size: 17px;
+        font-size: 1.7rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        border: 2px solid $button;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+
+        &:hover {
+            color: $button-hover;
+            border-color: $button-hover;
+        }
     }
 }
 
