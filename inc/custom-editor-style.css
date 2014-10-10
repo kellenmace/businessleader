@@ -8,15 +8,6 @@ Description: Used to style the content editor in posts and pages.
 .gallery:after {
   clear: both; }
 
-body#tinymce.wp-editor {
-  font-family: Courier, Arial, Helvetica, sans-serif;
-  font-size: 60px;
-  color: purple; }
-
-.wp-editor-container textarea.wp-editor-area {
-  color: green;
-}
-
 /* =Body
 ----------------------------------------------- */
 html .mceContentBody {
@@ -42,7 +33,7 @@ a {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto", sans-serif;
   color: #333333;
-  font-weight: 700;
+  font-weight: 300;
   clear: both;
   margin-bottom: .4em; }
 
@@ -68,7 +59,8 @@ p,
 ul,
 ol {
   font-size: 19px;
-  line-height: 1.6em; }
+  line-height: 1.6em;
+  font-weight: 300; }
 
 /* =Blockquotes
 ----------------------------------------------- */

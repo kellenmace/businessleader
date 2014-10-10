@@ -11,7 +11,7 @@
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<footer class="entry-meta">
 		<?php bus_leader_posted_on(); ?>
 		<?php
 		    if ( ! post_password_required() && comments_open() && '0' != get_comments_number() ) { 

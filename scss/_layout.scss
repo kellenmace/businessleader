@@ -1,6 +1,14 @@
 // Layout: Content-Sidebar
 @if $layout == content-sidebar {
 
+	.blog {
+		.format-aside {
+			.entry-meta {
+				padding: 0 4rem;
+			}
+		}
+	}
+
 	.site-main {
 		background: $site-main-background;
 
@@ -39,7 +47,7 @@
 	}
 
 	.site-content {
-		margin-top: 250px;
+		margin-top: 275px; //TODO: change no-sidebar to match this
 		background: $site-main-background;
 
 		.widget-area { /* Sidebar 1 */

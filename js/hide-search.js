@@ -3,7 +3,7 @@
  */
 jQuery(document).ready(function($){
     $('.search-toggle').click(function(){
-    	$('.search-toggle').toggleClass('active');
+        $('.search-toggle').toggleClass('active');
         $('#search-container').slideToggle(200);
 
         // Hide mobile menu
@@ -20,7 +20,7 @@ jQuery(document).ready(function($){
  */
 jQuery(document).ready(function($){
 	$(window).scroll(function(e){
-		var scrolled = $(window).scrollTop();
-		$('.single-post-featured-image').css('top', -(scrolled * 0.2) + 'px');
+		var scrolled = $(window).scrollTop(); // TODO: this 60px accounts for the site header menu
+		$('.single-post-featured-image').css('top', -(scrolled * 0.3) + 'px');
 	});
 });

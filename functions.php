@@ -23,13 +23,10 @@ if ( ! function_exists( 'bus_leader_setup' ) ) :
 function bus_leader_setup() {
 
 	// Style the back end visual editor
-	// TODO: This is not loading properly.
-	//$font_url = 'http://fonts.googleapis.com/css?family=Roboto:500,400,300,300italic,700,400italic,100';
-	//add_editor_style( array( 'inc/editor-style.css', $font_url ) );
-	//$font_url = urlencode( '//fonts.googleapis.com/css?family=Lato:300,400,700' );
-	//add_editor_style( $font_url );
-	add_editor_style( 'custom-editor-style.css' );
-
+	$editor_font_url = urlencode( '//fonts.googleapis.com/css?family=Roboto:500,400,300,300italic,700,400italic,100' );
+	add_editor_style( $editor_font_url );
+	add_editor_style( 'inc/custom-editor-style.css' );
+	
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.

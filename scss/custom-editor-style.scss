@@ -6,12 +6,6 @@ Description: Used to style the content editor in posts and pages.
 @import 'settings';
 @import 'mixins';
 
-body#tinymce.wp-editor { 
-    font-family: Courier, Arial, Helvetica, sans-serif; 
-    font-size: 60px;
-    color: purple;
-}
-
 /* =Body
 ----------------------------------------------- */
 html .mceContentBody {
@@ -43,7 +37,7 @@ a {
 h1, h2, h3, h4, h5, h6 {
     font-family: $header-font;
     color: $header-color;
-    font-weight: 700;
+    font-weight: 300;
     clear: both;
     margin-bottom: .4em;
 }
@@ -77,6 +71,7 @@ ul,
 ol {
     font-size: 19px;
     line-height: 1.6em;
+    font-weight: 300;
 }
 
 /* =Blockquotes
