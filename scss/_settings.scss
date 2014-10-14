@@ -32,6 +32,7 @@ $sub-menu-background: lighten( $header-background, 10% );
 $mobile-menu-current-page: #999;
 
 // Content
+$featured-image-banner-text: #fff;
 $entry-title: #333;
 $entry-footer-text: #9d9d9d;
 $entry-footer-links: #333;
@@ -70,4 +71,4 @@ $highlighted-text-color: #e5e5e5;
 //  null | content-sidebar | sidebar-content | no-sidebar
 // $layout: null !default;
 $layout: content-sidebar;
-$vspacing: 40px; // try 1.5em?
+$vspacing: 40px;

@@ -1,8 +1,19 @@
 /* =Asides
 ----------------------------------------------- */
 
-.blog .format-aside, .archive .format-aside {
-	.entry-title {
-		display: none;
+.blog, .archive, .error404, .search {
+	.format-aside {
+		.entry-title {
+			display: none;
+		}
+		.entry-content {
+		    padding-top: 4rem;
+		}
+		.entry-meta {
+			padding: 0 4rem;
+			a:hover {
+				color: $link-color;
+			}
+		}
 	}
 }

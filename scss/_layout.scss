@@ -1,14 +1,6 @@
 // Layout: Content-Sidebar
 @if $layout == content-sidebar {
 
-	.blog {
-		.format-aside {
-			.entry-meta {
-				padding: 0 4rem;
-			}
-		}
-	}
-
 	.site-main {
 		background: $site-main-background;
 
@@ -21,14 +13,20 @@
 				padding: 4rem 4rem 0;
 		    }
 
-		    .entry-header {
-		    	padding-top: 25px;
-		    	margin-bottom: 30px;
-		    }
-
-		    .entry-content p {
-		    	margin-bottom: 50px;
-		    }
+		    .entry-content {
+		    	.search-form {
+		    		.search-field {
+		    			box-sizing: border-box;
+		    			width: 100%
+		    		}
+		    		.search-submit {
+		    			display: none;
+		    		}
+		    	}
+			    p {
+			    	margin-bottom: 50px;
+			    }
+			}
 			
 			blockquote.alignleft {
 				border: none;
@@ -43,6 +41,10 @@
 			    	padding-right: 2em;
 				}
 			}
+		}
+
+		.content-none-page-header {
+		    margin-bottom: 0;
 		}
 	}
 
