@@ -7,6 +7,81 @@
  * @package Business Leader
  */
 
+if ( ! function_exists( 'get_header_container' ) ) :
+/**
+ * Display header container with featured image and page title inside
+ */
+function get_header_container() {
+	// TODO: add upload option & integrate customizer
+    if ( has_post_thumbnail( $post->ID ) && ! is_archive() && ! is_home() ) {
+		$header_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large-thumb' )[0];
+	}
+	else {
+		$header_image = get_template_directory_uri() . '/images/default-featured-image.jpg';
+	}
+	?>
+	<div class="header-container">
+		<div class="header-image" style="background-image: url('<?php echo $header_image ?>')"></div><!-- .header-image -->
+		
+		<?php if ( is_404() ) : ?>
+			<header class="page-header">
+				<h1 class="page-title page-title-404">
+					<?php _e( 'Page not available', 'bus_leader' ); ?>
+				</h1>
+			</header><!-- .header-title -->
+
+		<?php elseif ( is_search() ) : ?>
+			<header class="page-header">
+				<h1 class="page-title page-title-search">
+					<?php printf( __( 'Search results for<br><em>', 'bus_leader') . get_search_query() . '</em>' ); ?>
+				</h1>
+			</header><!-- .header-title -->
+
+		<?php elseif ( is_archive() ) : ?>
+			<header class="page-header">
+				<h1 class="page-title">
+					<?php
+						if ( is_category() ) :
+						    printf( __( 'Filed under', 'bus_leader' ) );
+						    echo '<br><em>';
+						    single_cat_title();
+						    echo '</em>';
+
+						elseif ( is_tag() ) :
+						    printf( __( 'Tagged as', 'bus_leader' ) );
+						    echo '<br><em>';
+						    single_tag_title();
+						    echo '</em>';
+
+						elseif ( is_author() ) :
+							printf( __( 'Articles by %s', 'bus_leader' ), '<span class="vcard">' . get_the_author() . '</span>' );
+
+						elseif ( is_day() ) :
+							printf( __( 'Articles from %s', 'bus_leader' ), '<span>' . get_the_date() . '</span>' );
+
+						elseif ( is_month() ) :
+							printf( __( 'Articles from %s', 'bus_leader' ), '<span>' . get_the_date( _x( 'F, Y', 'monthly archives date format', 'bus_leader' ) ) . '</span>' );
+
+						elseif ( is_year() ) :
+							printf( __( 'Articles from %s', 'bus_leader' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'bus_leader' ) ) . '</span>' );
+
+						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
+							_e( 'Asides', 'bus_leader' );
+
+						else :
+							_e( 'Archives', 'bus_leader' );
+
+						endif;
+					?>
+				</h1>
+			</header><!-- .page-header -->
+		<?php endif; ?>
+
+	</div><!-- .header-image-container -->
+<?php 
+}
+endif;
+
 if ( ! function_exists( 'bus_leader_paging_nav' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.

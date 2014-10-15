@@ -19,8 +19,8 @@ jQuery(document).ready(function($){
  * Apply parallax effect to featured image
  */
 jQuery(document).ready(function($){
-	$(window).scroll(function(e){
-		var scrolled = $(window).scrollTop(); // TODO: this 60px accounts for the site header menu
-		$('.single-post-featured-image').css('top', -(scrolled * 0.3) + 'px');
-	});
+    $(window).scroll(function(e){
+        var scrolled = $(window).scrollTop();
+        $('.header-image').css('top', -(scrolled * 0.3) + 'px');
+    });
 });

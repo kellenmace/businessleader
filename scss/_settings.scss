@@ -26,7 +26,7 @@ $read-more-small: 650px;
 
 // Header
 $header-font: $base-font;
-$header-background: #333;
+$header-background: #333; // TODO: make this transparent?
 $header-text: #fff;
 $sub-menu-background: lighten( $header-background, 10% );
 $mobile-menu-current-page: #999;

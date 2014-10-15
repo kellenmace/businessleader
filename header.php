@@ -59,4 +59,6 @@
 		</div><!-- #search-container -->
 	</header><!-- #masthead -->
 
+	<?php get_header_container(); ?>
+
 	<div id="content" class="site-content">

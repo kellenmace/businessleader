@@ -13,15 +13,6 @@
 
 get_header(); ?>
 
-	<?php
-	// TODO: add upload option & integrate customizer
-    // if ( has_post_thumbnail( $post->ID ) ) {
-	// $featured_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large-thumb' )[0];
-		$featured_image_url = get_template_directory_uri() . '/images/default-featured-image.jpg';
-	?>
-	<div class="single-post-featured-image" style="background-image: url('<?php echo $featured_image_url ?>')">
-	</div><!-- .single-post-featured-image -->
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 

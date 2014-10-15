@@ -48,7 +48,7 @@
     if ( is_404() || is_search() ) {
         
         ?>
-    <div class="index-box content-none-page-header">
+    <div class="index-box index-page-header">
         <header class="page-header"><h1 class="page-title">Recent posts:</h1></header>
     </div><!-- .index-box -->
     <?php

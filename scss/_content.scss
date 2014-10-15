@@ -114,19 +114,22 @@
     }
 }
 
-.page-header {
-    margin: 0 auto;
-    padding: $vspacing 4rem 0;
-        @media screen and (max-width: $entry-text-small) {
-            padding-top: 25px;
-        }
+.site-main {
 
-    .page-title {
-        font-weight: 100;
-        font-size: 30px;
-        font-size: 3rem;
-        color: $header-color;
-        text-transform: uppercase;
+    .page-header {
+        margin: 0 auto;
+        padding: $vspacing 4rem 0;
+            @media screen and (max-width: $entry-text-small) {
+                padding-top: 25px;
+            }
+
+        .page-title {
+            font-weight: 100;
+            font-size: 30px;
+            font-size: 3rem;
+            color: $header-color;
+            text-transform: uppercase;
+        }
     }
 }
 
@@ -183,19 +186,25 @@
     }
 }
 
-.featured-image-banner {
-    width: 827px;
+// page header
+.header-container {
     display: table;
-    position: absolute;
-    height: 100%;
+    height: 275px;
+    width: 955px;
     margin: 0 auto;
-    z-index: -1;
     text-align: center;
-    left: 0;
-    right: 0;
-    top: 90px;
-    width: 100%;
-    height: 277px;
+
+    .header-image {
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: -1;
+        position: fixed;
+        height: 100%;
+        background-size: cover;
+        background-position: 50% 0%;
+        background-repeat: no-repeat;
+    }
 
     .page-header {
         display: table-cell;
@@ -203,12 +212,31 @@
         text-align: center;
         font-size: 65px;
         font-size: 6.5rem;
-
+        
         .page-title {
             text-align: center;
             text-shadow: 0 1px 6px rgba(0,0,0,0.3);
             color: $featured-image-banner-text;
             font-weight: 100;
+            width: 955px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            &:before {
+                font-family: 'Fontawesome';
+                -webkit-font-smoothing: antialiased;
+                padding-right: 5px;
+                vertical-align: top;
+            }
+        }
+
+        .page-title-404:before {
+            content: '\f057';
+        }
+
+        .page-title-search:before {
+            content: '\f002';
         }
     }
 }

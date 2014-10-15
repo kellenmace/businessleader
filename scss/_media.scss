@@ -12,24 +12,6 @@
 	}
 }
 
-// Featured Images
-.single-post-featured-image {
-  	position: fixed;
-  	background-size: cover;
-	background-position: top;
-	background-repeat: no-repeat;
-	min-height: 375px;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: -2;
-	img {
-		display: block;
-    	width: 100%;
-    	max-width: none;
-	}
-}
-
 // Image Captions
 .wp-caption {
 	margin-bottom: $vspacing;
