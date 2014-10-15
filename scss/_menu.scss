@@ -23,8 +23,9 @@
 				display: block;
 				text-decoration: none;
 			    padding: 1.3em 1em;
-			    @include font-size(12);
-			    line-height: 1.3em;
+			    font-size: 14px;
+			    font-size: 1.4rem;
+			    line-height: 24px;
 			    color: $header-text;
 			}
 
@@ -50,7 +51,7 @@
 		    background: $sub-menu-background;
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			top: 60px;
-			
+
 			a {
 				width: 200px;
 				&:hover {
@@ -109,22 +110,11 @@
 
 @media screen and (max-width: 600px) {
 	.menu-toggle {
-            // display: block;
-            // float: right;
-            height: 3.75em;
+            height: 60px;
+            line-height: 60px;
             padding: 0 1em;
-            // font-weight: normal;
-            // font-size: 14px;
-            // font-size: 1.4rem;
-            // text-decoration: none;
-            line-height: 3.75em;
-            // color: white;
-            
             display: block;
             float: right;
-		    //width: 54px;
-		    //height: 54px;
-		    //padding: 12px;
 		    margin-right: 20px;
 		    color: $header-text;
 		    text-align: center;
@@ -142,7 +132,6 @@
 		background: $sub-menu-background;
 
 		&.toggled {
-			//display: block; //handle by JS?
 			clear: both;
 			border-top: 1px solid;
 			border-top-color: $sub-menu-background;
@@ -162,8 +151,8 @@
 	}
 
 	.main-navigation ul li > a:hover {
-		background: $header-background; //$sub-menu-background;
-		color: $mobile-menu-current-page; //NEW
+		background: $header-background;
+		color: $mobile-menu-current-page;
 	}
         
 	.main-navigation li { 
@@ -202,7 +191,7 @@
 
 	.main-navigation ul a:hover,
 	.main-navigation ul ul a:hover {
-		background: $header-background; //$sub-menu-background;
+		background: $header-background;
 	}
 
 	.main-navigation .current_page_ancestor { background: inherit; }

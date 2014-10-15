@@ -633,9 +633,9 @@ textarea {
         display: block;
         text-decoration: none;
         padding: 1.3em 1em;
-        font-size: 12px;
-        font-size: 1.5rem;
-        line-height: 1.3em;
+        font-size: 14px;
+        font-size: 1.4rem;
+        line-height: 24px;
         color: white; }
       .main-navigation ul li:hover > a {
         background: #4d4d4d; }
@@ -650,7 +650,7 @@ textarea {
       padding: 0;
       background: #4d4d4d;
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      top: 40px; }
+      top: 60px; }
       .main-navigation ul ul a {
         width: 200px; }
         .main-navigation ul ul a:hover {
@@ -681,9 +681,9 @@ textarea {
 
 @media screen and (max-width: 600px) {
   .menu-toggle {
-    height: 3.75em;
+    height: 60px;
+    line-height: 60px;
     padding: 0 1em;
-    line-height: 3.75em;
     display: block;
     float: right;
     margin-right: 20px;
