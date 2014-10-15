@@ -35,28 +35,15 @@
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</div>
 
-		<div class="search-toggle">
-		    <i class="fa fa-search"></i>
-		    <a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'bus_leader' ); ?></a>
-		</div>
-
-
 		<div class="menu-toggle">
 		    <i class="fa fa-bars"></i>
 		    <a href="#site-navigation" class="screen-reader-text"><?php _e( 'Menu', 'bus_leader' ); ?></a>
 		</div>
 
-
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<!-- <button class="menu-toggle"><?php _e( 'Menu', 'bus_leader' ); ?></button> -->
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
-
-		<div id="search-container" class="search-box-wrapper clear">
-		    <div class="search-box clear">
-		        <?php get_search_form(); ?>
-		    </div>
-		</div><!-- #search-container -->
 	</header><!-- #masthead -->
 
 	<?php get_header_container(); ?>

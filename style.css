@@ -465,6 +465,11 @@ textarea {
   vertical-align: top;
   /* Improves readability and alignment in all browsers */ }
 
+.error404 .search-submit,
+.search .search-submit,
+.search-box .search-submit {
+  display: none; }
+
 .site-main {
   background: white; }
   .site-main .index-box {
@@ -476,8 +481,6 @@ textarea {
     .site-main .index-box .entry-content .search-form .search-field {
       box-sizing: border-box;
       width: 100%; }
-    .site-main .index-box .entry-content .search-form .search-submit {
-      display: none; }
     .site-main .index-box .entry-content p {
       margin-bottom: 50px; }
     .site-main .index-box blockquote.alignleft {
@@ -569,8 +572,7 @@ textarea {
   width: 100%; }
 
 .site-header {
-  background: #333333;
-  /* Header search */ }
+  background: #333333; }
   .site-header .site-branding {
     padding: 1rem 3rem;
     text-align: left;
@@ -610,42 +612,6 @@ textarea {
       color: #fff;
       -webkit-font-smoothing: antialiased;
       content: '\f0c9'; }
-  .site-header .search-toggle {
-    float: right;
-    margin-right: 20px;
-    color: white;
-    text-align: center;
-    cursor: pointer;
-    height: 3.75em;
-    padding: 0 1em;
-    line-height: 3.75em; }
-    .site-header .search-toggle:hover, .site-header .search-toggle.active {
-      background: #4d4d4d; }
-  .site-header .search-box-wrapper {
-    clear: both;
-    z-index: 2;
-    width: 100%;
-    display: none; }
-    .site-header .search-box-wrapper .search-box {
-      padding: 1em;
-      background: #4d4d4d; }
-      .site-header .search-box-wrapper .search-box .search-field {
-        max-width: 362px;
-        float: right;
-        padding: 0.5rem 1rem;
-        font-size: 21px;
-        font-size: 2.1rem;
-        font-weight: 300;
-        background-color: white;
-        border: 0; }
-  .site-header input[type="search"] {
-    box-sizing: border-box;
-    width: 100%;
-    color: #4d4d4d; }
-  .site-header .error404 .search-submit,
-  .site-header .search .search-submit,
-  .site-header .search-box .search-submit {
-    display: none; }
 
 /* =Menu
 ----------------------------------------------- */
