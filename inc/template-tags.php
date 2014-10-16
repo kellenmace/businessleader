@@ -13,7 +13,7 @@ if ( ! function_exists( 'get_header_container' ) ) :
  */
 function get_header_container() {
 	// TODO: add upload option & integrate customizer
-    if ( has_post_thumbnail( $post->ID ) && ! is_archive() && ! is_home() ) {
+    if ( has_post_thumbnail( $post->ID ) && ! is_archive() && ! is_home() && ! is_search() ) {
 		$header_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large-thumb' )[0];
 	}
 	else {

@@ -55,4 +55,21 @@ jQuery(document).ready(function($){
             isAnimated: true
         });
     }
+
+    /* 
+     * Masonry settings to organize image galleries
+     */
+    var $gallery_container = $('.gallery');
+    var $gallery_columnWidth = 8;
+    gallery_runMasonry();
+    
+    function gallery_runMasonry() {
+        // initialize
+        $gallery_container.masonry({
+            columnWidth: $gallery_columnWidth,
+            itemSelector: '.gallery-item',
+            isFitWidth: true,
+            isAnimated: true
+        });
+    }
 });

@@ -65,12 +65,6 @@ function bus_leader_setup() {
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
 	add_theme_support( 'post-formats', array( 'aside' ) );
-
-	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'bus_leader_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
 }
 endif; // bus_leader_setup
 add_action( 'after_setup_theme', 'bus_leader_setup' );
@@ -125,7 +119,7 @@ function bus_leader_scripts() {
 	wp_enqueue_script( 'bus_leader-superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('bus_leader-superfish'), '20140710', true );
 
 	// Theme scripts
-	wp_enqueue_script( 'bus_leader-hide-search', get_template_directory_uri() . '/js/bus-leader-scripts.js', array('jquery', 'masonry'), '20141015', true );
+	wp_enqueue_script( 'bus_leader-scripts', get_template_directory_uri() . '/js/bus-leader-scripts.js', array('jquery', 'masonry'), '20141015', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

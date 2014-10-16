@@ -34,7 +34,7 @@
 	<footer class="entry-footer">
 		<?php
 			/* translators: used between list items, there is a space after the comma */
-			$category_list = get_the_category_list( __( ', ', 'bus_leader' ) );
+			$category_list = ( is_attachment() ? get_the_category_list( ', ','bus_leader',$post->post_parent ) : get_the_category_list( __( ', ', 'bus_leader' ) ) );
 
 			/* translators: used between list items, there is a space after the comma */
 			$tag_list = get_the_tag_list( '', __( ', ', 'bus_leader' ) );

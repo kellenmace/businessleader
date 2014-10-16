@@ -96,6 +96,7 @@
         font-size: 1.9rem;
         font-weight: 300;
         line-height: 1.6em;
+        word-wrap: break-word;
         @media screen and (max-width: $entry-text-small) {
             font-size: 17px;
             font-size: 1.7rem;
