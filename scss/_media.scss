@@ -16,13 +16,9 @@
 .wp-caption {
 	margin-bottom: $vspacing;
 	max-width: 100%;
-
-	img[class*="size-large"] {
-		display: block;
-		margin: 0 auto;
-	}
-
-	img[class*="size-full"] {
+	
+	// consider targeting img[class*="size-large"] and img[class*="size-full"] instead
+	img {
 		display: block;
 		margin: 0 auto;
 	}

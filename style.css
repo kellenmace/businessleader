@@ -702,65 +702,58 @@ textarea {
       clear: both;
       border-top: 1px solid;
       border-top-color: #4d4d4d; }
-
-  .main-navigation ul {
-    padding-left: 0; }
-
-  .main-navigation ul li {
-    float: none; }
-
-  .main-navigation ul li:hover > a {
-    background: inherit; }
-
-  .main-navigation ul li > a:hover {
-    background: #333333;
-    color: #999999; }
-
-  .main-navigation li {
-    float: none; }
-
-  .main-navigation li a {
-    padding: 1.3em 2em; }
-
-  .main-navigation li li a {
-    padding-left: 4em; }
-
-  .main-navigation li li li a {
-    padding-left: 6em; }
-
-  .main-navigation ul ul,
-  .main-navigation ul ul ul {
-    position: relative;
-    top: inherit;
-    left: 0;
-    display: block;
-    float: none;
-    box-shadow: none;
-    background: inherit; }
-
-  .main-navigation ul ul a {
-    width: 100%; }
-
-  .main-navigation ul ul li a {
-    width: auto; }
-
-  .main-navigation ul a:hover,
-  .main-navigation ul ul a:hover {
-    background: #333333; }
-
-  .main-navigation .current_page_ancestor {
-    background: inherit; }
-
-  .main-navigation ul ul .current_page_parent {
-    color: inherit;
-    background: inherit; }
-
-  .main-navigation .current_page_item > a,
-  .main-navigation .current_page_parent .current_page_item > a,
-  .main-navigation .current_page_item > a:hover,
-  .main-navigation .current-menu-item > a:hover {
-    background: #333333;
-    color: #999999; } }
+    .main-navigation ul {
+      padding-left: 0; }
+      .main-navigation ul li {
+        float: none; }
+        .main-navigation ul li:hover > a {
+          background: inherit; }
+        .main-navigation ul li > a:hover {
+          background: #333333;
+          color: #999999; }
+      .main-navigation ul ul {
+        position: relative;
+        top: inherit;
+        left: 0;
+        display: block;
+        float: none;
+        box-shadow: none;
+        background: inherit; }
+        .main-navigation ul ul li a {
+          width: auto; }
+        .main-navigation ul ul a {
+          width: 100%; }
+          .main-navigation ul ul a:hover {
+            background: #333333; }
+        .main-navigation ul ul ul {
+          position: relative;
+          top: inherit;
+          left: 0;
+          display: block;
+          float: none;
+          box-shadow: none;
+          background: inherit; }
+        .main-navigation ul ul .current_page_parent {
+          color: inherit;
+          background: inherit; }
+      .main-navigation ul a:hover {
+        background: #333333; }
+    .main-navigation li {
+      float: none; }
+      .main-navigation li a {
+        padding: 1.3em 2em; }
+      .main-navigation li li a {
+        padding-left: 4em; }
+      .main-navigation li li li a {
+        padding-left: 6em; }
+    .main-navigation .current_page_ancestor {
+      background: inherit; }
+    .main-navigation .current_page_item > a,
+    .main-navigation .current_page_parent .current_page_item > a,
+    .main-navigation .current_page_item > a:hover,
+    .main-navigation .current-menu-item > a:hover {
+      background: #333333;
+      color: #999999; } }
 /* =Content
 ----------------------------------------------- */
 /*
@@ -1031,10 +1024,7 @@ textarea {
 .wp-caption {
   margin-bottom: 40px;
   max-width: 100%; }
-  .wp-caption img[class*="size-large"] {
-    display: block;
-    margin: 0 auto; }
-  .wp-caption img[class*="size-full"] {
+  .wp-caption img {
     display: block;
     margin: 0 auto; }
   .wp-caption .wp-caption-text {
@@ -1076,7 +1066,7 @@ textarea {
       max-height: 45%;
       width: 100%;
       margin: 0;
-      padding: 6px 8px;
+      padding: 2px 8px;
       font-size: 12px;
       font-size: 1.2rem;
       font-family: "Roboto", sans-serif;
