@@ -63,7 +63,7 @@
 			&:hover {
 				> a {
 					background: green;
-				};
+				}
 			}
 
 			li {
@@ -136,76 +136,96 @@
 			border-top: 1px solid;
 			border-top-color: $sub-menu-background;
 		}
-	}
 
-	.main-navigation ul {
-        padding-left: 0;
-	}
-	
-	.main-navigation ul li {
-		float: none;
-	}
+		ul {
+	        padding-left: 0;
 
-	.main-navigation ul li:hover > a {
-		background: inherit;
-	}
+	        li {
+				float: none;
 
-	.main-navigation ul li > a:hover {
-		background: $header-background;
-		color: $mobile-menu-current-page;
-	}
-        
-	.main-navigation li { 
-		float: none; 
-	}
+				&:hover > a {
+					background: inherit;
+				}
 
-	.main-navigation li a { 
-		padding: 1.3em 2em; 
-	}
+				> a:hover {
+					background: $header-background;
+					color: $mobile-menu-current-page;
+				}
+			}
 
-	.main-navigation li li a { 
-		padding-left: 4em; 
-	}
+			ul {
+				position: relative;
+				top: inherit;
+				left: 0;
+				display: block;
+				float: none;
+				box-shadow: none;
+				background: inherit;
 
-	.main-navigation li li li a { 
-		padding-left: 6em; 
-	}
+				li {
+					a {
+						width: auto;
+					}
+				}
 
-	
-	.main-navigation ul ul,
-	.main-navigation ul ul ul {
-		position: relative;
-		top: inherit;
-		left: 0;
-		display: block;
-		float: none;
-		box-shadow: none;
-		background: inherit;
-	}
-	
-	.main-navigation ul ul a { width: 100%; }
+				a {
+					width: 100%;
 
-	.main-navigation ul ul li a {
-		width: auto;
-	}
+					&:hover {
+						background: $header-background;
+					}
+				}
 
-	.main-navigation ul a:hover,
-	.main-navigation ul ul a:hover {
-		background: $header-background;
-	}
+				ul {
+					position: relative;
+					top: inherit;
+					left: 0;
+					display: block;
+					float: none;
+					box-shadow: none;
+					background: inherit;
+				}
 
-	.main-navigation .current_page_ancestor { background: inherit; }
+				.current_page_parent {
+					color: inherit;
+					background: inherit;
+				}
+			}
 
-	.main-navigation ul ul .current_page_parent {
-		color: inherit;
-		background: inherit;
-	}
+			a:hover {
+				background: $header-background;
+			}
+		}
 
-	.main-navigation .current_page_item > a,
-	.main-navigation .current_page_parent .current_page_item > a,
-	.main-navigation .current_page_item > a:hover,
-	.main-navigation .current-menu-item > a:hover {
-		background: $header-background;
-		color: $mobile-menu-current-page;
+		li { 
+			float: none;
+			a { 
+				padding: 1.3em 2em; 
+			}
+
+			li {
+				a { 
+					padding-left: 4em; 
+				}
+
+				li {
+					a { 
+						padding-left: 6em; 
+					}
+				}
+			}
+		}
+
+		.current_page_ancestor {
+			background: inherit;
+		}
+
+		.current_page_item > a,
+		.current_page_parent .current_page_item > a,
+		.current_page_item > a:hover,
+		.current-menu-item > a:hover {
+			background: $header-background;
+			color: $mobile-menu-current-page;
+		}
 	}
 }

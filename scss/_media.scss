@@ -22,6 +22,11 @@
 		margin: 0 auto;
 	}
 
+	img[class*="size-full"] {
+		display: block;
+		margin: 0 auto;
+	}
+
 	.wp-caption-text {
 		text-align: center;
 		padding: 0.8075em 1em;
@@ -74,7 +79,7 @@
 			    max-height: 45%;
 			    width: 100%;
 				margin: 0;
-				padding: 6px 8px;
+				padding: 2px 8px;
 			    font-size: 12px;
 			    font-size: 1.2rem;
 			    font-family: $base-font;

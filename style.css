@@ -1034,6 +1034,9 @@ textarea {
   .wp-caption img[class*="size-large"] {
     display: block;
     margin: 0 auto; }
+  .wp-caption img[class*="size-full"] {
+    display: block;
+    margin: 0 auto; }
   .wp-caption .wp-caption-text {
     text-align: center;
     padding: 0.8075em 1em;
