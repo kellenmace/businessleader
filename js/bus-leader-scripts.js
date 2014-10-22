@@ -1,4 +1,18 @@
 jQuery(document).ready(function($){
+    /*
+     * set header image size automatically
+     */
+    // var $site_header_height = $('#masthead').height();
+    // var $header_container_height = $('.header-container').height();
+    // var $window = $(window).on('resize', function() {
+    //     $('.header-image').css('height', $site_header_height + $header_container_height + 50);
+    // }).trigger('resize');
+
+    // var $site_content_position = $( '#content' ).offset();
+    // $(window).on('resize', function() {
+    //     $('.header-image').css('height', $site_content_position.top);
+    // }).trigger('resize');
+    
 
 	/* 
 	 * Apply parallax effect to featured image
@@ -19,57 +33,42 @@ jQuery(document).ready(function($){
         return false;
     });
 
-    /* 
-	 * Masonry settings to organize footer widgets
-	 */
-    var $container = $('#footer-widgets');
-    var $masonryOn;
-    var $columnWidth = 50;
-    //var $gutter = 10;
-    
-    if ($(document).width() > 819) {
-        $masonryOn = true;
-        runMasonry();
-    }
-
-    $(window).resize( function() {
-        if ($(document).width() < 819) {
-            if ($masonryOn){
-                $container.masonry('destroy');
-                $masonryOn = false;
-            }
-
-        } else {
-            $masonryOn = true;
-            runMasonry();
-        }
-    });
-    
-    function runMasonry() {
-        // initialize
-        $container.masonry({
-            columnWidth: $columnWidth,
-            //gutter: $gutter,
-            itemSelector: '.widget',
-            isFitWidth: true,
-            isAnimated: true
-        });
-    }
-
-    /* 
+    /*
      * Masonry settings to organize image galleries
      */
     var $gallery_container = $('.gallery');
-    var $gallery_columnWidth = 8;
     gallery_runMasonry();
     
     function gallery_runMasonry() {
         // initialize
         $gallery_container.masonry({
-            columnWidth: $gallery_columnWidth,
+            columnWidth: 8,
             itemSelector: '.gallery-item',
             isFitWidth: true,
             isAnimated: true
         });
     }
+
+    /* 
+	 * Masonry settings to organize footer widgets
+	 */
+    var $container = $( '#footer-widgets' ).masonry();
+    enquire.register("screen and ( min-width:768px )", {
+
+        // Triggered when a media query matches.
+        match : function() {
+            $container.masonry({
+                columnWidth: 50,
+                itemSelector: '.widget',
+                isFitWidth: true,
+                isAnimated: true
+            });
+        },
+
+        // Triggered when the media query transitions 
+        // from a matched state to an unmatched state
+        unmatch : function() {
+            $container.masonry( 'destroy' );
+        }
+    });
 });

@@ -9,17 +9,29 @@
 
 if ( ! function_exists( 'get_header_container' ) ) :
 /**
- * Display header container with featured image and page title inside
+ * Display header container with image inside
  */
 function get_header_container() {
-	// TODO: add upload option & integrate customizer
-    if ( has_post_thumbnail( $post->ID ) && ! is_archive() && ! is_home() && ! is_search() ) {
+	// Display featured image or Theme Customizer image for single posts/pages
+    if ( ! is_home() && ! is_archive() && ! is_search() && ! is_404() && has_post_thumbnail( $post->ID ) ) {
 		$header_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large-thumb' )[0];
 	}
+	elseif ( ! is_home() && ! is_archive() && ! is_search() && ! is_404() && ! empty( get_theme_mod( 'bus-leader-header-image-setting-single' ) ) ) {
+		$header_image = get_theme_mod( 'bus-leader-header-image-setting-single' );
+	}
+	// Use image set in Theme Customizer for blog, archive, search and 404 pages
+	elseif ( is_home() && ! empty( get_theme_mod( 'bus-leader-header-image-setting-home' ) ) ) {
+		$header_image = get_theme_mod( 'bus-leader-header-image-setting-home' );
+	}
+	elseif ( is_archive() || is_search() || is_404() && ! empty( get_theme_mod( 'bus-leader-header-image-setting-archive' ) ) ) {
+		$header_image = get_theme_mod( 'bus-leader-header-image-setting-archive' );
+	}
+	// Else, use default theme image
 	else {
 		$header_image = get_template_directory_uri() . '/images/default-featured-image.jpg';
 	}
-	?>
+?>
+
 	<div class="header-container">
 		<div class="header-image" style="background-image: url('<?php echo $header_image ?>')"></div><!-- .header-image -->
 		
@@ -280,4 +292,3 @@ if ( ! function_exists( 'bus_leader_comment' ) ) :
 	    endswitch;
 	}
 endif;
-

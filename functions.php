@@ -24,8 +24,7 @@ function bus_leader_setup() {
 
 	// Style the back end visual editor
 	$editor_font_url = urlencode( '//fonts.googleapis.com/css?family=Roboto:500,400,300,300italic,700,400italic,100' );
-	add_editor_style( $editor_font_url );
-	add_editor_style( 'inc/custom-editor-style.css' );
+	add_editor_style( array( $editor_font_url, 'inc/custom-editor-style.css' ) );
 	
 	/*
 	 * Make theme available for translation.
@@ -111,7 +110,7 @@ function bus_leader_scripts() {
 	wp_enqueue_style( 'bus_leader-font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
 
 	// Underscores scripts
-	//wp_enqueue_script( 'bus_leader-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	//TODO: wp_enqueue_script( 'bus_leader-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 	wp_enqueue_script( 'bus_leader-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	// Add keyboard accessibility to navigation menu
