@@ -1,7 +1,7 @@
 .site-footer {
-    padding: 2em 2em 1.3em 2em;
+    padding: 2.75em 2em 1.5em;
     font-family: $footer-font;
-    @include font-size(14);
+    font-size: 100%;
     font-weight: 100;
     color: $footer-text;
     background: $footer-background;
@@ -12,9 +12,16 @@
 }
 
 .site-info {
-	margin: 0 auto;
-	border-top: 1px solid #666;
-	padding-top: 1.3em;
+	margin: 3em auto 0;
+	border-top: 1px solid $footer-widgets-horizontal-line;
+	padding-top: 1.75em;
 	font-size: 15px;
 	font-size: 1.5rem;
+
+    a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }

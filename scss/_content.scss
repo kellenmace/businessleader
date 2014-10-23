@@ -120,9 +120,13 @@
     .page-header {
         margin: 0 auto;
         padding: $vspacing 4rem 0;
-            @media screen and (max-width: $entry-text-small) {
-                padding-top: 25px;
-            }
+        @media screen and (max-width: $entry-text-small) {
+            padding-top: 25px;
+        }
+        @media screen and (max-width: $break-small) {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
 
         .page-title {
             font-weight: 100;
@@ -191,8 +195,6 @@
  *  Other
  */
 
-.sticky {
-}
 .hentry {
 	margin: 0 0 $vspacing;
 }

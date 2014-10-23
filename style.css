@@ -472,27 +472,27 @@ textarea {
 
 .site-main {
   background: white; }
-  .site-main .index-box {
-    max-width: 780px;
-    max-width: 78rem;
-    margin: 0 auto 2em; }
-    .site-main .index-box .small-index-thumbnail {
-      padding: 4rem 4rem 0; }
-    .site-main .index-box .entry-content .search-form .search-field {
-      box-sizing: border-box;
-      width: 100%; }
-    .site-main .index-box .entry-content p {
-      margin-bottom: 50px; }
-    .site-main .index-box blockquote.alignleft {
-      border: none; }
-      @media screen and (min-width: 1320px) {
-        .site-main .index-box blockquote.alignleft {
-          padding-left: 2em; } }
-    .site-main .index-box blockquote.alignright {
-      border: none; }
-      @media screen and (min-width: 1820px) {
-        .site-main .index-box blockquote.alignright {
-          padding-right: 2em; } }
+  .site-main .small-index-thumbnail {
+    padding: 4rem 4rem 0; }
+    @media screen and (max-width: 600px) {
+      .site-main .small-index-thumbnail {
+        padding-left: 1rem;
+        padding-right: 1rem; } }
+  .site-main .entry-content .search-form .search-field {
+    box-sizing: border-box;
+    width: 100%; }
+  .site-main .entry-content p {
+    margin-bottom: 50px; }
+  .site-main blockquote.alignleft {
+    border: none; }
+    @media screen and (min-width: 1320px) {
+      .site-main blockquote.alignleft {
+        padding-left: 2em; } }
+  .site-main blockquote.alignright {
+    border: none; }
+    @media screen and (min-width: 1820px) {
+      .site-main blockquote.alignright {
+        padding-right: 2em; } }
   .site-main .index-page-header {
     margin-bottom: 0; }
 
@@ -534,6 +534,17 @@ textarea {
     .paging-navigation,
     .index-box {
       margin-right: 0; } }
+  @media screen and (max-width: 600px) {
+    .entry-header,
+    .entry-content,
+    .entry-footer,
+    .tag-links,
+    .post-navigation,
+    .comments-area,
+    .paging-navigation,
+    .index-box {
+      padding-left: 1rem;
+      padding-right: 1rem; } }
 
 .entry-meta {
   position: relative;
@@ -572,7 +583,8 @@ textarea {
   width: 100%; }
 
 .site-header {
-  background: #333333; }
+  background: #333333;
+  z-index: 10; }
   .site-header .site-branding {
     padding: 1rem 3rem;
     text-align: left;
@@ -580,7 +592,7 @@ textarea {
     overflow: hidden; }
     @media screen and (max-width: 600px) {
       .site-header .site-branding {
-        padding: 0; } }
+        padding: 0.5rem 2rem; } }
     .site-header .site-branding a {
       text-decoration: none; }
     .site-header .site-branding .logo {
@@ -589,16 +601,28 @@ textarea {
         float: left;
         max-width: 100%;
         margin-right: 10px; }
+        @media screen and (max-width: 600px) {
+          .site-header .site-branding .logo img {
+            width: 30px;
+            padding: 2.5px 0; } }
     .site-header .site-branding .site-title {
       display: inline;
       font-weight: 100;
-      font-size: 23px;
-      font-size: 2.875rem;
+      font-size: 26px;
+      font-size: 2.6rem;
       clear: none;
       line-height: normal; }
+      @media screen and (max-width: 600px) {
+        .site-header .site-branding .site-title {
+          font-size: 22px;
+          font-size: 2.2rem;
+          line-height: 35px; } }
       .site-header .site-branding .site-title a {
         color: white;
         line-height: 40px; }
+        @media screen and (max-width: 600px) {
+          .site-header .site-branding .site-title a {
+            line-height: 35px; } }
     .site-header .site-branding .site-description {
       position: absolute;
       clip: rect(1px, 1px, 1px, 1px); }
@@ -616,9 +640,9 @@ textarea {
 .header-container {
   display: table;
   height: 275px;
-  max-width: 955px;
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  max-width: 955px; }
   .header-container .header-image {
     top: 0px;
     left: 0px;
@@ -635,15 +659,54 @@ textarea {
     text-align: center;
     font-size: 65px;
     font-size: 6.5rem; }
+    @media screen and (max-width: 955px) {
+      .header-container .page-header {
+        font-size: 5.5rem; } }
+    @media screen and (max-width: 550px) {
+      .header-container .page-header {
+        font-size: 4.5rem; } }
+    @media screen and (max-width: 500px) {
+      .header-container .page-header {
+        font-size: 4rem; } }
+    @media screen and (max-width: 400px) {
+      .header-container .page-header {
+        font-size: 3.5rem; } }
+    @media screen and (max-width: 350px) {
+      .header-container .page-header {
+        font-size: 2.5rem; } }
+    @media screen and (max-width: 300px) {
+      .header-container .page-header {
+        font-size: 2rem; } }
     .header-container .page-header .page-title {
       text-align: center;
       text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
       color: white;
       font-weight: 100;
-      width: 955px;
       white-space: nowrap;
       overflow: hidden;
-      text-overflow: ellipsis; }
+      text-overflow: ellipsis;
+      width: 955px; }
+      @media screen and (max-width: 955px) {
+        .header-container .page-header .page-title {
+          width: 800px; } }
+      @media screen and (max-width: 800px) {
+        .header-container .page-header .page-title {
+          width: 650px; }
+          .header-container .page-header .page-title span {
+            display: block; } }
+      @media screen and (max-width: 650px) {
+        .header-container .page-header .page-title {
+          width: 500px; } }
+      @media screen and (max-width: 500px) {
+        .header-container .page-header .page-title {
+          width: 400px;
+          font-weight: 300; } }
+      @media screen and (max-width: 400px) {
+        .header-container .page-header .page-title {
+          width: 350px; } }
+      @media screen and (max-width: 350px) {
+        .header-container .page-header .page-title {
+          width: auto; } }
       .header-container .page-header .page-title:before {
         font-family: 'Fontawesome';
         -webkit-font-smoothing: antialiased;
@@ -660,6 +723,7 @@ textarea {
   position: relative;
   float: right;
   display: block;
+  padding-right: 2rem;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   text-transform: uppercase; }
@@ -674,9 +738,9 @@ textarea {
         display: block;
         text-decoration: none;
         padding: 1.3em 1em;
-        font-size: 14px;
-        font-size: 1.4rem;
-        line-height: 24px;
+        font-size: 12px;
+        font-size: 1.2rem;
+        line-height: 29px;
         color: white; }
       .main-navigation ul li:hover > a {
         background: #4d4d4d; }
@@ -722,12 +786,11 @@ textarea {
 
 @media screen and (max-width: 600px) {
   .menu-toggle {
-    height: 60px;
-    line-height: 60px;
+    line-height: 45px;
+    height: 45px;
     padding: 0 1em;
     display: block;
     float: right;
-    margin-right: 20px;
     color: white;
     text-align: center;
     cursor: pointer; }
@@ -738,7 +801,8 @@ textarea {
     display: none;
     float: none;
     clear: both;
-    background: #4d4d4d; }
+    background: #4d4d4d;
+    padding-right: 0; }
     .main-navigation.toggled {
       clear: both;
       border-top: 1px solid;
@@ -895,6 +959,10 @@ textarea {
   @media screen and (max-width: 680px) {
     .site-main .page-header {
       padding-top: 25px; } }
+  @media screen and (max-width: 600px) {
+    .site-main .page-header {
+      padding-left: 1rem;
+      padding-right: 1rem; } }
   .site-main .page-header .page-title {
     font-weight: 100;
     font-size: 30px;
@@ -978,11 +1046,11 @@ textarea {
   line-height: 1;
   color: #dddddd;
   border: 2px solid #dddddd;
-  webkit-border-radius: 4px;
+  -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
   cursor: pointer; }
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 600px) {
     .read-more a {
       display: block;
       text-align: center;
@@ -1000,6 +1068,11 @@ textarea {
     -webkit-font-smoothing: antialiased;
     padding-right: 10px;
     vertical-align: top; }
+  .sticky .index-box {
+    padding-bottom: 5rem; }
+    @media screen and (max-width: 600px) {
+      .sticky .index-box {
+        padding-bottom: 4rem; } }
 
 /* =Asides
 ----------------------------------------------- */
@@ -1011,6 +1084,9 @@ textarea {
     margin-bottom: 25px; }
 .blog .format-aside .entry-meta, .archive .format-aside .entry-meta, .error404 .format-aside .entry-meta, .search .format-aside .entry-meta {
   padding: 0 4rem; }
+  @media screen and (max-width: 600px) {
+    .blog .format-aside .entry-meta, .archive .format-aside .entry-meta, .error404 .format-aside .entry-meta, .search .format-aside .entry-meta {
+      padding: 0 1rem; } }
   .blog .format-aside .entry-meta a:hover, .archive .format-aside .entry-meta a:hover, .error404 .format-aside .entry-meta a:hover, .search .format-aside .entry-meta a:hover {
     color: #4d4d4d; }
 
@@ -1332,10 +1408,9 @@ ol.children {
   .reply {
     margin-left: 0; } }
 .site-footer {
-  padding: 2em 2em 1.3em 2em;
+  padding: 2.75em 2em 1.5em;
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  font-size: 1.75rem;
+  font-size: 100%;
   font-weight: 100;
   color: white;
   background: #333333; }
@@ -1343,11 +1418,15 @@ ol.children {
     color: white; }
 
 .site-info {
-  margin: 0 auto;
-  border-top: 1px solid #666;
-  padding-top: 1.3em;
+  margin: 3em auto 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1.75em;
   font-size: 15px;
   font-size: 1.5rem; }
+  .site-info a {
+    text-decoration: none; }
+    .site-info a:hover {
+      text-decoration: underline; }
 
 /* =Widgets
 ----------------------------------------------- */
@@ -1395,7 +1474,7 @@ ol.children {
   font-size: 2.3rem;
   font-weight: 100;
   text-transform: uppercase;
-  border-top: 1px solid #eaeaea; }
+  border-top: 1px solid #e3e3e3; }
 
 .widget_recent_entries li:before,
 .widget_recent_comments li:before,

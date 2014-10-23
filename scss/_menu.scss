@@ -5,6 +5,7 @@
 	position: relative;
     float: right;
     display: block;
+    padding-right: 2rem;
     font-family: $base-font;
     font-weight: 100;
     text-transform: uppercase;
@@ -23,9 +24,9 @@
 				display: block;
 				text-decoration: none;
 			    padding: 1.3em 1em;
-			    font-size: 14px;
-			    font-size: 1.4rem;
-			    line-height: 24px;
+			    font-size: 12px;
+			    font-size: 1.2rem;
+			    line-height: 29px;
 			    color: $header-text;
 			}
 
@@ -110,12 +111,11 @@
 
 @media screen and (max-width: 600px) {
 	.menu-toggle {
-            height: 60px;
-            line-height: 60px;
+            line-height: 45px;
+            height: 45px;
             padding: 0 1em;
             display: block;
             float: right;
-		    margin-right: 20px;
 		    color: $header-text;
 		    text-align: center;
 		    cursor: pointer;
@@ -130,6 +130,7 @@
 		float: none;
 		clear: both;
 		background: $sub-menu-background;
+		padding-right: 0;
 
 		&.toggled {
 			clear: both;
