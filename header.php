@@ -35,7 +35,7 @@
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</div>
 
-		<div class="menu-toggle">
+		<div id="nav-menu-toggle" class="menu-toggle">
 		    <i class="fa fa-bars"></i>
 		    <a href="#site-navigation" class="screen-reader-text"><?php _e( 'Menu', 'bus_leader' ); ?></a>
 		</div>

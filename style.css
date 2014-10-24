@@ -792,8 +792,7 @@ textarea {
     display: block;
     float: right;
     color: white;
-    text-align: center;
-    cursor: pointer; }
+    text-align: center; }
     .menu-toggle:hover, .menu-toggle.active {
       background: #4d4d4d; }
 
@@ -804,6 +803,7 @@ textarea {
     background: #4d4d4d;
     padding-right: 0; }
     .main-navigation.toggled {
+      display: block;
       clear: both;
       border-top: 1px solid;
       border-top-color: #4d4d4d; }
@@ -1419,6 +1419,7 @@ ol.children {
 
 .site-info {
   margin: 3em auto 0;
+  border-top: 1px solid #666;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 1.75em;
   font-size: 15px;
@@ -1543,14 +1544,14 @@ ol.children {
   .footer-widgets .widget_nav_menu a,
   .footer-widgets .widget_pages a {
     border-bottom-color: #666;
-    border-bottom-color: rgba(255, 255, 255, 0.2); }
+    border-bottom-color: rgba(255, 255, 255, 0.1); }
   .footer-widgets .wp-caption .wp-caption-text {
     border-left-color: #666;
     border-bottom-color: #666;
     border-right-color: #666;
-    border-left-color: rgba(255, 255, 255, 0.2);
-    border-bottom-color: rgba(255, 255, 255, 0.2);
-    border-right-color: rgba(255, 255, 255, 0.2); }
+    border-left-color: rgba(255, 255, 255, 0.1);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    border-right-color: rgba(255, 255, 255, 0.1); }
 
 /* Footer widgets responsive */
 @media screen and (max-width: 797px) {

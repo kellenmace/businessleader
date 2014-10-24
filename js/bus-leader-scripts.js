@@ -1,3 +1,56 @@
+( function() {
+    /*
+     * Handles toggling the navigation menu for small screens.
+     */
+    var container, button, menu;
+
+    container = document.getElementById( 'site-navigation' );
+    if ( ! container )
+        return;
+
+    //button = container.getElementsByTagName( 'button' )[0];
+    button = document.getElementById( 'nav-menu-toggle' );
+    if ( ! button )
+        return;
+
+    menu = container.getElementsByTagName( 'ul' )[0];
+    // Hide menu toggle button if menu is empty and return early.
+    if ( 'undefined' === typeof menu )
+        return;
+
+    if ( -1 === menu.className.indexOf( 'nav-menu' ) )
+        menu.className += ' nav-menu';
+
+    button.onclick = function() {
+        if ( -1 !== container.className.indexOf( 'toggled' ) ) {
+            container.className = container.className.replace( ' toggled', '' );
+        }
+        else
+            container.className += ' toggled';
+    };
+
+    /*
+     * Skip link focus fix
+     */
+    var is_webkit = navigator.userAgent.toLowerCase().indexOf( 'webkit' ) > -1,
+        is_opera  = navigator.userAgent.toLowerCase().indexOf( 'opera' )  > -1,
+        is_ie     = navigator.userAgent.toLowerCase().indexOf( 'msie' )   > -1;
+
+    if ( ( is_webkit || is_opera || is_ie ) && document.getElementById && window.addEventListener ) {
+        window.addEventListener( 'hashchange', function() {
+            var element = document.getElementById( location.hash.substring( 1 ) );
+
+            if ( element ) {
+                if ( ! /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) )
+                    element.tabIndex = -1;
+
+                element.focus();
+            }
+        }, false );
+    }
+
+} )();
+
 jQuery(document).ready(function($){
     /*
      * set header image size automatically
@@ -25,19 +78,19 @@ jQuery(document).ready(function($){
 	/* 
 	 * Toggles mobile menu on and off
 	 */
-	$('.menu-toggle').click(function(){
-        $('.menu-toggle').toggleClass('active');
-        $('.main-navigation').toggleClass('toggled').slideToggle(300);
-    });
-    $( window ).resize(function() {
-        var win = $(this);
-        if ( win.width() > 600 ) {
-            $('.main-navigation').show();
-        }
-        else if ( win.width() <= 600 ) {
-            $('.main-navigation').hide();
-        }
-    });
+	// $('.menu-toggle').click(function(){
+ //        $('.menu-toggle').toggleClass('active');
+ //        $('.main-navigation').toggleClass('toggled').slideToggle(300);
+ //    });
+ //    $( window ).resize(function() {
+ //        var win = $(this);
+ //        if ( win.width() > 600 ) {
+ //            $('.main-navigation').show();
+ //        }
+ //        else if ( win.width() <= 600 ) {
+ //            $('.main-navigation').hide();
+ //        }
+ //    });
 
     /*
      * Masonry settings to organize image galleries

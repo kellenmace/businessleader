@@ -109,10 +109,6 @@ function bus_leader_scripts() {
 	wp_enqueue_style( 'bus_leader-google-fonts', 'http://fonts.googleapis.com/css?family=Roboto:500,400,300,300italic,700,400italic,100' );
 	wp_enqueue_style( 'bus_leader-font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
 
-	// Underscores scripts
-	//TODO: wp_enqueue_script( 'bus_leader-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-	wp_enqueue_script( 'bus_leader-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
-
 	// Add keyboard accessibility to navigation menu
 	wp_enqueue_script( 'bus_leader-superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), '20140710', true );
 	wp_enqueue_script( 'bus_leader-superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('bus_leader-superfish'), '20140710', true );

@@ -118,7 +118,6 @@
             float: right;
 		    color: $header-text;
 		    text-align: center;
-		    cursor: pointer;
 
 		    &:hover, &.active {
 	            background: $sub-menu-background;
@@ -133,6 +132,7 @@
 		padding-right: 0;
 
 		&.toggled {
+			display: block;
 			clear: both;
 			border-top: 1px solid;
 			border-top-color: $sub-menu-background;
