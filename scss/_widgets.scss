@@ -49,8 +49,8 @@
 		width: 100%;
 		box-sizing: border-box;
 		padding: 0.5rem 1rem;
-		font-size: 20px;
-		font-size: 2rem;
+		font-size: 19px;
+		font-size: 1.9rem;
 		font-weight: 300;
 		color: $text-area-text;
 	}
@@ -129,8 +129,35 @@
 	}
 }
 
+.widget_calendar {
+	table, th, td {
+		border: none;
+		text-align: center;
+	}
+	caption {
+		padding-bottom: 8px;
+		border-bottom: 1px solid $horizontal-line;
+		text-align: center;
+	}
+	thead th {
+		border-bottom: 1px solid $horizontal-line;
+	}
+	tfoot{
+		td {
+			border-top: 1px solid $horizontal-line;
+			padding-top: 8px;
+		}
+		#prev {
+			text-align: left;
+		}
+		#next {
+			text-align: right;
+		}
+	}
+}
+
 /*
- *	CHANGE THIS SO THAT THE FOOTER IS MORE RESPONSIVE, LIKE BIGFOOT
+ *	Footer widgets
  */
 .footer-widgets {
 	margin: 0 auto;
@@ -167,6 +194,20 @@
 		border-left-color: $footer-widgets-horizontal-line;
 		border-bottom-color: $footer-widgets-horizontal-line;
 		border-right-color: $footer-widgets-horizontal-line;
+	}
+
+	.widget_calendar {
+		caption {
+			border-bottom: 1px solid $footer-widgets-horizontal-line;
+		}
+		thead th {
+			border-bottom: 1px solid $footer-widgets-horizontal-line;
+		}
+		tfoot{
+			td {
+				border-top: 1px solid $footer-widgets-horizontal-line;
+			}
+		}
 	}
 }
 

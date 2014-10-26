@@ -13,6 +13,10 @@ if ( ! function_exists( 'get_header_container' ) ) :
  */
 function get_header_container() {
 	// Display featured image or Theme Customizer image for single posts/pages
+	// When a new image is chosen in the customizer, then removed,
+	// get_theme_mod() returns an empty string intead of false, resulting in blank headers
+	// See this issue in Trac: https://core.trac.wordpress.org/ticket/28637
+	global $post;
     if ( ! is_home() && ! is_archive() && ! is_search() && ! is_404() && has_post_thumbnail( $post->ID ) ) {
 		$header_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large-thumb' )[0];
 	}
@@ -190,13 +194,35 @@ function bus_leader_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	printf( __( '<span class="posted-on">%1$s</span><span class="byline"> • Posted by %2$s</span>', 'bus_leader' ),
+	printf( __( '<span class="posted-on">%1$s</span><span class="byline">Posted by %2$s</span>', 'bus_leader' ),
 		$time_string,
 		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s">%2$s</a></span>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 			esc_html( get_the_author() )
 		)
 	);
+}
+endif;
+
+if ( ! function_exists( 'bus_leader_comments_link' ) ) :
+/**
+ * Prints HTML with meta information for the number of comments
+ */
+function bus_leader_comments_link() {
+	if ( ! post_password_required() && comments_open() && '0' != get_comments_number() ) { 
+        echo '<span class="comments-link">';
+        comments_popup_link( '', __( '1 Comment', 'bus_leader' ), __( '% Comments', 'bus_leader' ) );
+        echo '</span>';
+    }
+}
+endif;
+
+if ( ! function_exists( 'bus_leader_edit_link' ) ) :
+/**
+ * Prints HTML with meta information for the edit link
+ */
+function bus_leader_edit_link() {
+	edit_post_link( __( 'Edit', 'bus_leader' ), '<span class="edit-link">', '</span>' );
 }
 endif;
 
@@ -265,11 +291,6 @@ if ( ! function_exists( 'bus_leader_comment' ) ) :
 	                    <?php echo get_avatar( $comment, 65 ); ?>
 	                    <?php printf( '<b class="fn">%s</b>', get_comment_author_link() ); ?>
 	                </div><!-- .comment-author .vcard -->
-	                <?php if ( $comment->comment_approved == '0' ) : ?>
-	                    <em><?php _e( 'Your comment is awaiting moderation.', 'bus_leader' ); ?></em>
-	                    <br />
-	                <?php endif; ?>
-	 
 	                <div class="comment-metadata">
 	                    <time pubdate datetime="<?php comment_time( 'c' ); ?>">
 	                    <?php
@@ -278,6 +299,11 @@ if ( ! function_exists( 'bus_leader_comment' ) ) :
 	                    <?php edit_comment_link( __( '(Edit)', 'bus_leader' ), ' ' );
 	                    ?>
 	                </div><!-- .comment-meta .commentmetadata -->
+	                <?php if ( $comment->comment_approved == '0' ) : ?>
+	                	<br />
+	                    <em><?php _e( 'Thanks &#8212; your comment is awaiting moderation.', 'bus_leader' ); ?></em>
+	                    <br />
+	                <?php endif; ?>
 	            </footer>
 	 
 	            <div class="comment-content"><?php comment_text(); ?></div>

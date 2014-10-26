@@ -27,17 +27,17 @@
                             
                     <?php elseif ( is_404() ) : ?>
                             
-                            <p><?php _e( 'Sorry — that page can&rsquo;t be found. You can view the most recent articles below or try a search:', 'bus_leader' ); ?></p>
+                            <p><?php _e( 'Sorry &mdash; that page can&rsquo;t be found. You can view the most recent articles below or try a search:', 'bus_leader' ); ?></p>
                             <?php get_search_form(); ?>
                             
     		<?php elseif ( is_search() ) : ?>
 
-    			<p><?php _e( 'Sorry — nothing matched your search terms. You can view the most recent articles below or try a search:', 'bus_leader' ); ?></p>
+    			<p><?php _e( 'Sorry &mdash; nothing matched your search terms. You can view the most recent articles below or try a search:', 'bus_leader' ); ?></p>
     			<?php get_search_form(); ?>
 
     		<?php else : ?>
 
-    			<p><?php _e( 'Sorry — it seems we can’t find what you’re looking for. Perhaps searching can help.', 'bus_leader' ); ?></p>
+    			<p><?php _e( 'Sorry &mdash; it seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'bus_leader' ); ?></p>
     			<?php get_search_form(); ?>
 
     		<?php endif; ?>

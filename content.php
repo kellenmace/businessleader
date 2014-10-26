@@ -21,14 +21,8 @@
 			<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
 				<?php bus_leader_posted_on(); ?>
-				<?php
-				    if ( ! post_password_required() && comments_open() && '0' != get_comments_number() ) { 
-				        echo '<span class="comments-link"> • ';
-				        comments_popup_link( '', __( '1 Comment', 'bus_leader' ), __( '% Comments', 'bus_leader' ) );
-				        echo '</span>';
-				    }
-				?>
-				<?php edit_post_link( __( 'Edit', 'bus_leader' ), '<span class="edit-link"> • ', '</span>' ); ?>
+				<?php bus_leader_comments_link(); ?>
+				<?php bus_leader_edit_link() ?>
 			</div><!-- .entry-meta -->
 			<?php endif; ?>
 		</header><!-- .entry-header -->

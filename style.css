@@ -3,24 +3,13 @@ Theme Name: Business Leader
 Theme URI: https://github.com/kellenmace/businessleader
 Author: Kellen Mace
 Author URI: http://kellenmace.com/
-Description: Business Leader WordPress Theme
-Version: 0.1
+Description: Business Leader is a bright, clean, modern theme that is ideal for small businesses and organizations. Get up and running in just a few minutes by uploading your logo and custom header images, then jump straight into creating content, generating leads and promoting your brand. Business Leader is fully responsive, and scales to fit smartphones, tablets and desktop screens perfectly. Features include full width, parallax header images on each page, beautiful and easy-to-read typography, sidebar and footer widgets, retina-ready/high resolution image support, no-sidebar page template, Aside post format support, and more. Business Leader is built using the cutting edge Underscores framework and styled using SASS. Showcase your projects, jobs, employees and company beautifully with this professional and versitile theme, and give your business the online presence it deserves.
+Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: bus_leader
 Domain Path: /languages/
-Tags:
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-_s is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
-
-
-Resetting and rebuilding styles have been helped along thanks to the fine work of
-Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
-along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-and Blueprint http://www.blueprintcss.org/
+Tags: white, gray, light, one-column, two-columns, right-sidebar, responsive-layout, accessibility-ready, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, sticky-post, threaded-comments
 */
 /* =Reset
 -------------------------------------------------------------- */
@@ -155,6 +144,9 @@ a img {
 .screen-reader-text:active,
 .screen-reader-text:focus {
   background-color: #f1f1f1;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  -webkit-border-radius: 3px;
   border-radius: 3px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
@@ -178,10 +170,10 @@ button,
 input,
 select,
 textarea {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   color: #4d4d4d;
-  font-size: 18px;
-  font-size: 1.8rem;
+  font-size: 20px;
+  font-size: 2rem;
   line-height: 1.5; }
 
 ::selection {
@@ -189,7 +181,7 @@ textarea {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   color: #333333;
   font-weight: 700;
   clear: both; }
@@ -237,7 +229,7 @@ blockquote {
   font-style: italic; }
   blockquote p {
     margin: 0;
-    border-left: 5px solid whitesmoke;
+    border-left: 5px solid #f2f2f2;
     padding-left: 1.5em;
     position: relative; }
     blockquote p:after {
@@ -258,7 +250,7 @@ blockquote {
     margin-left: 40%;
     font-size: 16px;
     font-size: 1.6rem;
-    font-family: "Roboto", sans-serif;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
     font-style: normal;
     line-height: 1.5em;
     text-align: right; }
@@ -293,10 +285,10 @@ address {
 
 pre {
   background: #eee;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  border-radius: 8px;
-  /* future proofing */
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 15px;
   font-size: 1.5rem;
@@ -342,10 +334,15 @@ figure {
 
 table {
   margin: 0 0 40px;
-  width: 100%; }
+  width: 100%;
+  border: 1px solid #eaeaea; }
 
 th {
   font-weight: bold; }
+
+th, td {
+  padding: 3px;
+  border: 1px solid #eaeaea; }
 
 caption, th, td {
   font-weight: 300; }
@@ -385,14 +382,15 @@ input[type="submit"] {
   font-size: 17px;
   font-size: 1.7rem;
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   line-height: 1;
   background: #fff;
   color: #dddddd;
   border: 2px solid #dddddd;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
   -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   border-radius: 4px;
   cursor: pointer;
   -webkit-appearance: button; }
@@ -446,6 +444,9 @@ input[type="search"],
 textarea {
   padding: 0.5rem 1rem;
   border: 2px solid #dddddd;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  -webkit-border-radius: 4px;
   border-radius: 4px;
   color: #4d4d4d;
   font-size: 18px;
@@ -483,6 +484,8 @@ textarea {
     width: 100%; }
   .site-main .entry-content p {
     margin-bottom: 50px; }
+  .site-main .entry-content blockquote p {
+    margin-bottom: 0; }
   .site-main blockquote.alignleft {
     border: none; }
     @media screen and (min-width: 1320px) {
@@ -497,7 +500,8 @@ textarea {
     margin-bottom: 0; }
 
 .site-content {
-  background: white; }
+  background: white;
+  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2); }
   .site-content .widget-area {
     /* Sidebar 1 */
     width: 342px;
@@ -554,10 +558,11 @@ textarea {
   color: #bfbfbf;
   font-weight: 300;
   font-size: 14px; }
+  @media screen and (max-width: 400px) {
+    .entry-meta {
+      font-size: 12px; } }
   .entry-meta a {
-    color: #bfbfbf;
-    font-weight: 300;
-    font-size: 14px; }
+    color: #bfbfbf; }
 
 @media screen and (min-width: 1540px) {
   .content-area {
@@ -679,7 +684,7 @@ textarea {
         font-size: 2rem; } }
     .header-container .page-header .page-title {
       text-align: center;
-      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+      text-shadow: 0px 1px 5px #000;
       color: white;
       font-weight: 100;
       white-space: nowrap;
@@ -724,7 +729,7 @@ textarea {
   float: right;
   display: block;
   padding-right: 2rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   font-weight: 100;
   text-transform: uppercase; }
   .main-navigation ul {
@@ -886,6 +891,19 @@ textarea {
         line-height: 1.3em; } }
   .entry-header .entry-meta a:hover {
     color: #333333; }
+  .entry-header .entry-meta .byline:before, .entry-header .entry-meta .comments-link:before, .entry-header .entry-meta .edit-link:before {
+    content: '\007C';
+    -webkit-font-smoothing: antialiased;
+    padding: 0 9px;
+    color: #e0e0e0;
+    font-size: 18px;
+    font-size: 1.8rem; }
+    @media screen and (max-width: 500px) {
+      .entry-header .entry-meta .byline:before, .entry-header .entry-meta .comments-link:before, .entry-header .entry-meta .edit-link:before {
+        padding: 0 7px; } }
+  @media screen and (max-width: 500px) {
+    .entry-header .entry-meta .comments-link, .entry-header .entry-meta .edit-link {
+      display: none; } }
 
 .entry-content a {
   text-decoration: underline; }
@@ -935,8 +953,8 @@ textarea {
       font-size: 18px;
       font-size: 1.8rem; } }
 .entry-content p, .entry-content ul, .entry-content ol {
-  font-size: 18px;
-  font-size: 1.8rem;
+  font-size: 19px;
+  font-size: 1.9rem;
   font-weight: 300;
   line-height: 1.6em;
   word-wrap: break-word; }
@@ -971,7 +989,7 @@ textarea {
     text-transform: uppercase; }
 
 .entry-footer {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 15px;
   font-size: 1.5rem;
   font-weight: 300;
@@ -1004,8 +1022,9 @@ textarea {
     font-weight: 400;
     text-transform: uppercase;
     border: 2px solid #dddddd;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */
     -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
     border-radius: 4px; }
     .entry-footer .edit-link a:hover {
       color: #4d4d4d;
@@ -1041,13 +1060,14 @@ textarea {
   font-size: 17px;
   font-size: 1.7rem;
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   line-height: 1;
   color: #dddddd;
   border: 2px solid #dddddd;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
   -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   border-radius: 4px;
   cursor: pointer; }
   @media screen and (max-width: 600px) {
@@ -1112,7 +1132,7 @@ textarea {
     font-size: 14px;
     font-size: 1.4rem;
     font-weight: 300;
-    font-family: "Roboto", sans-serif;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
     border-left: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
     border-right: 1px solid #e5e5e5; }
@@ -1146,7 +1166,7 @@ textarea {
       padding: 2px 8px;
       font-size: 12px;
       font-size: 1.2rem;
-      font-family: "Roboto", sans-serif;
+      font-family: "Lato", Helvetica, Arial, sans-serif;
       background: #333333;
       opacity: 0;
       line-height: 1.5;
@@ -1245,12 +1265,13 @@ object {
     font-size: 14px;
     font-size: 1.4rem;
     font-weight: 400;
-    font-family: "Roboto", sans-serif;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
     line-height: 25px;
     color: #dddddd;
     border: 2px solid #dddddd;
-    webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */
+    -webkit-border-radius: 4px;
     border-radius: 4px;
     cursor: pointer;
     text-align: center;
@@ -1303,8 +1324,6 @@ object {
   font-size: 3rem;
   color: #333333;
   text-transform: uppercase; }
-.comments-area .comment-list ol {
-  margin-left: 50px; }
 .comments-area .comment-list > .comment {
   border-bottom: 1px solid #eaeaea;
   margin-bottom: 2em; }
@@ -1320,14 +1339,15 @@ object {
       display: block;
       float: left;
       margin-right: 20px;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */
       -webkit-border-radius: 1000px;
-      -moz-border-radius: 1000px;
       border-radius: 1000px; }
     .comments-area .comment-list .comment-body .comment-meta .comment-author .fn {
       font-weight: 300;
-      font-family: "Roboto", sans-serif;
-      font-size: 20px;
-      font-size: 2rem; }
+      font-family: "Lato", Helvetica, Arial, sans-serif;
+      font-size: 19px;
+      font-size: 1.9rem; }
       .comments-area .comment-list .comment-body .comment-meta .comment-author .fn a {
         text-decoration: none; }
         .comments-area .comment-list .comment-body .comment-meta .comment-author .fn a:hover {
@@ -1337,6 +1357,14 @@ object {
       font-weight: 300;
       font-size: 14px;
       font-size: 1.4rem; }
+    .comments-area .comment-list .comment-body .comment-meta em {
+      margin-left: 80px;
+      padding: 5px;
+      background: #eaeaea;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */
+      -webkit-border-radius: 4px;
+      border-radius: 4px; }
   .comments-area .comment-list .comment-body .comment-content {
     font-size: 90%;
     font-weight: 300;
@@ -1347,10 +1375,13 @@ object {
       margin-left: 1.5em; }
     .comments-area .comment-list .comment-body .comment-content p {
       margin-bottom: 1em; }
+      .comments-area .comment-list .comment-body .comment-content p:after {
+        font-size: 18px;
+        font-size: 1.8rem; }
   .comments-area .comment-list .comment-body .reply {
     margin-left: 80px;
     font-weight: 300;
-    font-family: "Roboto", sans-serif;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
     font-size: 13px;
     font-size: 1.3rem;
     text-transform: uppercase; }
@@ -1390,11 +1421,16 @@ object {
 ol.children {
   list-style-type: none; }
   ol.children .comment-body {
-    border-left: 5px solid whitesmoke;
+    border-left: 5px solid #f2f2f2;
     padding-left: 10px; }
 
 .comment-content a {
   word-wrap: break-word; }
+
+.bypostauthor > .comment-body {
+  background: #f9f9f9;
+  padding: 10px;
+  border-left: 5px solid #f2f2f2; }
 
 /* Comments responsive */
 @media screen and (max-width: 600px) {
@@ -1409,7 +1445,7 @@ ol.children {
     margin-left: 0; } }
 .site-footer {
   padding: 2.75em 2em 1.5em;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 100%;
   font-weight: 100;
   color: white;
@@ -1433,7 +1469,7 @@ ol.children {
 ----------------------------------------------- */
 .widget {
   margin: 0 0 40px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 15px;
   font-size: 1.5rem;
   /* Make sure select elements fit in widgets */ }
@@ -1462,8 +1498,8 @@ ol.children {
   width: 100%;
   box-sizing: border-box;
   padding: 0.5rem 1rem;
-  font-size: 20px;
-  font-size: 2rem;
+  font-size: 19px;
+  font-size: 1.9rem;
   font-weight: 300;
   color: #4d4d4d; }
 .widget_search .search-submit {
@@ -1522,8 +1558,25 @@ ol.children {
   font-weight: 300;
   font-style: italic; }
 
+.widget_calendar table, .widget_calendar th, .widget_calendar td {
+  border: none;
+  text-align: center; }
+.widget_calendar caption {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eaeaea;
+  text-align: center; }
+.widget_calendar thead th {
+  border-bottom: 1px solid #eaeaea; }
+.widget_calendar tfoot td {
+  border-top: 1px solid #eaeaea;
+  padding-top: 8px; }
+.widget_calendar tfoot #prev {
+  text-align: left; }
+.widget_calendar tfoot #next {
+  text-align: right; }
+
 /*
- *	CHANGE THIS SO THAT THE FOOTER IS MORE RESPONSIVE, LIKE BIGFOOT
+ *	Footer widgets
  */
 .footer-widgets {
   margin: 0 auto;
@@ -1552,6 +1605,12 @@ ol.children {
     border-left-color: rgba(255, 255, 255, 0.1);
     border-bottom-color: rgba(255, 255, 255, 0.1);
     border-right-color: rgba(255, 255, 255, 0.1); }
+  .footer-widgets .widget_calendar caption {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+  .footer-widgets .widget_calendar thead th {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+  .footer-widgets .widget_calendar tfoot td {
+    border-top: 1px solid rgba(255, 255, 255, 0.1); }
 
 /* Footer widgets responsive */
 @media screen and (max-width: 797px) {

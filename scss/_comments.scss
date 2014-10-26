@@ -40,13 +40,10 @@
 		font-weight: 100;
 		font-size: 30px;
 		font-size: 3rem;
-		color: $header-color;
+		color: $header-background;
 		text-transform: uppercase;
 	}
 	.comment-list {
-		ol {
-			margin-left: 50px;
-		}
 		>.comment {
 			border-bottom: 1px solid $horizontal-line;
 			margin-bottom: 2em;
@@ -65,15 +62,13 @@
 						display: block;
 						float: left;
 						margin-right: 20px;
-						-webkit-border-radius: 1000px; 
-						-moz-border-radius: 1000px; 
-						border-radius: 1000px; 
+						@include border-radius( 1000px );
 					}
 					.fn {
 					    font-weight: 300;
 					    font-family: $base-font;
-					    font-size: 20px;
-					    font-size: 2rem;
+					    font-size: 19px;
+					    font-size: 1.9rem;
 					    a {
 							text-decoration: none;
 							&:hover {
@@ -88,6 +83,12 @@
 			    	font-size: 14px;
     				font-size:1.4rem;
 			    }
+			    em {
+			    	margin-left: 80px;
+			    	padding: 5px;
+			    	background: $comment-awaiting-mod-background;
+					@include border-radius( 4px );
+			    }
 			}
 			.comment-content {
 				font-size: 90%;
@@ -101,6 +102,10 @@
 				}
 				p {
 					margin-bottom: 1em;
+					&:after {
+						font-size: 18px;
+						font-size: 1.8rem;
+					}
 				}
 			}
 			.reply {
@@ -170,7 +175,11 @@ ol.children {
 	word-wrap: break-word;
 }
 
-.bypostauthor {}
+.bypostauthor > .comment-body {
+	background: $author-comment;
+	padding: 10px;
+	border-left: 5px solid #f2f2f2;
+}
 
 /* Comments responsive */
 @media screen and (max-width:600px) {    
@@ -180,12 +189,4 @@ ol.children {
     
     .comment-content,
     .reply { margin-left: 0; }
-}
-
-.bypostauthor > .comment-body { // TODO: highlight author comments
-    // position: relative;
-    // padding: 1em;
-    // margin-bottom: 2em;
-    // background: hsl(0, 0%, 93%);
-    // border: none;
 }

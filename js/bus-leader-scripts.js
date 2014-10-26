@@ -8,7 +8,6 @@
     if ( ! container )
         return;
 
-    //button = container.getElementsByTagName( 'button' )[0];
     button = document.getElementById( 'nav-menu-toggle' );
     if ( ! button )
         return;
@@ -48,25 +47,9 @@
             }
         }, false );
     }
-
 } )();
 
 jQuery(document).ready(function($){
-    /*
-     * set header image size automatically
-     */
-    // var $site_header_height = $('#masthead').height();
-    // var $header_container_height = $('.header-container').height();
-    // var $window = $(window).on('resize', function() {
-    //     $('.header-image').css('height', $site_header_height + $header_container_height + 50);
-    // }).trigger('resize');
-
-    // var $site_content_position = $( '#content' ).offset();
-    // $(window).on('resize', function() {
-    //     $('.header-image').css('height', $site_content_position.top);
-    // }).trigger('resize');
-    
-
 	/* 
 	 * Apply parallax effect to header image
 	 */
@@ -75,22 +58,26 @@ jQuery(document).ready(function($){
 		$('.header-image').css('top', -(scrolled * 0.3) + 'px');
 	});
 
-	/* 
-	 * Toggles mobile menu on and off
-	 */
-	// $('.menu-toggle').click(function(){
- //        $('.menu-toggle').toggleClass('active');
- //        $('.main-navigation').toggleClass('toggled').slideToggle(300);
- //    });
- //    $( window ).resize(function() {
- //        var win = $(this);
- //        if ( win.width() > 600 ) {
- //            $('.main-navigation').show();
- //        }
- //        else if ( win.width() <= 600 ) {
- //            $('.main-navigation').hide();
- //        }
- //    });
+    /* 
+     * Custom Superfish settings for keyboard accessible nav menu
+     */
+    var sf= $('ul.nav-menu');
+    enquire.register("screen and (min-width:600px)", {
+
+        // Triggered when a media query matches.
+        match : function() {
+            sf.superfish({
+                delay: 200,
+                speed: 'fast'
+            });
+        },
+
+        // Triggered when the media query transitions
+        // from a matched state to an unmatched state.
+        unmatch : function() {
+            sf.superfish('destroy');
+        }
+    });
 
     /*
      * Masonry settings to organize image galleries
@@ -108,7 +95,7 @@ jQuery(document).ready(function($){
         });
     }
 
-    /* 
+    /*
 	 * Masonry settings to organize footer widgets
 	 */
     var $container = $( '#footer-widgets' ).masonry();

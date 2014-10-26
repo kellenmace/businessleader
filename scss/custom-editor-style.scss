@@ -15,7 +15,7 @@ html .mceContentBody {
 body {
 	color: $text-color;
     font-family: $base-font;
-    font-size: 18px;
+    font-size: 19px;
     line-height: 1.5;
 }
 
@@ -36,7 +36,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $header-font;
-    color: $header-color;
+    color: $header-background;
     font-weight: 300;
     clear: both;
     margin-bottom: .4em;
@@ -125,7 +125,7 @@ blockquote cite {
     margin-bottom: $vspacing;
     max-width: 100%;
 
-    img[class*="size-large"] {
+    img {
         display: block;
         margin: 0 auto;
     }

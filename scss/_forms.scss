@@ -21,9 +21,7 @@ input[type="submit"] {
 	background: #fff;
 	color: $button;
 	border: 2px solid $button;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
+	@include border-radius( 4px );
 	cursor: pointer;
 	-webkit-appearance: button;
 }
@@ -71,7 +69,7 @@ input[type="search"],
 textarea {
 	padding: 0.5rem 1rem;
 	border: 2px solid $input-border;
-	border-radius: 4px;
+	@include border-radius( 4px );
 	color: $text-area-text;
 	font-size: 18px;
 	font-weight: 300;

@@ -17,7 +17,10 @@ function bus_leader_customize_register_header( $wp_customize ) {
 	    'priority'   => 70,
 	) );
 
-	$wp_customize->add_setting( 'bus-leader-header-image-setting-home' , array() );
+	$wp_customize->add_setting( 'bus-leader-header-image-setting-home' , array(
+		'default' 			=> '',
+		'sanitize_callback' => 'esc_url_raw'
+	) );
 
 	$wp_customize->add_control(
 	   new WP_Customize_Image_Control(
@@ -32,7 +35,10 @@ function bus_leader_customize_register_header( $wp_customize ) {
 	   )
 	);
 
-	$wp_customize->add_setting( 'bus-leader-header-image-setting-archive' , array() );
+	$wp_customize->add_setting( 'bus-leader-header-image-setting-archive' , array(
+		'default' 			=> '',
+		'sanitize_callback' => 'esc_url_raw'
+	) );
 
 	$wp_customize->add_control(
 	   new WP_Customize_Image_Control(
@@ -47,7 +53,10 @@ function bus_leader_customize_register_header( $wp_customize ) {
 	   )
 	);
 
-	$wp_customize->add_setting( 'bus-leader-header-image-setting-single' , array() );
+	$wp_customize->add_setting( 'bus-leader-header-image-setting-single' , array(
+		'default' 			=> '',
+		'sanitize_callback' => 'esc_url_raw'
+	) );
 
 	$wp_customize->add_control(
 	   new WP_Customize_Image_Control(
@@ -68,7 +77,7 @@ add_action( 'customize_register', 'bus_leader_customize_register_header' );
  * Rename default Header Image section to "Logo" and move to top of list
  */
 function bus_leader_filter_customizer( $wp_customize ) {
-	$wp_customize->get_section('header_image')->title = __( 'Logo' );
+	$wp_customize->get_section('header_image')->title = __( 'Logo', 'bus_leader' );
 	$wp_customize->get_section('header_image')->priority = 1;
 }
 add_filter( 'customize_register', 'bus_leader_filter_customizer' );

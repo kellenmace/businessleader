@@ -23,6 +23,10 @@
 		    p {
 		    	margin-bottom: 50px;
 		    }
+
+	    	blockquote p {
+	    		margin-bottom: 0;
+	    	}
 		}
 		
 		blockquote.alignleft {
@@ -46,6 +50,7 @@
 
 	.site-content {
 		background: $site-main-background;
+		box-shadow: 0 0 5px 0px rgba( 0, 0, 0, .2 );
 
 		.widget-area { /* Sidebar 1 */
 			width: 342px;
@@ -91,10 +96,11 @@
 	    color: $text-color-light;
 	    font-weight: 300;
 		font-size: 14px;
+		@media screen and (max-width: 400px) {
+			font-size: 12px;
+		}
 	    a {
 	    	color: $text-color-light;
-	    	font-weight: 300;
-			font-size: 14px;
 	    }
     }
 	    

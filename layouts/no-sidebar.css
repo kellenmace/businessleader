@@ -4,7 +4,6 @@ Layout: No sidebar
 */
 
 .site-content {
-	margin-top: 250px;
 	background: #fff;
 }
 
@@ -26,6 +25,11 @@ Layout: No sidebar
     max-width: 78rem;
     padding: 0 4rem;
     margin: 0 auto;
+}
+
+.entry-header {
+    padding-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 .site-footer {

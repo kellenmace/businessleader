@@ -5,8 +5,8 @@ select,
 textarea {
 	font-family: $base-font;
 	color: $text-color;
-	font-size: 18px;
-	font-size: 1.8rem;
+	font-size: 20px;
+	font-size: 2rem;
 	line-height: 1.5;
 }
 
@@ -17,7 +17,7 @@ textarea {
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
 	font-family: $header-font;
-	color: $header-color;
+	color: $header-background;
 	font-weight: 700;
 	clear: both;
 }
@@ -127,9 +127,7 @@ address {
 }
 pre {
 	background: #eee;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	border-radius: 8px; /* future proofing */
+	@include border-radius( 4px );
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
 	font-size: 1.5rem;
@@ -176,9 +174,14 @@ figure {
 table {
 	margin: 0 0 $vspacing;
 	width: 100%;
+	border: 1px solid $table-cells;
 }
 th {
 	font-weight: bold;
+}
+th, td {
+	padding: 3px;
+	border: 1px solid $table-cells;
 }
 caption, th, td {
 	font-weight: 300;

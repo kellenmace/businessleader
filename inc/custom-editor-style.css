@@ -15,8 +15,8 @@ html .mceContentBody {
 
 body {
   color: #4d4d4d;
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-size: 19px;
   line-height: 1.5; }
 
 /* =Base elements
@@ -31,7 +31,7 @@ a {
     color: #4d4d4d; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   color: #333333;
   font-weight: 300;
   clear: both;
@@ -58,7 +58,7 @@ h6 {
 p,
 ul,
 ol {
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.6em;
   font-weight: 300; }
 
@@ -94,7 +94,7 @@ blockquote cite {
   margin-left: 40%;
   font-size: 16px;
   font-size: 1.6rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   font-style: normal;
   line-height: 1.5em;
   text-align: right; }
@@ -104,7 +104,7 @@ blockquote cite {
 .wp-caption {
   margin-bottom: 40px;
   max-width: 100%; }
-  .wp-caption img[class*="size-large"] {
+  .wp-caption img {
     display: block;
     margin: 0 auto; }
   .wp-caption .wp-caption-text {
@@ -113,7 +113,7 @@ blockquote cite {
     font-size: 14px;
     font-size: 1.4rem;
     font-weight: 300;
-    font-family: "Roboto", sans-serif;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
     border-left: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
     border-right: 1px solid #e5e5e5; }
@@ -130,7 +130,7 @@ blockquote cite {
   padding: 6px 8px;
   font-size: 12px;
   font-size: 1.2rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   background: #333333;
   opacity: 0;
   line-height: 1.5;
@@ -174,7 +174,7 @@ blockquote cite {
   padding: 6px 8px;
   font-size: 12px;
   font-size: 1.2rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   background: #333333;
   opacity: 0;
   line-height: 1.5;

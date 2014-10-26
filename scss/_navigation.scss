@@ -24,7 +24,7 @@
 		color: $post-navigation-text;
 	}
 	
-	.nav-previous { // TODO: put inside of .post-nav-box so that it doesn't apply to page or comment navigation?
+	.nav-previous {
 		float: left;
 		width: 50%;
 		padding-right: 10px;
@@ -117,9 +117,7 @@
 		line-height: 25px;
 		color: $button;
 		border: 2px solid $button;
-		webkit-border-radius: 4px;
-		-moz-border-radius: 4px;
-		border-radius: 4px;
+		@include border-radius( 4px );
 		cursor: pointer;
 		text-align: center;
 		vertical-align: middle;

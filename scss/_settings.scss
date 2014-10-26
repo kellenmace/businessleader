@@ -1,18 +1,12 @@
-// Some common variables and mixins to get you started.
-// Variables allow you to re-use colors, sizes, and other values without repeating
-// yourself. This means that changes that should be small, such as tweaking the
-// coloring or the sizing, can be done in one place, not all over the stylesheet.
-
 // Base Font
-$base-font: 'Roboto', sans-serif;
+$base-font: 'Lato', Helvetica, Arial, sans-serif;
 
 // Base Color Scheme
 $body-background: #fff;
 $site-main-background: #fff;
 $widget-area-background: #f9f9f9;
 $text-color: #4d4d4d;
-$text-color-light: #bfbfbf; //#9d9d9d - darker for better visibility?
-$header-color: #333; // TODO: remove all instances of this and use $header-background below
+$text-color-light: #bfbfbf;
 $link-color: $text-color;
 $link-visited: $text-color;
 
@@ -26,7 +20,7 @@ $prev-next-nav-small: 600px;
 
 // Header
 $header-font: $base-font;
-$header-background: #333; // TODO: make this transparent?
+$header-background: #333;
 $header-text: #fff;
 $sub-menu-background: lighten( $header-background, 10% );
 $mobile-menu-current-page: #999;
@@ -34,6 +28,7 @@ $mobile-menu-current-page: #999;
 // Content
 $featured-image-banner-text: #fff;
 $entry-title: #333;
+$entry-meta-pipes: #e0e0e0;
 $entry-footer-text: #9d9d9d;
 $entry-footer-links: #333;
 
@@ -67,9 +62,12 @@ $gallery-caption-text: #fff;
 $horizontal-line: #eaeaea;
 $post-navigation-text: #ccc;
 $post-navigation-text-hover: $text-color;
-$blockquote-border: #f5f5f5;
-$comment-reply-border: #f5f5f5;
+$blockquote-border: #f2f2f2;
+$comment-reply-border: #f2f2f2;
+$author-comment: $widget-area-background;
 $highlighted-text-color: #e5e5e5;
+$table-cells: #eaeaea;
+$comment-awaiting-mod-background: #eaeaea;
 
 // Supported Values for $layout:
 //  null | content-sidebar | sidebar-content | no-sidebar
