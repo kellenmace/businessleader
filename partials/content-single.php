@@ -1,5 +1,7 @@
 <?php
 /**
+ * The template part for displaying page content in single.php
+ * 
  * @package Business Leader
  */
 ?>

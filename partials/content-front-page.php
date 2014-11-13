@@ -1,16 +1,12 @@
 <?php
 /**
- * The template part for displaying page content in page.php
- *
+ * The template part for displaying page content for Front Page template
+ * 
  * @package Business Leader
  */
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php the_content(); ?>
@@ -21,7 +17,9 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
+
 	<footer class="entry-footer">
 		<?php edit_post_link( __( 'Edit', 'bus_leader' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
+
 </article><!-- #post-## -->

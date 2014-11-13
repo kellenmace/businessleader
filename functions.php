@@ -101,6 +101,10 @@ add_action( 'widgets_init', 'bus_leader_widgets_init' );
 function bus_leader_scripts() {
 	wp_enqueue_style( 'bus_leader-style', get_stylesheet_uri() );
 
+	if ( is_page_template( 'page-templates/page-front-page.php' ) ) {
+	    wp_enqueue_style( 'bus_leader-layout-style', get_template_directory_uri() . '/layouts/front-page.css' );
+	}
+
 	if ( is_page_template( 'page-templates/page-nosidebar.php' ) ) {
 	    wp_enqueue_style( 'bus_leader-layout-style', get_template_directory_uri() . '/layouts/no-sidebar.css' );
 	}

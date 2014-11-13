@@ -12,25 +12,30 @@ if ( ! function_exists( 'get_header_container' ) ) :
  * Display header container with image inside
  */
 function get_header_container() {
-	// Display featured image or Theme Customizer image for single posts/pages
-	// When a new image is chosen in the customizer, then removed,
+	// Issue: When a new image is chosen in the customizer, then removed,
 	// get_theme_mod() returns an empty string intead of false, resulting in blank headers
 	// See this issue in Trac: https://core.trac.wordpress.org/ticket/28637
 	global $post;
+	// Get featured image, else Customizer header image for single posts/pages
     if ( ! is_home() && ! is_archive() && ! is_search() && ! is_404() && has_post_thumbnail( $post->ID ) ) {
 		$header_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large-thumb' )[0];
 	}
 	elseif ( ! is_home() && ! is_archive() && ! is_search() && ! is_404() && ! empty( get_theme_mod( 'bus-leader-header-image-setting-single' ) ) ) {
 		$header_image = get_theme_mod( 'bus-leader-header-image-setting-single' );
 	}
-	// Use image set in Theme Customizer for blog, archive, search and 404 pages
+	// Get Customizer header image for blog
 	elseif ( is_home() && ! empty( get_theme_mod( 'bus-leader-header-image-setting-home' ) ) ) {
 		$header_image = get_theme_mod( 'bus-leader-header-image-setting-home' );
 	}
+	// Get Customizer header image for front page
+	elseif ( is_front_page() && ! empty( get_theme_mod( 'bus-leader-header-image-setting-front-page' ) ) ) {
+		$header_image = get_theme_mod( 'bus-leader-header-image-setting-front-page' );
+	}
+	// Get Customizer header image for archive, search & 404 pages
 	elseif ( is_archive() || is_search() || is_404() && ! empty( get_theme_mod( 'bus-leader-header-image-setting-archive' ) ) ) {
 		$header_image = get_theme_mod( 'bus-leader-header-image-setting-archive' );
 	}
-	// Else, use default theme image
+	// Else, get default theme header image
 	else {
 		$header_image = get_template_directory_uri() . '/images/default-featured-image.jpg';
 	}

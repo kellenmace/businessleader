@@ -1,0 +1,205 @@
+/*
+Theme Name: Business Leader
+Layout: Front Page
+*/
+
+.site-content {
+	background: #fff;
+}
+
+.header-container {
+	height: 450px;
+}
+
+.content-area {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.entry-header,
+.entry-content,
+.entry-footer,
+.tag-links,
+.post-navigation,
+.comments-area,
+.paging-navigation,
+.index-box {
+	position: relative;
+    max-width: 1220px;
+    max-width: 122rem;
+    /*padding: 0 4rem;*/
+    margin: 0 auto;
+}
+
+.entry-header {
+    padding-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.entry-content {
+	padding: 4rem 0;
+
+	pre:nth-child(even) {
+		background: #f9f9f9;
+		overflow: hidden;
+	}
+}
+
+.site-footer {
+    clear: both;
+    width: 100%;
+}
+
+
+.page-template-page-templatespage-front-page-php pre {
+	background: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+/* Features by WooThemes plugin styles */
+.widget_woothemes_features {
+	margin: 0;
+
+	.columns-3 {
+		max-width: 1000px;
+		margin: 0 auto;
+
+		.feature {
+			width: 33.3333%;
+			padding: 0 20px;
+			font-size: 1rem;
+			text-align: center;
+			vertical-align: top;
+			display: inline-block;
+
+			@media screen and (max-width: 750px) {
+				display: block;
+				width: auto;
+				padding: 4rem;
+				margin: 0 auto;
+				max-width: 400px;
+			}
+
+			.icon-preview {
+				font-size: 10em;
+				margin-bottom: 1rem;
+			}
+
+			.feature-title {
+				margin-bottom: 3rem;
+				font-size: 23px;
+				word-wrap: break-word;
+				text-transform: uppercase;
+
+				@media screen and (max-width: 950px) {
+					font-size: 20px;
+				}
+				@media screen and (min-width: 751px) and (max-width: 850px) {
+					font-size: 17px;
+				}
+			}
+
+			.feature-content {
+				word-wrap: break-word;
+				font-size: 18px;
+				font-weight: 300;
+				line-height: 1.4;
+
+				@media screen and (min-width: 751px) and (max-width: 850px) {
+					font-size: 16px;
+				}
+			}
+		}
+
+		.first {
+			@media screen and (max-width: 750px) {
+				padding-top: 0;
+			}
+		}
+		.last {
+			@media screen and (max-width: 750px) {
+				padding-bottom: 0;
+			}
+		}
+	}
+}
+
+/* Testimonials by WooThemes plugin styles */
+.widget_woothemes_testimonials {
+	max-width: 1000px;
+	margin: 0 auto;
+	
+	.testimonials-list {
+		padding: 0 4rem;
+		text-align: center;
+
+		&:before {
+			content: "What our customers are saying";
+			font-size: 45px;
+			font-weight: 100;
+			word-wrap: break-word;
+			@media screen and (max-width: 800px) {
+				font-size: 36px;
+			}
+			@media screen and (max-width: 400px) {
+				font-size: 32px;
+			}
+			@media screen and (max-width: 350px) {
+				font-size: 28px;
+			}
+			@media screen and (max-width: 300px) {
+				font-size: 24px;
+			}
+		}
+
+		.quote {
+			width: 33.3333%;
+			float: left;
+			border-left: 5px solid #eaeaea;
+			padding: 0 2rem;
+			margin: 4rem 0;
+			height: 205px;
+			text-align: left;
+
+			@media screen and (max-width: 890px) {
+				float: none;
+				height: auto;
+				width: 100%;
+			}
+
+			.testimonials-text {
+				padding: 0;
+				height: 100px;
+
+				@media screen and (max-width: 890px) {
+					height: auto;
+					margin-bottom: 10px;
+				}
+				p {
+					font-size: 15px;
+					border-left: none;
+					padding-left: 0;
+					&:after {
+						content: none;
+					}
+				}
+			}
+
+			.avatar-link {
+				display: block;
+				float: left;
+				padding-right: 5px;
+			}
+
+			.author {
+				span:first-child {
+					&:after {
+						content: "\a";
+						white-space: pre;
+					}
+				}
+			}
+		}
+	}
+}

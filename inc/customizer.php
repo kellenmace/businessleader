@@ -11,12 +11,32 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function bus_leader_customize_register_header( $wp_customize ) {
-	//All our sections, settings, and controls will be added here
+	// Add header image section
 	$wp_customize->add_section( 'bus-leader-header-image-section' , array(
 	    'title'      => __( 'Header Images', 'bus_leader' ),
 	    'priority'   => 70,
 	) );
 
+	// Set header image for front page
+	$wp_customize->add_setting( 'bus-leader-header-image-setting-front-page' , array(
+		'default' 			=> '',
+		'sanitize_callback' => 'esc_url_raw'
+	) );
+
+	$wp_customize->add_control(
+	   new WP_Customize_Image_Control(
+	       $wp_customize,
+	       'bus-leader-header-image-control-front-page',
+	       array(
+	           'label'      => __( 'Header image for front page', 'bus_leader' ),
+	           'section'    => 'bus-leader-header-image-section',
+	           'settings'   => 'bus-leader-header-image-setting-front-page',
+	           'context'    => 'bus-leader-header-image-front-page'
+	       )
+	   )
+	);
+
+	// Set header image for blog
 	$wp_customize->add_setting( 'bus-leader-header-image-setting-home' , array(
 		'default' 			=> '',
 		'sanitize_callback' => 'esc_url_raw'
@@ -35,24 +55,7 @@ function bus_leader_customize_register_header( $wp_customize ) {
 	   )
 	);
 
-	$wp_customize->add_setting( 'bus-leader-header-image-setting-archive' , array(
-		'default' 			=> '',
-		'sanitize_callback' => 'esc_url_raw'
-	) );
-
-	$wp_customize->add_control(
-	   new WP_Customize_Image_Control(
-	       $wp_customize,
-	       'bus-leader-header-image-control-archive',
-	       array(
-	           'label'      => __( 'Header image for archive, search and 404 (page not found) pages', 'bus_leader' ),
-	           'section'    => 'bus-leader-header-image-section',
-	           'settings'   => 'bus-leader-header-image-setting-archive',
-	           'context'    => 'bus-leader-header-image-archive'
-	       )
-	   )
-	);
-
+	// Set header image for single posts & pages that don't have a featured image
 	$wp_customize->add_setting( 'bus-leader-header-image-setting-single' , array(
 		'default' 			=> '',
 		'sanitize_callback' => 'esc_url_raw'
@@ -67,6 +70,25 @@ function bus_leader_customize_register_header( $wp_customize ) {
 	           'section'    => 'bus-leader-header-image-section',
 	           'settings'   => 'bus-leader-header-image-setting-single',
 	           'context'    => 'bus-leader-header-image-single'
+	       )
+	   )
+	);
+
+	// Set header image for archive, search & 404 pages
+	$wp_customize->add_setting( 'bus-leader-header-image-setting-archive' , array(
+		'default' 			=> '',
+		'sanitize_callback' => 'esc_url_raw'
+	) );
+
+	$wp_customize->add_control(
+	   new WP_Customize_Image_Control(
+	       $wp_customize,
+	       'bus-leader-header-image-control-archive',
+	       array(
+	           'label'      => __( 'Header image for archive, search and 404 (page not found) pages', 'bus_leader' ),
+	           'section'    => 'bus-leader-header-image-section',
+	           'settings'   => 'bus-leader-header-image-setting-archive',
+	           'context'    => 'bus-leader-header-image-archive'
 	       )
 	   )
 	);

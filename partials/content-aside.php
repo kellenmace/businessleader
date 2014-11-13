@@ -1,5 +1,7 @@
 <?php
 /**
+ * The template part for the aside post format
+ *
  * @package Business Leader
  */
 ?>
