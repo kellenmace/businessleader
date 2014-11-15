@@ -110,7 +110,7 @@ function bus_leader_scripts() {
 	}
 
 	// Fonts
-	wp_enqueue_style( 'bus_leader-google-fonts2', 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,300italic,400italic' );
+	wp_enqueue_style( 'bus_leader-google-fonts2', 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic,400italic,700italic,900italic' );
 	wp_enqueue_style( 'bus_leader-font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
 
 	// Theme scripts

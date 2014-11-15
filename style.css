@@ -174,7 +174,8 @@ textarea {
   color: #4d4d4d;
   font-size: 20px;
   font-size: 2rem;
-  line-height: 1.5; }
+  line-height: 1.5;
+  -webkit-font-smoothing: subpixel-antialiased; }
 
 ::selection {
   background: #e5e5e5; }
@@ -338,13 +339,14 @@ table {
   border: 1px solid #eaeaea; }
 
 th {
-  font-weight: bold; }
+  font-weight: 400;
+  background-color: #f9f9f9; }
 
 th, td {
   padding: 3px;
   border: 1px solid #eaeaea; }
 
-caption, th, td {
+caption, td {
   font-weight: 300; }
 
 img {
@@ -616,7 +618,9 @@ textarea {
       font-size: 26px;
       font-size: 2.6rem;
       clear: none;
-      line-height: normal; }
+      line-height: normal;
+      -webkit-text-stroke: 0.55px;
+      text-shadow: 0px 0px 0px, 0px 0px 0px; }
       @media screen and (max-width: 600px) {
         .site-header .site-branding .site-title {
           font-size: 22px;
@@ -631,16 +635,6 @@ textarea {
     .site-header .site-branding .site-description {
       position: absolute;
       clip: rect(1px, 1px, 1px, 1px); }
-    .site-header .site-branding .mobile-menu-icon:before {
-      display: inline-block;
-      font-style: normal;
-      padding: 0 5px;
-      vertical-align: top;
-      font-family: 'Fontawesome';
-      font-size: 20px;
-      color: #fff;
-      -webkit-font-smoothing: antialiased;
-      content: '\f0c9'; }
 
 .header-container {
   display: table;
@@ -732,6 +726,9 @@ textarea {
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-weight: 100;
   text-transform: uppercase; }
+  .main-navigation a {
+    -webkit-text-stroke: 0.55px;
+    text-shadow: 0px 0px 0px, 0px 0px 0px; }
   .main-navigation ul {
     list-style: none;
     margin: 0;

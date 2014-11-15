@@ -8,6 +8,7 @@ textarea {
 	font-size: 20px;
 	font-size: 2rem;
 	line-height: 1.5;
+	-webkit-font-smoothing: subpixel-antialiased;
 }
 
 ::selection {
@@ -177,13 +178,14 @@ table {
 	border: 1px solid $table-cells;
 }
 th {
-	font-weight: bold;
+	font-weight: 400;
+	background-color: $table-cell-bg;
 }
 th, td {
 	padding: 3px;
 	border: 1px solid $table-cells;
 }
-caption, th, td {
+caption, td {
 	font-weight: 300;
 }
 img {

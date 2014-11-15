@@ -13,8 +13,9 @@
 function bus_leader_customize_register_header( $wp_customize ) {
 	// Add header image section
 	$wp_customize->add_section( 'bus-leader-header-image-section' , array(
-	    'title'      => __( 'Header Images', 'bus_leader' ),
-	    'priority'   => 70,
+	    'title'       => __( 'Header Images', 'bus_leader' ),
+	    'priority'    => 70,
+	    'description' => __( 'Recommended size for header images is 1200 by 715 pixels', 'bus_leader' ),
 	) );
 
 	// Set header image for front page
