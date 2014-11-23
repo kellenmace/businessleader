@@ -11,8 +11,8 @@ function bus_leader_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'bus_leader_custom_header_args', array(
 		'default-image'          => get_template_directory_uri() . '/images/sample-logo.png',
 		'default-text-color'     => 'ffffff',
-		'width'                  => 40,
-		'height'                 => 40,
+		'width'                  => 55,
+		'height'                 => 55,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'bus_leader_header_style',
 		'admin-head-callback'    => 'bus_leader_admin_header_style',

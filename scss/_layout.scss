@@ -75,12 +75,15 @@
     .paging-navigation,
     .index-box {
     	position: relative;
-	    max-width: 780px;
-	    max-width: 78rem;
+	    max-width: 800px;
+	    max-width: 80rem;
 	    padding: 0 4rem;
 	    margin: 0 auto;
-    	@media screen and (min-width: $break-med) and (max-width: $break-large - 1) {
-        	margin-right: 0;
+    	@media screen and (min-width: 1225px) {
+        	max-width: 83rem;
+    	}
+    	@media screen and (min-width: 1250px) {
+        	max-width: 86rem;
     	}
     	@media screen and (max-width: $break-small) {
     		padding-left: 1rem;

@@ -30,8 +30,8 @@
         .site-title {
             display: inline;
             font-weight: 100;
-            font-size: 26px;
-            font-size: 2.6rem;
+            font-size: 32px;
+            font-size: 3.2rem;
             clear: none;
             line-height: normal;
             // Improve font rendering in webkit and firefox
@@ -44,7 +44,7 @@
             }
             a {
                 color: $header-text;
-                line-height: 40px;
+                line-height: 55px;
                 @media screen and (max-width: $break-small) {
                     line-height: 35px;
                 }
