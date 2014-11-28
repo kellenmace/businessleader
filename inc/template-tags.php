@@ -18,10 +18,10 @@ if ( ! function_exists( 'get_header_container' ) ) :
 		$header_image_setting_single       = get_theme_mod( 'bus-leader-header-image-setting-single' );
 		$header_image_setting_home         = get_theme_mod( 'bus-leader-header-image-setting-home' );
 		$header_image_setting_front_page   = get_theme_mod( 'bus-leader-header-image-setting-front-page' );
-		$header_image_setting_archive      = get_theme_mod( 'bus-leader-header-image-setting-archive' );
+		$header_image_setting_pages        = get_theme_mod( 'bus-leader-header-image-setting-pages' );
 
-		// Get featured image, else Customizer header image for single posts/pages
-		if ( ! is_front_page() && ! is_home() && ! is_archive() && ! is_search() && ! is_404() ) {
+		// Get featured image, else Customizer header image for single posts/custom post types
+		if ( is_single() ) {
 			if( has_post_thumbnail( $post->ID ) ) {
 				$header_image = $attachment_image_array[0];
 			}
@@ -37,9 +37,9 @@ if ( ! function_exists( 'get_header_container' ) ) :
 		elseif ( is_front_page() && ! empty( $header_image_setting_front_page ) ) {
 			$header_image = $header_image_setting_front_page;
 		}
-		// Get Customizer header image for archive, search & 404 pages
-		elseif ( is_archive() || is_search() || is_404() && ! empty( $header_image_setting_archive ) ) {
-			$header_image = $header_image_setting_archive;
+		// Get Customizer header image for pages, archive, search & 404
+		elseif ( is_page() || is_search() || is_archive() || is_404() && ! empty( $header_image_setting_pages ) ) {
+			$header_image = $header_image_setting_pages;
 		}
 		// Else, get default theme header image
 		else {

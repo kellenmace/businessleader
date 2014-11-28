@@ -56,7 +56,7 @@ function bus_leader_customize_register_header( $wp_customize ) {
 	   )
 	);
 
-	// Set header image for single posts & pages that don't have a featured image
+	// Set header image for single posts that don't have a featured image
 	$wp_customize->add_setting( 'bus-leader-header-image-setting-single' , array(
 		'default' 			=> '',
 		'sanitize_callback' => 'esc_url_raw'
@@ -67,7 +67,7 @@ function bus_leader_customize_register_header( $wp_customize ) {
 	       $wp_customize,
 	       'bus-leader-header-image-control-single',
 	       array(
-	           'label'      => __( 'Header image for posts and pages that don\'t have a featured image', 'bus_leader' ),
+	           'label'      => __( 'Header image for posts that don\'t have a featured image', 'bus_leader' ),
 	           'section'    => 'bus-leader-header-image-section',
 	           'settings'   => 'bus-leader-header-image-setting-single',
 	           'context'    => 'bus-leader-header-image-single'
@@ -75,8 +75,8 @@ function bus_leader_customize_register_header( $wp_customize ) {
 	   )
 	);
 
-	// Set header image for archive, search & 404 pages
-	$wp_customize->add_setting( 'bus-leader-header-image-setting-archive' , array(
+	// Set header image for pages, archive, search & 404
+	$wp_customize->add_setting( 'bus-leader-header-image-setting-pages' , array(
 		'default' 			=> '',
 		'sanitize_callback' => 'esc_url_raw'
 	) );
@@ -86,10 +86,10 @@ function bus_leader_customize_register_header( $wp_customize ) {
 	       $wp_customize,
 	       'bus-leader-header-image-control-archive',
 	       array(
-	           'label'      => __( 'Header image for archive, search and 404 (page not found) pages', 'bus_leader' ),
+	           'label'      => __( 'Header image for pages', 'bus_leader' ),
 	           'section'    => 'bus-leader-header-image-section',
-	           'settings'   => 'bus-leader-header-image-setting-archive',
-	           'context'    => 'bus-leader-header-image-archive'
+	           'settings'   => 'bus-leader-header-image-setting-pages',
+	           'context'    => 'bus-leader-header-image-pages'
 	       )
 	   )
 	);

@@ -977,6 +977,9 @@ textarea {
     .entry-content blockquote p {
       font-size: 19px;
       font-size: 1.9rem; } }
+.entry-content table {
+  font-size: 15px;
+  font-size: 1.5rem; }
 
 .site-main .page-header {
   margin: 0 auto;
