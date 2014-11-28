@@ -24,8 +24,15 @@
         if ( -1 !== container.className.indexOf( 'toggled' ) ) {
             container.className = container.className.replace( ' toggled', '' );
         }
-        else
+        else {
             container.className += ' toggled';
+        }
+        if ( -1 !== button.className.indexOf( 'clicked' ) ) {
+            button.className = button.className.replace( ' clicked', '' );
+        }
+        else {
+            button.className += ' clicked';
+        }
     };
 
     /*
@@ -62,7 +69,7 @@ jQuery(document).ready(function($){
      * Custom Superfish settings for keyboard accessible nav menu
      */
     var sf= $('ul.nav-menu');
-    enquire.register("screen and (min-width:600px)", {
+    enquire.register("screen and (min-width:1025px)", {
 
         // Triggered when a media query matches.
         match : function() {

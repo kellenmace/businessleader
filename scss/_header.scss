@@ -7,7 +7,7 @@
         text-align: left;
         float: left;
         overflow: hidden;
-        @media screen and (max-width: $break-small) {
+        @media screen and (max-width: $mobile-menu) {
             padding: 0.5rem 2rem;
         }
         a {
@@ -19,8 +19,9 @@
             img {
                 float: left;
                 max-width: 100%;
+                max-height: 55px;
                 margin-right: 10px;
-                @media screen and (max-width: $break-small) {
+                @media screen and (max-width: $mobile-menu) {
                     width: 30px;
                     padding: 2.5px 0;
                 }
@@ -37,15 +38,14 @@
             // Improve font rendering in webkit and firefox
             -webkit-text-stroke: 0.55px;
             text-shadow: 0px 0px 0px, 0px 0px 0px;
-            @media screen and (max-width: $break-small) {
-                font-size: 22px;
+            @media screen and (max-width: $mobile-menu) {
                 font-size: 2.2rem;
                 line-height: 35px;
             }
             a {
                 color: $header-text;
                 line-height: 55px;
-                @media screen and (max-width: $break-small) {
+                @media screen and (max-width: $mobile-menu) {
                     line-height: 35px;
                 }
             }

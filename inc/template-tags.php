@@ -2,44 +2,51 @@
 /**
  * Custom template tags for this theme.
  *
- * Eventually, some of the functionality here could be replaced by core features.
- *
  * @package Business Leader
  */
 
 if ( ! function_exists( 'get_header_container' ) ) :
-/**
- * Display header container with image inside
- */
-function get_header_container() {
-	// Issue: When a new image is chosen in the customizer, then removed,
-	// get_theme_mod() returns an empty string intead of false, resulting in blank headers
-	// See this issue in Trac: https://core.trac.wordpress.org/ticket/28637
-	global $post;
-	// Get featured image, else Customizer header image for single posts/pages
-    if ( ! is_home() && ! is_archive() && ! is_search() && ! is_404() && has_post_thumbnail( $post->ID ) ) {
-		$header_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large-thumb' )[0];
-	}
-	elseif ( ! is_home() && ! is_archive() && ! is_search() && ! is_404() && ! empty( get_theme_mod( 'bus-leader-header-image-setting-single' ) ) ) {
-		$header_image = get_theme_mod( 'bus-leader-header-image-setting-single' );
-	}
-	// Get Customizer header image for blog
-	elseif ( is_home() && ! empty( get_theme_mod( 'bus-leader-header-image-setting-home' ) ) ) {
-		$header_image = get_theme_mod( 'bus-leader-header-image-setting-home' );
-	}
-	// Get Customizer header image for front page
-	elseif ( is_front_page() && ! empty( get_theme_mod( 'bus-leader-header-image-setting-front-page' ) ) ) {
-		$header_image = get_theme_mod( 'bus-leader-header-image-setting-front-page' );
-	}
-	// Get Customizer header image for archive, search & 404 pages
-	elseif ( is_archive() || is_search() || is_404() && ! empty( get_theme_mod( 'bus-leader-header-image-setting-archive' ) ) ) {
-		$header_image = get_theme_mod( 'bus-leader-header-image-setting-archive' );
-	}
-	// Else, get default theme header image
-	else {
-		$header_image = get_template_directory_uri() . '/images/default-featured-image.jpg';
-	}
-?>
+	/**
+	 * Display header container with image inside
+	 */
+	function get_header_container() {
+		// Issue: When a new image is chosen in the customizer, then removed,
+		// get_theme_mod() returns an empty string intead of false, resulting in blank headers
+		// See this issue in Trac: https://core.trac.wordpress.org/ticket/28637
+		global $post;
+		$attachment_image_array            = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large-thumb' );
+		$header_image_setting_single       = get_theme_mod( 'bus-leader-header-image-setting-single' );
+		$header_image_setting_home         = get_theme_mod( 'bus-leader-header-image-setting-home' );
+		$header_image_setting_front_page   = get_theme_mod( 'bus-leader-header-image-setting-front-page' );
+		$header_image_setting_archive      = get_theme_mod( 'bus-leader-header-image-setting-archive' );
+
+		// Get featured image, else Customizer header image for single posts/pages
+		if ( ! is_front_page() && ! is_home() && ! is_archive() && ! is_search() && ! is_404() ) {
+			if( has_post_thumbnail( $post->ID ) ) {
+				$header_image = $attachment_image_array[0];
+			}
+			elseif( ! empty( $header_image_setting_single ) ) {
+				$header_image = $header_image_setting_single;
+			}
+		}
+		// Get Customizer header image for blog
+		elseif ( is_home() && ! empty( $header_image_setting_home ) ) {
+			$header_image = $header_image_setting_home;
+		}
+		// Get Customizer header image for front page
+		elseif ( is_front_page() && ! empty( $header_image_setting_front_page ) ) {
+			$header_image = $header_image_setting_front_page;
+		}
+		// Get Customizer header image for archive, search & 404 pages
+		elseif ( is_archive() || is_search() || is_404() && ! empty( $header_image_setting_archive ) ) {
+			$header_image = $header_image_setting_archive;
+		}
+		// Else, get default theme header image
+		else {
+			$header_image = get_template_directory_uri() . '/images/default-featured-image.jpg';
+		}
+
+	?>
 
 	<div class="header-container">
 		<div class="header-image" style="background-image: url('<?php echo $header_image ?>')"></div><!-- .header-image -->
@@ -99,9 +106,10 @@ function get_header_container() {
 		<?php endif; ?>
 
 	</div><!-- .header-image-container -->
-<?php 
-}
+	<?php
+	}
 endif;
+
 
 if ( ! function_exists( 'bus_leader_paging_nav' ) ) :
 /**

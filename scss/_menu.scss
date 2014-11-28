@@ -59,26 +59,15 @@
 		    padding: 0;
 		    background: $sub-menu-background;
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			top: 60px;
-
-			a {
-				width: 200px;
-				&:hover {
-					// Hover color for sub-menu items
-					background: $header-background;
-				}
-			}
-
-			&:hover {
-				> a {
-					background: green;
-				}
-			}
+			top: 75px;
 
 			li {
 				a {
 					width: 200px;
-					&:hover {};
+					line-height: 30px;
+					&:hover {
+						background: $header-background;
+					}
 				}
 			}
 
@@ -117,7 +106,7 @@
 	cursor: pointer;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: $mobile-menu) {
 	.menu-toggle {
             line-height: 45px;
             height: 45px;
@@ -127,7 +116,7 @@
 		    color: $header-text;
 		    text-align: center;
 
-		    &:hover, &.active {
+		    &:hover, &.clicked {
 	            background: $sub-menu-background;
 	        }
 	}
@@ -152,13 +141,23 @@
 	        li {
 				float: none;
 
+				a {
+					line-height: 20px;
+				}
+
+				> a {
+					
+					&:hover {
+						background: $header-background;
+					}
+				}
+
 				&:hover > a {
 					background: inherit;
 				}
 
 				> a:hover {
 					background: $header-background;
-					color: $mobile-menu-current-page;
 				}
 			}
 
@@ -174,6 +173,7 @@
 				li {
 					a {
 						width: auto;
+						line-height: 20px;
 					}
 				}
 
@@ -234,7 +234,6 @@
 		.current_page_item > a:hover,
 		.current-menu-item > a:hover {
 			background: $header-background;
-			color: $mobile-menu-current-page;
 		}
 	}
 }

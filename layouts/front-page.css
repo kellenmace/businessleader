@@ -21,10 +21,8 @@ Layout: Front Page
 .paging-navigation,
 .index-box {
   position: relative;
-  max-width: 1220px;
-  max-width: 122rem;
-  /*padding: 0 4rem;*/
-  margin: 0 auto; }
+  max-width: none;
+  margin: 0; }
 
 .entry-header {
   padding-top: 4rem;

@@ -13,6 +13,7 @@ $link-visited: $text-color;
 // Media Queries
 $break-small: 600px;
 $break-med: 985px;
+$mobile-menu: 1024px;
 $break-large: 1540px;
 $widget-area-tablet-width: 780px;
 $entry-text-small: 680px;
@@ -23,7 +24,6 @@ $header-font: $base-font;
 $header-background: #333;
 $header-text: #fff;
 $sub-menu-background: lighten( $header-background, 10% );
-$mobile-menu-current-page: #999;
 
 // Content
 $featured-image-banner-text: #fff;

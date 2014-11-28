@@ -607,7 +607,7 @@ textarea {
     text-align: left;
     float: left;
     overflow: hidden; }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 1024px) {
       .site-header .site-branding {
         padding: 0.5rem 2rem; } }
     .site-header .site-branding a {
@@ -617,8 +617,9 @@ textarea {
       .site-header .site-branding .logo img {
         float: left;
         max-width: 100%;
+        max-height: 55px;
         margin-right: 10px; }
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 1024px) {
           .site-header .site-branding .logo img {
             width: 30px;
             padding: 2.5px 0; } }
@@ -631,15 +632,14 @@ textarea {
       line-height: normal;
       -webkit-text-stroke: 0.55px;
       text-shadow: 0px 0px 0px, 0px 0px 0px; }
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 1024px) {
         .site-header .site-branding .site-title {
-          font-size: 22px;
           font-size: 2.2rem;
           line-height: 35px; } }
       .site-header .site-branding .site-title a {
         color: white;
         line-height: 55px; }
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 1024px) {
           .site-header .site-branding .site-title a {
             line-height: 35px; } }
     .site-header .site-branding .site-description {
@@ -767,15 +767,12 @@ textarea {
       padding: 0;
       background: #4d4d4d;
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      top: 60px; }
-      .main-navigation ul ul a {
-        width: 200px; }
-        .main-navigation ul ul a:hover {
-          background: #333333; }
-      .main-navigation ul ul:hover > a {
-        background: green; }
+      top: 75px; }
       .main-navigation ul ul li a {
-        width: 200px; }
+        width: 200px;
+        line-height: 30px; }
+        .main-navigation ul ul li a:hover {
+          background: #333333; }
       .main-navigation ul ul .current_page_parent {
         background: #333333; }
       .main-navigation ul ul ul {
@@ -796,7 +793,7 @@ textarea {
   display: none;
   cursor: pointer; }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
   .menu-toggle {
     line-height: 45px;
     height: 45px;
@@ -805,7 +802,7 @@ textarea {
     float: right;
     color: white;
     text-align: center; }
-    .menu-toggle:hover, .menu-toggle.active {
+    .menu-toggle:hover, .menu-toggle.clicked {
       background: #4d4d4d; }
 
   .main-navigation {
@@ -823,11 +820,14 @@ textarea {
       padding-left: 0; }
       .main-navigation ul li {
         float: none; }
+        .main-navigation ul li a {
+          line-height: 20px; }
+        .main-navigation ul li > a:hover {
+          background: #333333; }
         .main-navigation ul li:hover > a {
           background: inherit; }
         .main-navigation ul li > a:hover {
-          background: #333333;
-          color: #999999; }
+          background: #333333; }
       .main-navigation ul ul {
         position: relative;
         top: inherit;
@@ -837,7 +837,8 @@ textarea {
         box-shadow: none;
         background: inherit; }
         .main-navigation ul ul li a {
-          width: auto; }
+          width: auto;
+          line-height: 20px; }
         .main-navigation ul ul a {
           width: 100%; }
           .main-navigation ul ul a:hover {
@@ -869,8 +870,7 @@ textarea {
     .main-navigation .current_page_parent .current_page_item > a,
     .main-navigation .current_page_item > a:hover,
     .main-navigation .current-menu-item > a:hover {
-      background: #333333;
-      color: #999999; } }
+      background: #333333; } }
 /* =Content
 ----------------------------------------------- */
 /*
