@@ -9,7 +9,7 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: bus_leader
 Domain Path: /languages/
-Tags: white, gray, light, one-column, two-columns, right-sidebar, responsive-layout, accessibility-ready, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, sticky-post, threaded-comments
+Tags: white, gray, light, one-column, two-columns, right-sidebar, responsive-layout, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, sticky-post, threaded-comments
 */
 /* =Reset
 -------------------------------------------------------------- */
@@ -387,7 +387,7 @@ input[type="submit"] {
   font-family: "Lato", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   line-height: 1;
-  background: #fff;
+  background: none;
   color: #dddddd;
   border: 2px solid #dddddd;
   background-clip: padding-box;
@@ -1585,6 +1585,13 @@ ol.children {
 .widget_calendar tfoot #next {
   text-align: right; }
 
+.widget-area input[type="text"] {
+  width: 100%; }
+.widget-area input[type="submit"] {
+  margin-top: 5px;
+  padding: 0.55em 1em;
+  width: 100%; }
+
 /*
  *	Footer widgets
  */
@@ -1621,6 +1628,14 @@ ol.children {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
   .footer-widgets .widget_calendar tfoot td {
     border-top: 1px solid rgba(255, 255, 255, 0.1); }
+  .footer-widgets input[type="text"] {
+    border-color: #fff; }
+  .footer-widgets input[type="submit"] {
+    color: #777;
+    border-color: #777; }
+    .footer-widgets input[type="submit"]:hover {
+      color: #fff;
+      border-color: #fff; }
 
 /* Footer widgets responsive */
 @media screen and (max-width: 797px) {

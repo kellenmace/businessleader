@@ -156,6 +156,18 @@
 	}
 }
 
+// Forms in widget areas
+.widget-area {
+	input[type="text"] {
+		width: 100%;
+	}
+	input[type="submit"] {
+		margin-top: 5px;
+		padding: 0.55em 1em;
+		width: 100%;
+	}
+}
+
 /*
  *	Footer widgets
  */
@@ -209,10 +221,24 @@
 			}
 		}
 	}
+
+	input[type="text"] {
+		border-color: #fff;
+	}
+
+	input[type="submit"] {
+		color: #777;
+		border-color: #777;
+		&:hover {
+			color: #fff;
+			border-color: #fff;
+		}
+	}
 }
 
 // @media of max-width 1044, .footer-widgets .widget { width = 226px }
 // THB One does this at 990px
+
 
 
 /* Footer widgets responsive */
