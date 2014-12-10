@@ -28,6 +28,9 @@ if ( ! function_exists( 'get_header_container' ) ) :
 			elseif( ! empty( $header_image_setting_single ) ) {
 				$header_image = $header_image_setting_single;
 			}
+			else {
+				$header_image = get_template_directory_uri() . '/images/default-featured-image.jpg';
+			}
 		}
 		// Get Customizer header image for blog
 		elseif ( is_home() && ! empty( $header_image_setting_home ) ) {
@@ -39,7 +42,15 @@ if ( ! function_exists( 'get_header_container' ) ) :
 		}
 		// Get Customizer header image for pages, archive, search & 404
 		elseif ( is_page() || is_search() || is_archive() || is_404() && ! empty( $header_image_setting_pages ) ) {
-			$header_image = $header_image_setting_pages;
+			if ( has_post_thumbnail( $post->ID ) ) {
+				$header_image = $attachment_image_array[0];
+			}
+			elseif ( ! empty( $header_image_setting_pages ) ) {
+				$header_image = $header_image_setting_pages;
+			}
+			else {
+				$header_image = get_template_directory_uri() . '/images/default-featured-image.jpg';
+			}
 		}
 		// Else, get default theme header image
 		else {

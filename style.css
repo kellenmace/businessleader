@@ -388,8 +388,8 @@ input[type="submit"] {
   text-transform: uppercase;
   line-height: 1;
   background: none;
-  color: #dddddd;
-  border: 2px solid #dddddd;
+  color: #cccccc;
+  border: 2px solid #cccccc;
   background-clip: padding-box;
   /* stops bg color from leaking outside the border: */
   -webkit-border-radius: 4px;
@@ -1026,12 +1026,12 @@ textarea {
     display: inline-block;
     margin-top: 3em;
     padding: 0.5em 1em;
-    color: #dddddd;
+    color: #cccccc;
     font-size: 17px;
     font-size: 1.7rem;
     font-weight: 400;
     text-transform: uppercase;
-    border: 2px solid #dddddd;
+    border: 2px solid #cccccc;
     background-clip: padding-box;
     /* stops bg color from leaking outside the border: */
     -webkit-border-radius: 4px;
@@ -1073,8 +1073,8 @@ textarea {
   font-family: "Lato", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   line-height: 1;
-  color: #dddddd;
-  border: 2px solid #dddddd;
+  color: #cccccc;
+  border: 2px solid #cccccc;
   background-clip: padding-box;
   /* stops bg color from leaking outside the border: */
   -webkit-border-radius: 4px;
@@ -1277,8 +1277,8 @@ object {
     font-weight: 400;
     font-family: "Lato", Helvetica, Arial, sans-serif;
     line-height: 25px;
-    color: #dddddd;
-    border: 2px solid #dddddd;
+    color: #cccccc;
+    border: 2px solid #cccccc;
     background-clip: padding-box;
     /* stops bg color from leaking outside the border: */
     -webkit-border-radius: 4px;
@@ -1292,10 +1292,10 @@ object {
       color: #4d4d4d; }
   .paging-navigation span.dots {
     border: none;
-    color: #dddddd;
+    color: #cccccc;
     padding-bottom: 8px; }
     .paging-navigation span.dots:hover {
-      color: #dddddd; }
+      color: #cccccc; }
   .paging-navigation span.current {
     border-color: #4d4d4d;
     color: #4d4d4d; }
