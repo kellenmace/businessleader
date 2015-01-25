@@ -37,7 +37,7 @@ if ( post_password_required() ) {
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-below" class="comment-navigation clear" role="navigation">
-		    <h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'my-simone' ); ?></h1>
+		    <h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'bus_leader' ); ?></h1>
 		    <?php previous_comments_link( '<div class="nav-previous"><i class="fa fa-angle-left"></i>' . __( ' Older Comments', 'bus_leader' ) . '</div>'); ?>
 		    <?php next_comments_link( '<div class="nav-next">' . __( 'Newer Comments ', 'bus_leader' ) . '<i class="fa fa-angle-right"></i></div>' ); ?>
 		</nav><!-- #comment-nav-below -->

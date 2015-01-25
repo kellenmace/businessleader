@@ -12,7 +12,7 @@
     		<h1 class="entry-title">
                         <?php 
                         if ( is_404() ) { _e( 'Page not available', 'bus_leader' ); }
-                        else if ( is_search() ) { printf( __( 'Nothing found for <em>', 'bus_leader') . get_search_query() . '</em>' ); }
+                        else if ( is_search() ) { printf( __( 'Nothing found for <em>' . get_search_query() . '</em>', 'bus_leader' ) ); }
                         else { _e( 'Nothing Found', 'bus_leader' );}
                         ?>
                     </h1>

@@ -21,7 +21,7 @@ function bus_leader_customize_register_header( $wp_customize ) {
 	// Set header image for front page
 	$wp_customize->add_setting( 'bus-leader-header-image-setting-front-page' , array(
 		'default' 			=> '',
-		'sanitize_callback' => 'esc_url_raw'
+		'sanitize_callback' => 'esc_url'
 	) );
 
 	$wp_customize->add_control(
@@ -86,7 +86,7 @@ function bus_leader_customize_register_header( $wp_customize ) {
 	       $wp_customize,
 	       'bus-leader-header-image-control-archive',
 	       array(
-	           'label'      => __( 'Header image for pages', 'bus_leader' ),
+	           'label'      => __( 'Header image for pages that don\'t have a featured image', 'bus_leader' ),
 	           'section'    => 'bus-leader-header-image-section',
 	           'settings'   => 'bus-leader-header-image-setting-pages',
 	           'context'    => 'bus-leader-header-image-pages'

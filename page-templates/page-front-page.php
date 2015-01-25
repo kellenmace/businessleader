@@ -12,7 +12,11 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
+				<?php do_action( 'bus_leader_before_front_page_content' ); ?>
+
 				<?php get_template_part( 'partials/content', 'front-page' ); ?>
+
+				<?php do_action( 'bus_leader_after_front_page_content' ); ?>
 
 			<?php endwhile; ?>
 

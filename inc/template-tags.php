@@ -5,11 +5,11 @@
  * @package Business Leader
  */
 
-if ( ! function_exists( 'get_header_container' ) ) :
+if ( ! function_exists( 'bus_leader_get_header_container' ) ) :
 	/**
 	 * Display header container with image inside
 	 */
-	function get_header_container() {
+	function bus_leader_get_header_container() {
 		// Issue: When a new image is chosen in the customizer, then removed,
 		// get_theme_mod() returns an empty string intead of false, resulting in blank headers
 		// See this issue in Trac: https://core.trac.wordpress.org/ticket/28637
@@ -60,7 +60,7 @@ if ( ! function_exists( 'get_header_container' ) ) :
 	?>
 
 	<div class="header-container">
-		<div class="header-image" style="background-image: url('<?php echo $header_image ?>')"></div><!-- .header-image -->
+		<div class="header-image" style="background-image: url('<?php echo esc_attr( $header_image ); ?>')"></div><!-- .header-image -->
 		
 		<?php if ( is_404() ) : ?>
 			<header class="page-header">

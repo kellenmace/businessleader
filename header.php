@@ -45,6 +45,6 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<?php get_header_container(); ?>
+	<?php bus_leader_get_header_container(); ?>
 
 	<div id="content" class="site-content">

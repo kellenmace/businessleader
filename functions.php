@@ -110,12 +110,12 @@ function bus_leader_scripts() {
 	}
 
 	// Fonts
-	wp_enqueue_style( 'bus_leader-google-fonts2', 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic,400italic,700italic,900italic' );
+	wp_enqueue_style( 'bus_leader-google-fonts2', '//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic,400italic,700italic,900italic' );
 	wp_enqueue_style( 'bus_leader-font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
 
 	// Theme scripts
-	wp_enqueue_script( 'bus_leader-enquire', get_template_directory_uri() . '/js/enquire.min.js', false, '20141026', true );
-	wp_enqueue_script( 'bus_leader-superfish', get_template_directory_uri() . '/js/superfish.min.js', array( 'jquery' ), '20140710', true );
+	wp_enqueue_script( 'bus_leader-enquire', get_template_directory_uri() . '/js/enquire.min.js', false, '2.1.2', true );
+	wp_enqueue_script( 'bus_leader-superfish', get_template_directory_uri() . '/js/superfish.min.js', array( 'jquery' ), '1.7.5', true );
 	wp_enqueue_script( 'bus_leader-scripts', get_template_directory_uri() . '/js/bus-leader-scripts.min.js', array( 'jquery', 'masonry', 'bus_leader-enquire', 'bus_leader-superfish' ), '20141026', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
