@@ -1,6 +1,14 @@
 // Layout: Content-Sidebar
 @if $layout == content-sidebar {
 
+	.blog, .error404, .search-results, .archive {
+		.site-main {
+			article {
+				margin-bottom: 60px;
+			}
+		}
+	}
+
 	.site-main {
 		background: $site-main-background;
 
@@ -63,6 +71,12 @@
 				float: none;
 				margin: 1em auto 0 auto;
 			}
+			@media screen and (min-width: 1200px) {
+				padding-top: 60px;
+			}
+			@media screen and (min-width: 1300px) {
+				padding-top: 80px;
+			}
 		}
 	}
 
@@ -120,7 +134,15 @@
 	        float: left;
 	        margin-left: -342px;
 	        padding-left: 342px;
+	        padding-top: 0;
 	        padding-bottom: 4em;
+		}
+
+		@media screen and (min-width: 1200px) {
+			padding-top: 20px;
+		}
+		@media screen and (min-width: 1300px) {
+			padding-top: 40px;
 		}
 	}
 

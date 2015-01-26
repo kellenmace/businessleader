@@ -27,32 +27,6 @@
             line-height: 1.3em;
         }
     }
-    .entry-meta {
-        a:hover {
-            color: $entry-title;
-        }
-
-        .byline, .comments-link, .edit-link {
-            &:before {
-                content: '\007C';
-                -webkit-font-smoothing: antialiased;
-                padding: 0 9px;
-                color: $entry-meta-pipes;
-                font-size: 18px;
-                font-size: 1.8rem;
-
-                @media screen and (max-width: 500px) {
-                    padding: 0 7px;
-                }
-            }
-        }
-
-        .comments-link, .edit-link {
-            @media screen and (max-width: 500px) {
-                display: none;
-            }
-        }
-    }
 }
 
 .entry-content {
@@ -163,6 +137,33 @@
 }
 
 // Meta
+.entry-meta {
+    a:hover {
+        color: $entry-title;
+    }
+
+    .byline, .comments-link, .edit-link {
+        &:before {
+            content: '\007C';
+            -webkit-font-smoothing: antialiased;
+            padding: 0 9px;
+            color: $entry-meta-pipes;
+            font-size: 18px;
+            font-size: 1.8rem;
+
+            @media screen and (max-width: 500px) {
+                padding: 0 7px;
+            }
+        }
+    }
+
+    .comments-link, .edit-link {
+        @media screen and (max-width: 500px) {
+            display: none;
+        }
+    }
+}
+    
 .entry-footer {
     font-family: $header-font;
     font-size: 15px;
