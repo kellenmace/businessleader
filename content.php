@@ -32,7 +32,7 @@
 		</div><!-- .entry-content -->
 
 		<footer class="entry-footer read-more">
-			<?php echo '<a href="' . get_permalink() . '" title="' . __('Read more ', 'bus_leader') . get_the_title() . '" rel="bookmark">Read more</a>'; ?>
+			<?php echo '<a href="' . get_permalink() . '" title="' . __('Read More ', 'bus_leader') . get_the_title() . '" rel="bookmark">Read More<span class="screen-reader-text">  ' . get_the_title() . '</span></a>'; ?>
 		</footer><!-- .entry-footer -->
 	</div><!-- .index-box -->
 </article><!-- #post-## -->
