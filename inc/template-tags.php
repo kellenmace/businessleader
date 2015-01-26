@@ -60,8 +60,15 @@ if ( ! function_exists( 'bus_leader_get_header_container' ) ) :
 	?>
 
 	<div class="header-container">
-		<div class="header-image" style="background-image: url('<?php echo esc_attr( $header_image ); ?>')"></div><!-- .header-image -->
-		
+
+		<?php
+		// Display darkened background if text is displayed on top of header image
+		if ( is_404() || is_search() || is_archive() ) : ?>
+			<div class="header-image header-image-overlay" style="background-image: url('<?php echo esc_attr( $header_image ); ?>')"></div><!-- .header-image -->
+		<?php else : ?>
+			<div class="header-image" style="background-image: url('<?php echo esc_attr( $header_image ); ?>')"></div><!-- .header-image -->
+		<?php endif; ?>
+
 		<?php if ( is_404() ) : ?>
 			<header class="page-header">
 				<h1 class="page-title page-title-404">
@@ -81,16 +88,10 @@ if ( ! function_exists( 'bus_leader_get_header_container' ) ) :
 				<h1 class="page-title">
 					<?php
 						if ( is_category() ) :
-						    printf( __( 'Filed under', 'bus_leader' ) );
-						    echo '<br><em>';
-						    single_cat_title();
-						    echo '</em>';
+							printf( __( 'Filed under%s', 'bus_leader' ), '<br><em>' . single_cat_title('', false ) . '</em>' );
 
 						elseif ( is_tag() ) :
-						    printf( __( 'Tagged as', 'bus_leader' ) );
-						    echo '<br><em>';
-						    single_tag_title();
-						    echo '</em>';
+							printf( __( 'Tagged as%s', 'bus_leader' ), '<br><em>' . single_tag_title('', false ) . '</em>' );
 
 						elseif ( is_author() ) :
 							printf( __( 'Articles by %s', 'bus_leader' ), '<span class="vcard">' . get_the_author() . '</span>' );

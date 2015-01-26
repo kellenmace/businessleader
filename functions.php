@@ -23,7 +23,7 @@ if ( ! function_exists( 'bus_leader_setup' ) ) :
 function bus_leader_setup() {
 
 	// Style the back end visual editor
-	$editor_font_url = urlencode( '//fonts.googleapis.com/css?family=Roboto:500,400,300,300italic,700,400italic,100' );
+	$editor_font_url = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Lato:100,300,400,700,300italic' );
 	add_editor_style( array( $editor_font_url, 'inc/custom-editor-style.css' ) );
 	
 	/*
@@ -110,7 +110,7 @@ function bus_leader_scripts() {
 	}
 
 	// Fonts
-	wp_enqueue_style( 'bus_leader-google-fonts2', '//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic,400italic,700italic,900italic' );
+	wp_enqueue_style( 'bus_leader-google-fonts2', '//fonts.googleapis.com/css?family=Lato:100,300,400,700,300italic' );
 	wp_enqueue_style( 'bus_leader-font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
 
 	// Theme scripts
