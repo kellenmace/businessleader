@@ -32,7 +32,7 @@ The default-featured-image.jpg image is licensed under Creative Commons Zero (ht
 
 enquire.js v2.1.2 - Awesome Media Queries in JavaScript is copyright (c) 2014 Nick Williams (http://wicky.nillia.ms/enquire.js) and is licenced as MIT (http://www.opensource.org/licenses/mit-license.php).
 
-jQuery Superfish Menu Plugin - v1.7.4 is copyright (c) 2013 Joel Birch and is dual licensed under the MIT and GPL licenses:
+jQuery Superfish Menu Plugin - v1.7.5 is copyright (c) 2013 Joel Birch and is dual licensed under the MIT and GPL licenses:
  *	http://www.opensource.org/licenses/mit-license.php
  *	http://www.gnu.org/licenses/gpl.html
 

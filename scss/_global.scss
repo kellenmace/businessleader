@@ -57,3 +57,8 @@
 .site-footer {
 	@extend %clearfix;
 }
+
+/* Prevent header images from overflowing body container */
+body {
+	overflow: hidden;
+}

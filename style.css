@@ -165,6 +165,10 @@ a img {
   /* Above WP toolbar */ }
 
 /* Clearing */
+/* Prevent header images from overflowing body container */
+body {
+  overflow: hidden; }
+
 body,
 button,
 input,
@@ -630,6 +634,7 @@ textarea {
       font-size: 3.2rem;
       clear: none;
       line-height: normal;
+      color: white;
       -webkit-text-stroke: 0.55px;
       text-shadow: 0px 0px 0px, 0px 0px 0px; }
       @media screen and (max-width: 1024px) {
@@ -638,6 +643,8 @@ textarea {
           line-height: 35px; } }
       .site-header .site-branding .site-title a {
         color: white;
+        -webkit-text-stroke: 0.55px;
+        text-shadow: 0px 0px 0px, 0px 0px 0px;
         line-height: 55px; }
         @media screen and (max-width: 1024px) {
           .site-header .site-branding .site-title a {
