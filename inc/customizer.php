@@ -40,7 +40,7 @@ function bus_leader_customize_register_header( $wp_customize ) {
 	// Set header image for blog
 	$wp_customize->add_setting( 'bus-leader-header-image-setting-home' , array(
 		'default' 			=> '',
-		'sanitize_callback' => 'esc_url_raw'
+		'sanitize_callback' => 'esc_url'
 	) );
 
 	$wp_customize->add_control(
@@ -59,7 +59,7 @@ function bus_leader_customize_register_header( $wp_customize ) {
 	// Set header image for single posts that don't have a featured image
 	$wp_customize->add_setting( 'bus-leader-header-image-setting-single' , array(
 		'default' 			=> '',
-		'sanitize_callback' => 'esc_url_raw'
+		'sanitize_callback' => 'esc_url'
 	) );
 
 	$wp_customize->add_control(
@@ -78,7 +78,7 @@ function bus_leader_customize_register_header( $wp_customize ) {
 	// Set header image for pages, archive, search & 404
 	$wp_customize->add_setting( 'bus-leader-header-image-setting-pages' , array(
 		'default' 			=> '',
-		'sanitize_callback' => 'esc_url_raw'
+		'sanitize_callback' => 'esc_url'
 	) );
 
 	$wp_customize->add_control(
