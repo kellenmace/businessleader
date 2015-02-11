@@ -6,14 +6,18 @@
  */
 ?>
 
+else if ( is_search() ) {
+    printf( __( 'Nothing found for %s', 'bus_leader' ), '<em>' . get_search_query() . '</em>' );
+}
+
 <section class="<?php if ( is_404() ) { echo 'error-404'; } else { echo 'no-results'; } ?> not-found">
     <div class="index-box">
     	<header class="entry-header">
     		<h1 class="entry-title">
                         <?php 
                         if ( is_404() ) { _e( 'Page not available', 'bus_leader' ); }
-                        else if ( is_search() ) { printf( __( 'Nothing found for <em>' . get_search_query() . '</em>', 'bus_leader' ) ); }
-                        else { _e( 'Nothing Found', 'bus_leader' );}
+                        else if ( is_search() ) { printf( __( 'Nothing found for %s', 'bus_leader' ), '<em>' . get_search_query() . '</em>' ); }
+                        else { _e( 'Nothing Found', 'bus_leader' ); }
                         ?>
                     </h1>
     	</header>
