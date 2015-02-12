@@ -64,6 +64,12 @@ function bus_leader_setup() {
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
 	add_theme_support( 'post-formats', array( 'aside' ) );
+
+	/*
+	 * Allow WordPress to set title tags
+	 * See https://make.wordpress.org/core/2014/10/29/title-tags-in-4-1/
+	 */
+	add_theme_support( 'title-tag' );
 }
 endif; // bus_leader_setup
 add_action( 'after_setup_theme', 'bus_leader_setup' );
