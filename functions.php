@@ -109,9 +109,9 @@ function bus_leader_scripts() {
 	    wp_enqueue_style( 'bus_leader-layout-style', get_template_directory_uri() . '/layouts/no-sidebar.css' );
 	}
 
-	// Fonts
+	// Font & Font Icons
 	wp_enqueue_style( 'bus_leader-google-fonts2', '//fonts.googleapis.com/css?family=Lato:100,300,400,700,300italic' );
-	wp_enqueue_style( 'bus_leader-font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
+	wp_enqueue_style( 'bus_leader-font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css', false, '4.3.0' );
 
 	// Theme scripts
 	wp_enqueue_script( 'bus_leader-enquire', get_template_directory_uri() . '/js/enquire.min.js', false, '2.1.2', true );

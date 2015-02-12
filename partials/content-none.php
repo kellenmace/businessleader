@@ -6,10 +6,6 @@
  */
 ?>
 
-else if ( is_search() ) {
-    printf( __( 'Nothing found for %s', 'bus_leader' ), '<em>' . get_search_query() . '</em>' );
-}
-
 <section class="<?php if ( is_404() ) { echo 'error-404'; } else { echo 'no-results'; } ?> not-found">
     <div class="index-box">
     	<header class="entry-header">

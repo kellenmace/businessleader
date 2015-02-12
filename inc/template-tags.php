@@ -14,16 +14,19 @@ if ( ! function_exists( 'bus_leader_get_header_container' ) ) :
 		// get_theme_mod() returns an empty string intead of false, resulting in blank headers
 		// See this issue in Trac: https://core.trac.wordpress.org/ticket/28637
 		global $post;
-		$attachment_image_array            = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large-thumb' );
+		if ( has_post_thumbnail( $post->ID ) ) {
+			$featured_image_array = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large-thumb' );
+			$featured_image_url   = $featured_image_array[0];
+		}
 		$header_image_setting_single       = get_theme_mod( 'bus-leader-header-image-setting-single' );
 		$header_image_setting_home         = get_theme_mod( 'bus-leader-header-image-setting-home' );
 		$header_image_setting_front_page   = get_theme_mod( 'bus-leader-header-image-setting-front-page' );
 		$header_image_setting_pages        = get_theme_mod( 'bus-leader-header-image-setting-pages' );
 
-		// Get featured image, else Customizer header image for single posts/custom post types
+		// Get featured image, else Customizer header image for single posts
 		if ( is_single() ) {
 			if( has_post_thumbnail( $post->ID ) ) {
-				$header_image = $attachment_image_array[0];
+				$header_image = $featured_image_url;
 			}
 			elseif( ! empty( $header_image_setting_single ) ) {
 				$header_image = $header_image_setting_single;
@@ -43,7 +46,7 @@ if ( ! function_exists( 'bus_leader_get_header_container' ) ) :
 		// Get Customizer header image for pages, archive, search & 404
 		elseif ( is_page() || is_search() || is_archive() || is_404() && ! empty( $header_image_setting_pages ) ) {
 			if ( has_post_thumbnail( $post->ID ) ) {
-				$header_image = $attachment_image_array[0];
+				$header_image = $featured_image_url;
 			}
 			elseif ( ! empty( $header_image_setting_pages ) ) {
 				$header_image = $header_image_setting_pages;
