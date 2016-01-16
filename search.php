@@ -22,8 +22,7 @@ get_header(); ?>
 				 */
 				if ( 'aside' == get_post_format() ) {
 					get_template_part( 'partials/content', 'aside' );
-				}
-				else {
+				} else {
 					get_template_part( 'content', get_post_format() );
 				}
 				?>

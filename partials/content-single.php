@@ -40,7 +40,6 @@
 				if ( '' != $tag_list ) {
 					$meta_text = '<div class="tag-list">' . __( 'Tagged %2$s', 'bus_leader' ) . '</div>';
 				}
-
 			} else {
 				// But this blog has loads of categories so we should probably display them here
 				if ( '' != $tag_list ) {
@@ -48,7 +47,6 @@
 				} else {
 					$meta_text = '<div class="category-list">' . __( 'Filed under %1$s', 'bus_leader' ) . '</div>';
 				}
-
 			} // end check for categories on this blog
 
 			printf(

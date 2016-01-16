@@ -97,13 +97,20 @@ if ( ! function_exists( 'bus_leader_admin_header_image' ) ) :
  * @see bus_leader_custom_header_setup().
  */
 function bus_leader_admin_header_image() {
-	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
+	$header_textcolor = get_header_textcolor();
+	if ( ! empty( $header_textcolor ) ) {
+		$header_textcolor = 'color: #' . $header_textcolor;
+	}
 ?>
-	<div id="headimg">
-		<h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-		<div class="displaying-header-text" id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
+	<div id="heading">
+		<a id="name" style="<?php esc_attr_e( $header_textcolor ); ?>" onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+			<h1 class="displaying-header-text"><?php esc_html( bloginfo( 'name' ) ); ?></h1>
+		</a>
+		<div id="desc" class="displaying-header-text" style="<?php esc_attr_e( $header_textcolor ); ?>">
+			<?php esc_html( bloginfo( 'description' ) ); ?>
+		</div>
 		<?php if ( get_header_image() ) : ?>
-		<img src="<?php header_image(); ?>" alt="">
+			<img src="<?php header_image(); ?>" alt="">
 		<?php endif; ?>
 	</div>
 <?php

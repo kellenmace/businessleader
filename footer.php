@@ -13,7 +13,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<?php get_sidebar( 'footer' ); ?>
 		<div class="site-info">
-			<?php printf( '&copy; %1$s <a href="%2$s" rel="site url">%3$s</a>', date("Y"), get_site_url(), get_bloginfo('name') ); ?>
+			<?php printf( '&copy; %1$s <a href="%2$s" rel="site url">%3$s</a>', esc_html( date( 'Y' ) ), esc_url( get_site_url() ), esc_html( get_bloginfo( 'name' ) ) ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

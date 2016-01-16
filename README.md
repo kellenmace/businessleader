@@ -51,3 +51,5 @@ Change Log
 **1.0**
 * Initial release.
 
+**1.3**
+* Enhanced security and translation of text strings

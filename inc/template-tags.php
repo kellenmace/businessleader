@@ -25,10 +25,10 @@ if ( ! function_exists( 'bus_leader_get_header_container' ) ) :
 
 		// Get featured image, else Customizer header image for single posts
 		if ( is_single() ) {
-			if( has_post_thumbnail( $post->ID ) ) {
+			if ( has_post_thumbnail( $post->ID ) ) {
 				$header_image = $featured_image_url;
 			}
-			elseif( ! empty( $header_image_setting_single ) ) {
+			elseif ( ! empty( $header_image_setting_single ) ) {
 				$header_image = $header_image_setting_single;
 			}
 			else {
@@ -91,28 +91,28 @@ if ( ! function_exists( 'bus_leader_get_header_container' ) ) :
 				<h1 class="page-title">
 					<?php
 						if ( is_category() ) :
-							printf( __( 'Filed under%s', 'bus_leader' ), '<br><em>' . single_cat_title('', false ) . '</em>' );
+							printf( esc_html__( 'Filed under%s', 'bus_leader' ), '<br><em>' . single_cat_title( '', false ) . '</em>' );
 
 						elseif ( is_tag() ) :
-							printf( __( 'Tagged as%s', 'bus_leader' ), '<br><em>' . single_tag_title('', false ) . '</em>' );
+							printf( esc_html__( 'Tagged as%s', 'bus_leader' ), '<br><em>' . single_tag_title( '', false ) . '</em>' );
 
 						elseif ( is_author() ) :
-							printf( __( 'Articles by %s', 'bus_leader' ), '<span class="vcard">' . get_the_author() . '</span>' );
+							printf( esc_html__( 'Articles by %s', 'bus_leader' ), '<span class="vcard">' . get_the_author() . '</span>' );
 
 						elseif ( is_day() ) :
-							printf( __( 'Articles from %s', 'bus_leader' ), '<span>' . get_the_date() . '</span>' );
+							printf( esc_html__( 'Articles from %s', 'bus_leader' ), '<span>' . get_the_date() . '</span>' );
 
 						elseif ( is_month() ) :
-							printf( __( 'Articles from %s', 'bus_leader' ), '<span>' . get_the_date( _x( 'F, Y', 'monthly archives date format', 'bus_leader' ) ) . '</span>' );
+							printf( esc_html__( 'Articles from %s', 'bus_leader' ), '<span>' . get_the_date( _x( 'F, Y', 'monthly archives date format', 'bus_leader' ) ) . '</span>' );
 
 						elseif ( is_year() ) :
-							printf( __( 'Articles from %s', 'bus_leader' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'bus_leader' ) ) . '</span>' );
+							printf( esc_html__( 'Articles from %s', 'bus_leader' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'bus_leader' ) ) . '</span>' );
 
 						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-							_e( 'Asides', 'bus_leader' );
+							esc_html_e( 'Asides', 'bus_leader' );
 
 						else :
-							_e( 'Archives', 'bus_leader' );
+							esc_html_e( 'Archives', 'bus_leader' );
 
 						endif;
 					?>
@@ -153,21 +153,21 @@ function bus_leader_paging_nav() {
 
 	// Set up paginated links.
 	$links = paginate_links( array(
-		'base'     => $pagenum_link,
-		'format'   => $format,
-		'total'    => $GLOBALS['wp_query']->max_num_pages,
-		'current'  => $paged,
-		'mid_size' => 2,
-		'add_args' => array_map( 'urlencode', $query_args ),
+		'base'      => $pagenum_link,
+		'format'    => $format,
+		'total'     => $GLOBALS['wp_query']->max_num_pages,
+		'current'   => $paged,
+		'mid_size'  => 2,
+		'add_args'  => array_map( 'urlencode', $query_args ),
 		'prev_next' => false,
-        'type'      => 'list',
+		'type'      => 'list',
 	) );
 
 	if ( $links ) :
 
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'bus_leader' ); ?></h1>
+		<h1 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'bus_leader' ); ?></h1>
 			<?php echo $links; ?>
 	</nav><!-- .navigation -->
 	<?php
@@ -237,7 +237,7 @@ if ( ! function_exists( 'bus_leader_comments_link' ) ) :
  * Prints HTML with meta information for the number of comments
  */
 function bus_leader_comments_link() {
-	if ( ! post_password_required() && comments_open() && '0' != get_comments_number() ) { 
+	if ( ! post_password_required() && comments_open() && '0' != get_comments_number() ) {
         echo '<span class="comments-link">';
         comments_popup_link( '', __( '1 Comment', 'bus_leader' ), __( '% Comments', 'bus_leader' ) );
         echo '</span>';
@@ -305,43 +305,44 @@ if ( ! function_exists( 'bus_leader_comment' ) ) :
 	    switch ( $comment->comment_type ) :
 	        case 'pingback' :
 	        case 'trackback' :
-	    ?>
-	    <li class="post pingback">
-	        <p><?php _e( 'Pingback:', 'bus_leader' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'bus_leader' ), ' ' ); ?></p>
-	    <?php
+	            ?>
+			    <li class="post pingback">
+			        <p><?php _e( 'Pingback:', 'bus_leader' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'bus_leader' ), ' ' ); ?></p>
+				</li>
+			    <?php
 	            break;
 	        default :
-	    ?>
-	    <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-	        <article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
-	            <footer class="comment-meta">
-	                <div class="comment-author vcard">
-	                    <?php echo get_avatar( $comment, 65 ); ?>
-	                    <?php printf( '<b class="fn">%s</b>', get_comment_author_link() ); ?>
-	                </div><!-- .comment-author .vcard -->
-	                <div class="comment-metadata">
-	                    <time pubdate datetime="<?php comment_time( 'c' ); ?>">
-	                    <?php
-	                        printf( __( '%1$s', 'bus_leader' ), get_comment_date() ); ?>
-	                    </time>
-	                    <?php edit_comment_link( __( '(Edit)', 'bus_leader' ), ' ' );
-	                    ?>
-	                </div><!-- .comment-meta .commentmetadata -->
-	                <?php if ( $comment->comment_approved == '0' ) : ?>
-	                	<br />
-	                    <em><?php _e( 'Thanks &#8212; your comment is awaiting moderation.', 'bus_leader' ); ?></em>
-	                    <br />
-	                <?php endif; ?>
-	            </footer>
-	 
-	            <div class="comment-content"><?php comment_text(); ?></div>
-	 
-	            <div class="reply">
-	                <?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-	            </div><!-- .reply -->
-	        </article><!-- #comment-## -->
-	 
-	    <?php
+			    ?>
+			    <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+			        <article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
+			            <footer class="comment-meta">
+			                <div class="comment-author vcard">
+			                    <?php echo get_avatar( $comment, 65 ); ?>
+			                    <?php printf( '<b class="fn">%s</b>', get_comment_author_link() ); ?>
+			                </div><!-- .comment-author .vcard -->
+			                <div class="comment-metadata">
+			                    <time pubdate datetime="<?php comment_time( 'c' ); ?>">
+			                    <?php
+			                        printf( __( '%1$s', 'bus_leader' ), get_comment_date() ); ?>
+			                    </time>
+			                    <?php edit_comment_link( __( '(Edit)', 'bus_leader' ), ' ' );
+			                    ?>
+			                </div><!-- .comment-meta .commentmetadata -->
+			                <?php if ( $comment->comment_approved == '0' ) : ?>
+			                    <br />
+			                    <em><?php _e( 'Thanks &#8212; your comment is awaiting moderation.', 'bus_leader' ); ?></em>
+			                    <br />
+			                <?php endif; ?>
+			            </footer>
+
+			            <div class="comment-content"><?php comment_text(); ?></div>
+
+			            <div class="reply">
+			                <?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+			            </div><!-- .reply -->
+			        </article><!-- #comment-## -->
+				</li>
+			    <?php
 	            break;
 	    endswitch;
 	}

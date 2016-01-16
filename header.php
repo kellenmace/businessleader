@@ -20,7 +20,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'bus_leader' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bus_leader' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
@@ -37,7 +37,7 @@
 
 		<div id="nav-menu-toggle" class="menu-toggle">
 		    <i class="fa fa-bars"></i>
-		    <a href="#site-navigation" class="screen-reader-text"><?php _e( 'Menu', 'bus_leader' ); ?></a>
+		    <a href="#site-navigation" class="screen-reader-text"><?php esc_html_e( 'Menu', 'bus_leader' ); ?></a>
 		</div><!-- #nav-menu-toggle -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
