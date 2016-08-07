@@ -8,11 +8,11 @@
 	<div class="index-box">
 		<?php if ( has_post_thumbnail() ) : ?>
 			<div class="small-index-thumbnail clear">
-				<?php printf( __( '<a href="%1$s" title="Read %2$s" rel="bookmark">%3$s</a>', 'bus_leader' ), esc_url( get_permalink() ), esc_attr( get_the_title() ), get_the_post_thumbnail( null, 'index-thumb' ) ); ?>
+				<a href="<?php the_permalink(); ?>" title="<?php esc_attr_e( 'Read ', 'bus_leader' ); ?><?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail( 'index-thumb' ); ?></a>
 			</div><!-- .small-index-thumbnail -->
 		<?php endif ?>
 		<header class="entry-header">
-			<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
 			<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
@@ -28,7 +28,7 @@
 		</div><!-- .entry-content -->
 
 		<footer class="entry-footer read-more">
-			<?php sprintf( esc_html__( '<a href="%1$s" title="Read More %2$s" rel="bookmark">Read More<span class="screen-reader-text">%3$s</span></a>', 'bus_leader' ), esc_url( get_permalink() ), esc_attr( get_the_title() ), esc_html( get_the_title() ) ); ?>
+			<a href="<?php the_permalink(); ?>" title="Read More <?php the_title(); ?>>" rel="bookmark"><?php esc_html_e( 'Read More', 'bus_leader' ); ?><span class="screen-reader-text"><?php esc_html_e( 'Read More', 'bus_leader' ); ?></span></a>
 		</footer><!-- .entry-footer -->
 	</div><!-- .index-box -->
 </article><!-- #post-## -->
